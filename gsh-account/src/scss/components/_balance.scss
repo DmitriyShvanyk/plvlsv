@@ -1,0 +1,56 @@
+.balance {
+    padding-top: 16px;
+    padding-bottom: 16px;
+
+    &__table {
+        margin-bottom: 0;
+
+        td {                        
+            padding-top: 10px;
+            padding-bottom: 6px;
+            border-top: none;
+            border-bottom: 1px solid $gray-15;
+            box-shadow: inset 0 -1px $white;
+            vertical-align: bottom;
+
+            &:first-of-type {
+                padding-left: 0;
+            }
+
+            &:last-of-type {
+                padding-right: 0;
+            }
+        }
+    }
+
+    &__text,
+    &__units{
+        color: $dark-blue2;
+    }
+
+    &__text {
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 14px;        
+    }
+
+    &__units {
+        display: block;
+        text-align: right;
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 1;
+        white-space: nowrap;
+    }
+
+    &__units-span{
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    @media (max-width:767px){
+        &__units {
+            font-size: 24px;
+        }
+    }
+}

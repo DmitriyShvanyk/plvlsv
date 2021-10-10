@@ -1,0 +1,60 @@
+.tasks {
+    &__body {
+        max-height: 203px;
+        margin-bottom: 28px;
+    }
+
+    &__item {
+        align-items: center;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        padding-right: 15px;
+    }
+
+    &__item+&__item {
+        border-top: 1px solid $gray-15;
+        box-shadow: 0 -1px $white;
+    }
+
+    &__more {
+        color: $gray-40;
+        display: block;
+        width: 16px;
+        min-width: 16px;
+    }
+
+    &__checkbox,
+    &__user-name {
+        margin-right: 24px;
+    }
+
+    &__user-name {
+        color: $brand-orange;
+    }
+
+    &__btn-add {
+        justify-content: space-between;
+        align-items: center;
+        padding: 13px 16px 11px 15px;
+    }
+
+    &__btn-add-icon {
+        margin-top: -2px;
+        margin-right: 4px;
+    }
+
+    &__time {
+        margin-left: 24px;
+    }
+
+    &__badge{
+        background: $gray-12!important;
+        box-shadow: $shadow-brand-sm;
+    }
+
+    @media (max-width:767px) {
+        &__time {
+            margin-left: 12px;
+        }
+    }
+}

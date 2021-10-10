@@ -1,0 +1,1 @@
+import '../pages/landing_settings.scss'

@@ -1,0 +1,14 @@
+.root {
+    background-color: #EEEFF3;
+    /*color: $gray-100;*/
+    color: $dark-blue2;
+    font-family: $fontDefault;
+    font-size: $fontSizeDefault;
+    font-weight: 400;
+    line-height: $lineHeight;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+  }

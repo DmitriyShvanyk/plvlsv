@@ -1,0 +1,22 @@
+.webinar-view {
+    padding: 0;
+
+    &__content {
+        padding: 24px 32px;
+    }
+
+    &__embed-responsive {
+        border-radius: 4px;
+        box-shadow: 2px 2px 6px rgba(56, 71, 109, .16), -2px -2px 6px $white;
+    }
+
+    &__chat {
+        background-color: $gray-15;
+    }
+
+    @media (max-width: 767px) {
+        &__content {
+            padding: 16px;
+        }
+    }
+}

@@ -1,0 +1,108 @@
+.form {
+    &-subtitle,
+    &-control {
+        font-size: 12px;
+        color: $dark-blue2;
+    }
+
+    &-subtitle {
+        font-weight: 600;
+        line-height: 14px;
+    }
+
+    &-control-container {
+        position: relative;
+    }
+
+    &-control-container--copy {
+        pointer-events: none;
+
+        .form-control{
+            border-color: $green!important;
+        }
+
+        .form-control-icon{
+            color: $green!important;
+        }
+    }
+
+    &-control {
+        padding: 8px 16px;
+        height: 40px;
+        background-color: #E9EAF1;
+        box-shadow: inset -1px -1px 1px rgba($white, .7), inset 1px 1px 1px rgba(56, 71, 109, 0.08);
+        border-radius: 6px;
+        border: none;
+        border: 1px solid transparent;
+
+        &[name=nameEvents]~svg,
+        &[name=loginForgotPassword]~svg,
+        &[name=nameLogin]~svg,
+        &[name=fnameRegister]~svg,
+        &[name=lnameRegister]~svg {
+            opacity: .7;
+        }
+
+        &::placeholder {
+            color: $gray-40;
+        }
+
+        &[readonly],
+        &[disabled] {
+            background-color: #E9EAF1;
+        }
+
+        &:hover,
+        &:focus {
+            box-shadow: inset -1px -1px 1px rgba($white, .7), inset 1px 1px 1px rgba(56, 71, 109, .08);
+            border-color: $brand-orange;
+        }
+    }
+
+    &-control-container-datapicker {
+        .flatpickr-wrapper {
+            width: 100%;
+        }
+    }
+
+    &-control-with-icon {
+        padding-left: 48px;
+    }
+
+    &-control-with-icon-right {
+        padding-right: 48px;
+
+        &+.form-control-icon {
+            cursor: pointer;
+            left: auto;
+            right: 14px;
+            color: $brand-orange;
+            pointer-events: auto;
+        }
+    }
+
+    &-control-icon {
+        color: $gray-100;
+        position: absolute;
+        top: 50%;
+        left: 18px;
+        transform: translateY(-50%);
+        pointer-events: none;
+    }
+
+    &-submit {
+        min-width: 120px;
+        padding-top: 11px;
+        padding-bottom: 11px;
+        margin-top: 10px;
+    }
+
+    @media (max-width:767px) {
+        &-forgot-password {
+            margin-top: 35px;
+            margin-bottom: 20px !important;
+            display: block;
+            text-align: right;
+        }
+    }
+}

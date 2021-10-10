@@ -1,0 +1,36 @@
+.scrollbar {
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-color: #EBECF1 #E0E2ED;
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+
+    &::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #E0E2ED;
+        box-shadow: inset -1px -1px 1px rgba($white, .4), inset 1px 1px 1px rgba(56, 71, 109, .08);
+        border-radius: 6px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $bg-brand-gradient;
+        border: 1px solid rgba(204, 204, 220, .9);
+        border-radius: 500px;
+        transition: opacity .3s ease;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+        opacity: .8;
+    }
+
+    .scrollbar--custom{
+        scrollbar-color: #F79F1A #E0E2ED;
+
+        &::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #F79F1A 0%, #FFCF54 100%);
+        }
+    }
+}

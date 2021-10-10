@@ -1,0 +1,138 @@
+.gift-codes {
+    &__packs-label {
+        padding: 16px 29px;
+        display: block;
+        display: flex;
+        align-items: center;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 1.5;
+        background-color: $bright-yellow;
+        box-shadow: -2px -2px 6px $white, 2px 2px 6px rgba(56, 71, 109, .16);
+        border-radius: 12px;
+        margin-bottom: 8px;
+        cursor: pointer;
+
+        &--2 {
+            background-color: $bright-green;
+        }
+
+        &--3 {
+            background-color: $bright-orange;
+        }
+
+        &--4 {
+            background-color: $bright-violet;
+        }
+    }
+
+    &__packs-icon {
+        position: relative;
+        width: 22px;
+        height: 22px;
+        background-color: $gray-15;
+        box-shadow: inset -1px -1px 1px rgba($white, .7), inset 1px 1px 1px rgba(56, 71, 109, .08);
+        border-radius: 50px;
+        margin-right: 17px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 12px;
+            height: 12px;
+            margin: -6px 0 0 -6px;
+            background: linear-gradient(180deg, $brand-orange 0%, $light-orange 100%);
+            border-radius: 40px;
+            opacity: 0;
+            transition: opacity .3s ease;
+        }
+    }
+
+    &__packs-control:checked+&__packs-label &__packs-icon::before {
+        opacity: 1;
+    }
+
+    &__packs-boxes {
+        margin-top: 32px;
+    }
+
+    &__packs-box {
+        display: none;
+    }
+
+    #giftCodesPack-1:checked~.gift-codes__packs-boxes #giftCodesPackBox-1,
+    #giftCodesPack-2:checked~.gift-codes__packs-boxes #giftCodesPackBox-2,
+    #giftCodesPack-3:checked~.gift-codes__packs-boxes #giftCodesPackBox-3,
+    #giftCodesPack-4:checked~.gift-codes__packs-boxes #giftCodesPackBox-4 {
+        display: block;
+    }
+
+    &__packs-checkbox-custom {
+        max-width: 350px;
+        margin-bottom: 48px;
+
+        .checkbox-custom__block {
+            box-shadow: inset -1px -1px 1px rgba($white, .7), inset 1px 1px 1px rgba(56, 71, 109, .08);
+        }
+
+        .checkbox-custom__text {
+            font-weight: 600;
+            font-size: 40px;
+            line-height: 1.2;
+            color: $gray-100;
+        }
+    }
+
+    @media (min-width:768px) {
+        &__packs-label {
+            background: #EEEFF3;
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 198px;
+                height: 24px;
+                width: calc(100% - 198px - 15px);
+                background-color: $bright-yellow;
+                border-radius: 4px;
+                transform: translateY(-50%);
+            }
+
+            &--2 {
+                &::before {
+                    background-color: $bright-green;
+                }
+            }
+
+            &--3 {
+                &::before {
+                    background-color: $bright-orange;
+                }
+            }
+
+            &--4 {
+                &::before {
+                    background-color: $bright-violet;
+                }
+            }
+        }
+    }
+
+    @media (max-width:576px) {
+        &__packs-boxes {
+            margin-top: 24px;
+        }
+
+        &__packs-checkbox-custom {
+            margin-bottom: 24px;
+
+            .checkbox-custom__text {
+                font-size: 30px;
+            }
+        }
+    }
+}

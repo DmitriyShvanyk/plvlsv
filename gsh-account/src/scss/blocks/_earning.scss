@@ -1,0 +1,137 @@
+.earning {
+    .table {
+        td {
+            height: 48px;
+        }
+
+        td:first-of-type {
+            padding-left: 16px;
+        }
+
+        td:last-of-type {
+            padding-right: 16px;
+        }
+    }
+
+    .earning__table-point {
+        tr {
+            td:nth-of-type(1) {
+                width: 150px;
+            }
+
+            td:nth-of-type(4) {
+                width: 140px;
+                white-space: nowrap;
+            }
+
+            td:nth-of-type(5) {
+                width: 80px;
+                white-space: nowrap;
+            }
+        }
+    }
+
+    .earning__table-userlog {
+        tr {
+            td:nth-of-type(1) {
+                width: 150px;
+            }
+
+            td:nth-of-type(1),
+            td:nth-of-type(3),
+            td:nth-of-type(4) {
+                white-space: nowrap;
+            }
+
+            td:nth-of-type(3) {
+                width: 140px;
+            }
+
+            td:nth-of-type(4) {
+                width: 80px;
+            }
+        }
+    }
+
+    .earning__table-giftcodes-log {
+        tr {
+
+            td:nth-of-type(1),
+            td:nth-of-type(4),
+            td:nth-of-type(5) {
+                white-space: nowrap;
+            }
+
+            th:nth-of-type(2),
+            td:nth-of-type(2) {
+                width: 150px;
+                text-align: right;
+                padding-right: 30px;
+            }
+
+            td:nth-of-type(3) {
+                width: 120px;
+            }
+
+            td:nth-of-type(4) {
+                width: 140px;
+            }
+
+            td:nth-of-type(5) {
+                width: 80px;
+            }
+        }
+    }
+
+    .earning__table-matching-bonus {
+        tr {
+
+            td {
+                white-space: nowrap;
+            }
+
+            td:nth-of-type(1) {
+                width: 150px;
+            }
+
+            th:nth-of-type(2),
+            td:nth-of-type(2) {
+                width: 150px;
+                text-align: right;
+                padding-right: 30px;
+            }
+
+            td:nth-of-type(5) {
+                width: 140px;
+            }
+
+            td:nth-of-type(6) {
+                width: 80px;
+            }
+        }
+    }
+
+    .badge{
+        box-shadow: $shadow-brand-sm;
+    }
+
+    @media (max-width:991px) {
+        .earning__table-userlog {
+            tr {
+                td:nth-of-type(2) {
+                    white-space: nowrap;
+                }
+            }
+        }
+    }
+
+    @media (max-width:767px) {
+        .earning__table-point {
+            tr {
+                td:nth-of-type(1) {
+                    width: 60px;
+                }
+            }
+        }
+    }
+}

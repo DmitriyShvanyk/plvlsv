@@ -1,0 +1,1 @@
+import '../pages/webinar_view.scss'

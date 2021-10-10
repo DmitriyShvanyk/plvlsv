@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Global Synergy Holding || Account</title>
+  <meta charset="utf-8">
+  <meta name="keywords" content='Global Synergy Holding || Account'>
+  <meta name="description" content='Global Synergy Holding || Account'>
+  <meta name="format-detection" content="telephone=no">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <!-- favicon -->
+  <link rel="shortcut icon" href="./favicon.ico">
+
+  <!-- preload style -->
+  <link rel="preload" href="<%= htmlWebpackPlugin.files.chunks.login.css %>" as="style">
+  <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.chunks.login.css %>">
+</head>
+
+<body class="root login">
+  <img class="login__bg" src="<%=require('./images/login/login-bg.jpg')%>" loading="lazy" alt="">
+
+  <a href="/" class="logo login__logo">
+    <svg class="logo__icon login__logo-icon" width="29" height="32">
+      <use xlink:href="#logo"></use>
+    </svg>
+    <span class="logo__text login__logo-text">Global Synergy<br> Holding</span>
+  </a>
+
+  <div class="login__box">
+    <div class="login__column">
+      <form action="#" class="login__form" method="POST">
+        <div class="login__form-head">
+          <h1 class="title login__form-title">Register</h1>
+          <p class="text-lead">Fill in the fields for registration</p>
+        </div>
+        <div class="login__form-body">
+          <div class="form-item mb-3">
+            <div class="form-control-container">
+              <input type="text" class="form-control" name="fnameRegister" placeholder="First Name" required>
+              <svg class="form-control-icon" width="24" height="24">
+                <use xlink:href="#i-account"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="form-item mb-3">
+            <div class="form-control-container">
+              <input type="text" class="form-control" name="lnameRegister" placeholder="Last Name" required>
+              <svg class="form-control-icon" width="24" height="24">
+                <use xlink:href="#i-account"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="form-item mb-3">
+            <div class="form-control-container">
+              <input type="email" class="form-control" name="emailRegister" placeholder="Email" required>
+              <svg class="form-control-icon" width="24" height="24">
+                <use xlink:href="#i-mail"></use>
+              </svg>
+            </div>
+          </div>
+
+          <h3 class="form-subtitle mb-3">Set password</h3>
+          <div class="form-item mb-3">
+            <div class="form-control-container">
+              <input type="password" class="form-control" name="passwordRegister" placeholder="Password" required>
+              <svg class="form-control-icon" width="24" height="24">
+                <use xlink:href="#i-lock-2"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="form-item mb-3">
+            <div class="form-control-container">
+              <input type="password" class="form-control" name="passwordRepeatRegister" placeholder="Repeat Password" required>
+              <svg class="form-control-icon" width="24" height="24">
+                <use xlink:href="#i-lock-2"></use>
+              </svg>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-warning btn-sm form-submit">Register</button>
+        </div>
+        <div class="login__form-foot">
+
+          <!--social.begin-->
+          <div class="social">
+            <h3 class="social__title">Login with</h3>
+            <div class="social__list d-flex">
+              <a href="#" class="social__link">
+                <svg class="social__icon" width="24" height="24">
+                  <use xlink:href="#i-google"></use>
+                </svg>
+              </a>
+              <a href="#" class="social__link">
+                <svg class="social__icon" width="24" height="24">
+                  <use xlink:href="#i-tw"></use>
+                </svg>
+              </a>
+              <a href="#" class="social__link">
+                <svg class="social__icon" width="24" height="24">
+                  <use xlink:href="#i-fb"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <!--social.end-->
+
+        </div>
+
+      </form>
+    </div>
+    <div class="login__column d-flex align-items-center justify-content-center">
+      <div class="login__event">
+        <h3 class="login__event-title mb-3">Log in</h3>
+        <p class="login__event-text mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sed risus quis
+          leo</p>
+        <a href="login.html" class="login__event-link">Log in now</a>
+      </div>
+    </div>
+  </div>  
+
+  <!--svg-sprites.begin-->
+  <svg class="sr-only" version="1.1" height="0" xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+    <symbol id="logo" viewBox="0 0 56 64">
+      <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M28.5002 0.133385C28.1904 -0.0444614 27.8096 -0.0444619 27.4998 0.133385L0.504457 15.6335C0.192417 15.8126 0 16.145 0 16.5049V47.4951C0 47.855 0.192416 48.1874 0.504456 48.3665L27.4998 63.8666C27.8096 64.0445 28.1904 64.0445 28.5002 63.8666L55.4955 48.3665C55.8076 48.1874 56 47.855 56 47.4951V16.5049C56 16.145 55.8076 15.8126 55.4955 15.6335L28.5002 0.133385ZM4.8115 15.8796C4.47685 16.072 4.47518 16.5543 4.80849 16.749L27.3872 29.9388C27.698 30.1203 28.0822 30.1217 28.3943 29.9424L40.5911 22.9342C40.9272 22.7411 40.9273 22.2561 40.5912 22.063L29.4342 15.6488L26.3452 17.4165L35.1242 22.4635L35.0607 22.4987L35.0769 22.5077L27.7665 26.5882L10.2062 16.3299L10.238 16.3117L10.2309 16.3077L27.8973 6.18877L48.6304 18.3004L51.7195 16.5327L28.3923 2.90575C28.0814 2.72414 27.6971 2.7228 27.385 2.90225L4.8115 15.8796ZM29.2136 33.5467L32.3026 31.779V43.9319L50.6162 33.4521V21.1729L53.9259 19.4052V47.2463L50.6162 49.014V37.2084L32.3026 47.6883V59.6202L28.9929 61.3879L29.2136 33.5467ZM2.82584 20.0564L5.16312 21.3938V21.3978L26.3452 33.5467V37.0821L5.16312 24.9332V33.3298L23.3646 43.7692L25.8154 45.084C26.1416 45.259 26.3452 45.5992 26.3452 45.9694V60.0787C26.3452 60.4648 25.9278 60.7066 25.593 60.5145L2.07407 47.0254V43.49L23.2561 55.6389V47.4633L2.57894 35.604C2.26667 35.4249 2.07407 35.0924 2.07407 34.7323V20.4924C2.07407 20.1065 2.49097 19.8647 2.82584 20.0564Z"
+        fill="#F79F1A" />
+    </symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24" fill="none">
+      <rect x="6" y="9" width="9" height="11" rx="1" stroke="currentColor" stroke-width="2" />
+      <path d="M9 8V7C9 6.44772 9.44772 6 10 6H17C17.5523 6 18 6.44772 18 7V16C18 16.5523 17.5523 17 17 17H15"
+        stroke="currentColor" stroke-width="2" />
+    </symbol>
+    <symbol id="i-union" viewBox="0 0 24 24" fill="none">
+      <path d="M12 20C16.3648 20 19.9132 16.5045 19.9984 12.1601L17.9979 12.1597C17.9133 15.3996 15.2603 18 12 18C8.68629 18 6 15.3137 6 12C6 8.68629 8.68629 6 12 6C12.0516 6 12.103 6.00065 12.1543 6.00195L12.1547 4.00147C12.1032 4.00049 12.0517 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20Z" fill="currentColor"/>
+      <path d="M17.9968 4L19.9961 5.9994L18.4722 7.52328L16.4728 5.52388L17.9968 4Z" fill="currentColor"/>
+      <path d="M10 11.8737V14H12.1241L18 8.12634L15.8759 6L10 11.8737Z" fill="currentColor"/>
+    </symbol>      
+    <symbol id="i-account" viewBox="0 0 24 24" fill="none">
+      <rect x="8.5" y="4.5" width="7" height="7" rx="3.5" stroke="#374A58" />
+      <path
+        d="M12.4997 13.4999C16.3112 13.4999 19.1882 16.4537 19.4762 19.4999H4.57055C5.05559 16.1079 7.97328 13.4999 11.4997 13.4999L12.4997 13.4999Z"
+        stroke="#374A58" />
+    </symbol>
+    <symbol id="i-check" viewBox="0 0 15 12" fill="none">
+      <path
+        d="M4.99997 8.58603L1.70697 5.29303L0.292969 6.70703L4.99997 11.414L14.707 1.70703L13.293 0.29303L4.99997 8.58603Z"
+        fill="currentColor" />
+    </symbol>
+    <symbol id="i-lock-2" viewBox="0 0 24 24" fill="none">
+      <rect x="5.5" y="9.5" width="13" height="11" rx="2" stroke="currentColor" />
+      <path d="M8.5 9.5L8.5 6.5C8.5 4.567 10.067 3 12 3C13.933 3 15.5 4.567 15.5 6.5L15.5 9.5" stroke="currentColor" />
+      <rect width="1" height="1" rx="0.5" transform="matrix(4.37114e-08 -1 -1 -4.37114e-08 12.5 16)"
+        stroke="currentColor" />
+      <rect width="1" height="1" rx="0.5" transform="matrix(4.37114e-08 -1 -1 -4.37114e-08 16 16)"
+        stroke="currentColor" />
+      <rect width="1" height="1" rx="0.5" transform="matrix(4.37114e-08 -1 -1 -4.37114e-08 9 16)"
+        stroke="currentColor" />
+    </symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24" fill="none">
+      <rect x="3.5" y="5.5" width="17" height="13" rx="0.5" stroke="currentColor" />
+      <path d="M19.8773 5.50009L12 14.2526L4.12269 5.50001L19.8773 5.50009Z" stroke="currentColor" />
+      <path
+        d="M7.87163 14.3344L9.99581 11.9979L11.6262 13.8322L11.9999 14.2526L12.3737 13.8322L14.0042 11.9979L16.1283 14.3345L16.13 14.3363L19.8773 18.5L4.12268 18.4999L7.86995 14.3363L7.87163 14.3344Z"
+        stroke="currentColor" />
+    </symbol>
+    <symbol id="i-google" viewBox="0 0 24 24" fill="none">
+      <path
+        d="M7.75 12C7.75 11.2073 7.96841 10.4647 8.34784 9.82885V7.13173H5.65072C4.58025 8.52198 4 10.2163 4 12C4 13.7837 4.58025 15.478 5.65072 16.8683H8.34784V14.1712C7.96841 13.5353 7.75 12.7927 7.75 12Z"
+        fill="#FBBD00" />
+      <path
+        d="M12 16.25L10.125 18.125L12 20C13.7837 20 15.478 19.4198 16.8683 18.3493V15.6551H14.174C13.5326 16.0359 12.7869 16.25 12 16.25Z"
+        fill="#0F9D58" />
+      <path
+        d="M8.34776 14.1711L5.65063 16.8682C5.86257 17.1435 6.09335 17.4071 6.34307 17.6568C7.85407 19.1678 9.86304 20 11.9999 20V16.25C10.4492 16.25 9.09001 15.415 8.34776 14.1711Z"
+        fill="#31AA52" />
+      <path
+        d="M20 12C20 11.5132 19.9559 11.0256 19.869 10.5507L19.7987 10.1663H12V13.9163H15.7954C15.4268 14.6495 14.8601 15.2477 14.174 15.655L16.8682 18.3493C17.1435 18.1373 17.4071 17.9066 17.6568 17.6568C19.1678 16.1458 20 14.1368 20 12Z"
+        fill="#3C79E6" />
+      <path
+        d="M15.0052 8.99478L15.3367 9.32622L17.9883 6.67459L17.6569 6.34316C16.1459 4.83216 14.1369 4 12 4L10.125 5.875L12 7.75C13.1352 7.75 14.2025 8.19206 15.0052 8.99478Z"
+        fill="#CF2D48" />
+      <path
+        d="M11.9999 7.75V4C9.86307 4 7.8541 4.83216 6.34307 6.34313C6.09335 6.59284 5.86257 6.85644 5.65063 7.13172L8.34776 9.82884C9.09004 8.585 10.4492 7.75 11.9999 7.75Z"
+        fill="#EB4132" />
+    </symbol>
+    <symbol id="i-tw" viewBox="0 0 24 24" fill="none">
+      <path
+        d="M21 6.65738C20.3306 6.93846 19.6174 7.12477 18.8737 7.21523C19.6388 6.778 20.2226 6.09092 20.4971 5.26277C19.7839 5.66985 18.9964 5.95738 18.1571 6.11785C17.4799 5.42754 16.5146 5 15.4616 5C13.4186 5 11.7739 6.58738 11.7739 8.53339C11.7739 8.81339 11.7986 9.08262 11.8594 9.33892C8.7915 9.19569 6.07687 7.78815 4.25325 5.644C3.93487 6.17277 3.74813 6.778 3.74813 7.42954C3.74813 8.65292 4.40625 9.73738 5.38725 10.3652C4.79437 10.3545 4.21275 10.1897 3.72 9.93015C3.72 9.94092 3.72 9.95492 3.72 9.96892C3.72 11.6855 4.99912 13.1114 6.6765 13.4398C6.37612 13.5185 6.04875 13.5562 5.709 13.5562C5.47275 13.5562 5.23425 13.5432 5.01038 13.4958C5.4885 14.8948 6.84525 15.9232 8.4585 15.9566C7.203 16.8968 5.60888 17.4632 3.88313 17.4632C3.5805 17.4632 3.29025 17.4503 3 17.4148C4.63462 18.4238 6.57188 19 8.661 19C15.4515 19 19.164 13.6154 19.164 8.948C19.164 8.79185 19.1584 8.64108 19.1505 8.49138C19.8829 7.99385 20.4982 7.37246 21 6.65738Z"
+        fill="#03A9F4" />
+    </symbol>
+    <symbol id="i-fb" viewBox="0 0 24 24" fill="none">
+      <g clip-path="url(#clipFB)">
+        <path
+          d="M13.397 20.997V12.801H16.162L16.573 9.592H13.397V7.548C13.397 6.622 13.655 5.988 14.984 5.988H16.668V3.127C15.849 3.039 15.025 2.997 14.201 3C11.757 3 10.079 4.492 10.079 7.231V9.586H7.33203V12.795H10.085V20.997H13.397Z"
+          fill="#4267B2" />
+      </g>
+      <defs>
+        <clipPath id="clipFB">
+          <rect width="24" height="24" fill="white" />
+        </clipPath>
+      </defs>
+    </symbol>
+  </svg>
+  <!--svg-sprites.end-->
+
+  <!--scripts.begin-->
+  <script defer src="<%= htmlWebpackPlugin.files.chunks.login.entry %>"></script>
+  <!--scripts.end-->
+
+</body>
+
+</html>

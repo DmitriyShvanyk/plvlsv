@@ -1,0 +1,129 @@
+.article {
+    &__head {
+        >div {
+            .badge {
+                box-shadow: $shadow-brand-sm;
+            }
+        }
+    }
+
+    &__title {
+        max-width: 740px;
+        margin-bottom: 16px;
+    }
+
+    &__subtitle {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 1.25;
+    }
+
+    &__subtitle--lg {
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 1.25;
+    }
+
+    &__subtitle,
+    &__item,
+    &__content {
+        margin-bottom: 24px;
+    }
+
+    &__subtitle--lg {
+        margin-bottom: 16px;
+    }
+
+    &__line {
+        margin-bottom: 24px;
+        box-shadow: 0 -1px #fff;
+    }
+
+    &__pict,
+    &__author {
+        margin-bottom: 32px;
+    }
+
+    &__text {
+        line-height: 1.5;
+        font-size: 16px;
+    }
+
+    ul,
+    ol {
+        padding-left: 0;
+        list-style: none;
+
+        >li {
+            padding-left: 32px;
+            position: relative;
+            margin-bottom: 8px;
+
+            &::before {
+                position: absolute;
+                left: 0;
+            }
+        }
+    }
+
+    ul {
+        >li {
+            &::before {
+                content: '';
+                top: 7px;
+                width: 8px;
+                height: 8px;
+                background-color: $gray-100;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    ol {
+        counter-reset: list;
+
+        ol {
+            margin-top: 8px;
+        }
+
+        li {
+            padding-left: 42px;
+
+            &::before {
+                top: 0;
+                counter-increment: list;
+                content: counters(list, ".") ". ";
+                font-weight: 600;
+                color: $gray-100;
+            }
+        }
+
+    }
+
+    @media (max-width:576px) {
+
+        &__subtitle {
+            font-size: 20px;
+            margin-bottom: 16px;
+        }
+
+        &__subtitle--lg {
+            font-size: 24px;
+        }
+
+        &__text {
+            font-size: 14px;
+        }
+
+        ul {
+            >li {
+                &::before {
+                    top: 8px;
+                    width: 6px;
+                    height: 6px;
+                }
+            }
+        }
+
+    }
+}

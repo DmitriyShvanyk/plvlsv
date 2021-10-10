@@ -1,0 +1,54 @@
+.dragbox {
+    padding: 8px;
+    background: #E9EAF1;
+    border-radius: 6px;
+    box-shadow: inset -1px -1px 1px rgba($white, .7), inset 1px 1px 1px rgba(56, 71, 109, .08);
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 16px;
+        border: 1px dashed $gray-40;
+        border-radius: 6px;
+    }
+
+    &__item {
+        margin: 4px 8px;
+    }
+
+    &__item,
+    &__label {
+        font-weight: 600;
+        font-size: 16px;
+        color: $gray-100;
+        line-height: 1.5;
+    }
+
+    @media (max-width:576px) {
+        &__inner {
+            padding: 14px;
+        }
+
+        &__item {
+            margin: 2px;
+        }
+
+        &__item,
+        &__label {
+            font-size: 14px;
+        }
+    }
+
+    @media (max-width:320px) {
+        &__inner {
+            padding: 8px 0;
+            border: none;
+        }
+
+        &__item,
+        &__label {
+            font-size: 12px;
+        }
+    }
+}

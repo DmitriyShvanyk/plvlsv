@@ -1,0 +1,52 @@
+.b-tasks {
+    @media (max-width:767px) {
+        &__box,
+        &__tabs {
+            width: calc(100% + 32px);
+            margin-left: -16px;
+            margin-right: -16px;
+        }
+
+        &__tabs {
+            white-space: nowrap;
+            overflow-x: auto;
+            overflow-y: hidden;
+        }
+
+        &__tasks-body,
+        &__tasks-foot {
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+
+        &__tasks-body {
+            max-height: 100%;
+            overflow-x: auto;
+
+            &::-webkit-scrollbar {
+                all: unset;
+            }
+
+            &::-webkit-scrollbar-track {
+                all: unset;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                all: unset;
+            }
+
+            &::-webkit-scrollbar-thumb:hover {
+                all: unset;
+            }
+        }
+
+        .tasks__time {
+            padding-right: 16px;
+        }
+
+        .nav-tabs{
+            margin-left: 0;
+        }
+        
+    }
+}

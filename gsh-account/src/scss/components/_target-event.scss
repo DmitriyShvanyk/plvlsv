@@ -1,0 +1,58 @@
+.target-event {
+    position: relative;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    &__head {
+        padding-bottom: 68.45%;
+        position: relative;
+        overflow: hidden;
+        height: 0;
+        width: 100%;
+
+        .badge {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            z-index: 99;
+        }
+    }
+
+    &__body {
+        padding: 0 24px 16px;
+        position: relative;
+    }
+
+    &__image {
+        background-color: $gray-100;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+
+    &__icon {
+        background-color: $gray-12;
+        border-radius: 50px;
+        margin-top: -20px;
+        margin-bottom: 8px;
+    }
+
+    .btn-edit {
+        position: absolute;
+        bottom: 16px;
+        right: 16px;
+    }
+
+    @media (max-width:576px) {
+        &__body {
+            padding: 0 8px;
+        }
+    }
+}

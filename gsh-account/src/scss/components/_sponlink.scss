@@ -1,0 +1,25 @@
+.sponlink {
+    margin-bottom: 18px;
+
+    &__title {
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 14px;
+        color: $dark-blue2;
+        margin: 0 0 8px;
+    }
+
+    &__form-control {
+        font-size: 12px;
+        line-height: 14px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: $dark-blue2;
+        height: 31px;
+        padding: 5px 42px 5px 10px;
+    }
+
+    .form-control-icon {
+        pointer-events: none!important;
+    }
+}

@@ -1,0 +1,74 @@
+@charset 'utf-8';
+
+/* ==================== PLUGINS ==================== */
+
+@import "~bootstrap/scss/bootstrap";
+
+
+/* ==================== ABSTRACTS ==================== */
+
+@import '../scss/abstracts/variable';
+
+
+/* ==================== BASE ==================== */
+
+@import '../scss/base/basic';
+
+
+/* ==================== COMPONENTS ==================== */
+
+@import '../scss/components/logo';
+@import '../scss/components/sponlink';
+@import '../scss/components/container';
+@import '../scss/components/btn';
+@import '../scss/components/close';
+@import '../scss/components/switch';
+@import '../scss/components/dropdown';
+@import '../scss/components/scrollbar';
+@import '../scss/components/checkbox';
+@import '../scss/components/form';
+@import '../scss/components/select';
+@import '../scss/components/carousel';
+@import '../scss/components/badge';
+@import '../scss/components/progress';
+@import '../scss/components/invited-progress';
+@import '../scss/components/symbol-user';
+@import '../scss/components/box';
+@import '../scss/components/verification';
+@import '../scss/components/levels';
+@import '../scss/components/stats-info';
+@import '../scss/components/tasks';
+@import '../scss/components/target-event';
+@import '../scss/components/card';
+@import '../scss/components/profile-info';
+@import '../scss/components/news';
+@import '../scss/components/users';
+@import '../scss/components/warning';
+@import '../scss/components/balance';
+@import '../scss/components/modal';
+@import '../scss/components/file-upload-result';
+
+
+/* ==================== BLOCKS ==================== */
+
+@import '../scss/blocks/root';
+@import '../scss/blocks/sidebar';
+@import '../scss/blocks/navbar';
+@import '../scss/blocks/content';
+@import '../scss/blocks/main';
+
+
+
+
+/*
+.page-dashboard {
+    .sidebar__body {
+        max-height: calc(100vh - 206px);
+        min-height: calc(100vh - 206px);
+    }
+
+    .sidebar__foot {
+        padding-top: 16px;
+    }
+}
+*/

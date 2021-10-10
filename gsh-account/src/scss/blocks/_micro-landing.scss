@@ -1,0 +1,69 @@
+.micro-landing {
+    display: block;
+    min-height: 1px;
+
+    &__form {
+        max-width: 360px;
+        margin: 40px auto;
+    }
+
+    &__head{
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    &__user-name {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 1.25;
+    }
+
+    &__body {
+        background: $bg-brand-gradient;
+        box-shadow: $shadow-brand;
+        border-radius: 8px;
+    }
+
+    &__item {
+        padding: 24px 16px;
+    }
+
+    &__item+&__item {
+        border-top: 1px solid $gray-15;
+        box-shadow: 0 -1px $white;
+    }
+
+    &__text{
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    &__link{
+        transition: opacity .3s ease;
+
+        &:hover,
+        &:focus,
+        &:active{
+            opacity: .8;
+            text-decoration: none;
+        }
+    }
+
+    &__messanger {
+        .social-check {
+            flex-basis: 0;
+            flex-grow: 1;            
+        }
+
+        .social-check__content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 48px;
+        }
+
+        .social-check__control:checked~.social-check__content {
+            box-shadow: 0 0 0 4px rgba($blue, .5);
+        }
+    }
+}

@@ -1,0 +1,67 @@
+.levels {
+    &__box {
+        position: relative;
+        padding: 14px 14px 7px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: $bg-brand-gradient;
+            box-shadow: $shadow-brand;
+            border-radius: 8px;
+        }
+    }
+
+    &__box--active::before {
+        box-shadow: -4px -4px 8px rgba($white, .8), 4px 4px 8px rgba(204, 204, 220, .7);
+        transform: scale(1.1);
+    }
+
+    &__box--active &__title {
+        color: $gray-100;
+    }
+
+    &__title {
+        color: $gray-40;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 1.25;
+        margin-top: 5px;
+        margin-bottom: 0;
+    }
+
+    &__triangle {
+        display: block;
+        width: 30px;
+        height: 26px;
+        background: linear-gradient(180deg, #F79F1A 0%, #FFCF54 100%);
+        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    }
+
+    &__square {
+        display: block;
+        width: 24px;
+        height: 24px;
+        background-color: $gray-40;
+        border-radius: 2px;
+    }
+
+    &__text {
+        color: $gray-100;
+    }
+
+    &__content {
+        position: relative;
+        z-index: 99;
+    }
+
+    @media (min-width:1201px) and (max-width:1300px) {
+        &__title {
+            font-size: 20px;
+        }
+    }
+}

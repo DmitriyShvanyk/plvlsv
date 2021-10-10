@@ -1,0 +1,40 @@
+.support-contact {
+    margin-top: 35px;
+
+    &__form {
+        max-width: 736px;
+
+        .form-control.error {
+            border-color: #A44C4C;
+            border-style: solid;
+        }
+
+        .form-control+.error {
+            position: absolute;
+            top: calc(100% + 1px);
+            left: 0;
+            color: #DB4D4D;
+            font-size: 10px;
+            line-height: 1.4;
+        }
+    }
+
+    &__submit {
+        margin-top: 30px;
+    }
+
+    @media (min-width:767px) {
+        &__title {
+            font-weight: 500;
+            font-size: 28px;
+            line-height: 1.29;
+            margin-bottom: 53px;
+        }
+
+        &__form {
+            .subtitle {
+                text-align: right;
+            }
+        }
+    }
+}

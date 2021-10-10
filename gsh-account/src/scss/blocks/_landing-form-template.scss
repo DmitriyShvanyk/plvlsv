@@ -1,0 +1,65 @@
+.landing-form-template {
+    display: block;
+    min-height: 1px;
+    max-width: 736px;
+    margin: 40px auto;
+    background: $bg-brand-gradient;
+    box-shadow: $shadow-brand;
+    border-radius: 8px;
+    padding: 55px 50px;
+    text-align: center;
+
+    &__title {
+        font-weight: 600;
+        font-size: 56px;
+        line-height: 1;
+        color: $gray-100;
+    }
+
+    .invitation__form-label {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 12px;
+        text-align: center;
+    }
+
+    .social-check__control:checked~.social-check__content {
+        box-shadow: 0 0 0 4px rgba($blue, .5);
+    }
+
+    @media (max-width: 767px) {
+        & {
+            padding: 40px;
+        }
+
+        &__title {
+            font-size: 46px;
+            line-height: 1.1;
+        }
+    }
+
+    @media (max-width: 576px) {
+        & {
+            padding: 0 30px 30px;
+            box-shadow: none;
+        }
+
+        &__title {
+            font-size: 36px;
+            line-height: 1.25;
+        }
+
+        .invitation__form-label {
+            font-size: 14px;
+        }
+
+        .invitation__form-column {
+            padding-bottom: 0;
+        }
+
+        .invitation__form-columns {
+            margin-bottom: 24px;
+        }
+    }
+}

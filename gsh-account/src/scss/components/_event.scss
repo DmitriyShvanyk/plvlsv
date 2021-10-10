@@ -1,0 +1,65 @@
+.event {
+    background: $bg-brand-gradient;
+    box-shadow: $shadow-brand;
+    border-radius: 8px;
+    margin-bottom: 32px;
+    padding: 8px;
+
+    &__pict {
+        width: 100%;
+    }
+
+    &__image {
+        width: 100%;
+        border-radius: 8px;
+        object-fit: cover;
+    }
+
+    &__content {
+        width: 100%;
+        padding: 4px 16px 16px 0;
+    }
+
+    &__head {
+        align-items: center;
+        flex-wrap: wrap;
+        font-size: 16px;
+    }
+
+    &__type {
+        color: $gray-100;
+        font-weight: 600;
+    }
+
+    &__place {
+        color: $gray-40;
+    }
+
+    &__btn-join {
+        min-width: 120px;
+    }
+
+    .badge{
+        box-shadow: $shadow-brand-sm;
+    }
+
+    @media (max-width:767px) {
+        &__content {
+            padding: 16px 16px 24px;
+        }
+    }
+
+    @media (max-width:576px) {
+        &__head {
+            font-size: 14px;
+        }
+
+        &__image {
+            min-height: 200px;
+        }
+
+        &__title{
+            margin-bottom: 1.2rem!important;
+        }
+    }
+}

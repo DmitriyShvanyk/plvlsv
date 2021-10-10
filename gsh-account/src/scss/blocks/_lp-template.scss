@@ -1,0 +1,219 @@
+.lp-template {
+    text-align: center;
+    flex-direction: column;
+    overflow-x: hidden;
+    color: $gray;
+    background-color: $gray-15;
+    font-size: 14px;
+    line-height: 1.43;
+
+    &__root {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__container {
+        padding-top: 24px;
+        padding-bottom: 24px;
+        max-width: 600px;
+    }
+
+    &__header {
+        background-color: $gray;
+        min-height: 128px;
+        position: relative;
+        z-index: 1;
+    }
+
+    &__logo {
+        color: $gray-15;
+    }
+
+    &__profile {
+        background-color: $white;
+    }
+
+    &__profile-container {
+        padding-top: 0;
+    }
+
+    &__pict {
+        margin-bottom: 16px;
+        margin-top: -64px;
+        position: relative;
+        z-index: 99;
+    }
+
+    &__image {
+        width: 144px;
+        height: 144px;
+        display: block;
+        margin: 0 auto;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+    &__name {
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 1.25;
+        color: $gray;
+        margin: 0 0 8px;
+    }
+
+    &__text {
+        p {
+            margin: 0;
+        }
+
+        p+p {
+            margin-top: 16px;
+        }
+    }
+
+    &__desc {
+        background-color: $gray-15;
+    }
+
+    &__footer {
+        margin-top: auto;
+        background: $gray-10;
+        box-shadow: 4px 4px 44px rgba(56, 71, 109, .16);
+        border-radius: 16px 16px 0 0;
+        position: relative;
+        z-index: 2;
+    }
+
+    &__social {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    &__social-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 48px;
+        height: 48px;
+        background: $gray-10;
+        box-shadow: -4px -4px 12px $white, 4px 4px 12px rgba(56, 71, 109, .16);
+        border-radius: 6px;
+        margin-bottom: 12px;
+        transition: opacity .3s ease;
+
+        &:hover,
+        &:focus,
+        &:active {
+            opacity: .7;
+        }
+    }
+
+    .btn {
+        margin-top: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .btn-icon{
+        margin-right: 12px;
+    }
+
+    .btn-warning {
+        color: $white;
+        background: $brand-orange;
+        border-color: $brand-orange;
+        box-shadow: none;
+        transition: opacity .3s ease;
+
+        &:hover,
+        &:focus,
+        &:active,
+        &:not(:disabled):not(.disabled).active,
+        &:not(:disabled):not(.disabled):active,
+        .show>.btn-warning.dropdown-toggle {
+            color: $white;
+            background: $brand-orange !important;
+            border-color: $brand-orange !important;
+            box-shadow: none;
+            opacity: .8;
+        }
+    }
+
+    .btn-success {
+        color: $white;
+        background: #4CAF50;
+        border-color: #4CAF50;
+        box-shadow: none;
+        transition: opacity .3s ease;
+
+        &:hover,
+        &:focus,
+        &:active,
+        &:not(:disabled):not(.disabled).active,
+        &:not(:disabled):not(.disabled):active,
+        .show>.btn-warning.dropdown-toggle {
+            color: $white;
+            background: #4CAF50 !important;
+            border-color: #4CAF50 !important;
+            box-shadow: none;
+            opacity: .8;
+        }
+    }
+
+    @media (max-width:480px) {
+        &__pict {
+            margin-top: -54px;
+        }
+
+        &__image {
+            width: 120px;
+            height: 120px;
+        }
+
+        &__social-link {
+            margin-right: 4px;
+            margin-left: 4px;
+        }
+    }
+
+    @media (max-width:414px) {
+        & {
+            font-size: 13px;
+        }
+
+        &__name {
+            font-size: 7vw;
+        }
+
+        &__social {
+            justify-content: center;
+        }
+    }
+
+    @media (max-width:359px) {
+        & {
+            font-size: 12px;
+        }
+
+        &__btns {
+            .row,
+            .col {
+                display: block;
+            }
+
+            .row {
+                margin-left: 0;
+                margin-right: 0;
+            }
+
+            .col {
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+            }
+        }
+    }
+}

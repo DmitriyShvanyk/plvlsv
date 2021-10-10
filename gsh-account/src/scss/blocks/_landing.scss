@@ -1,0 +1,60 @@
+.landing {
+    &__head {
+        display: flex;
+        align-items: center;
+    }
+
+    &__count {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        margin-right: 30px;
+    }
+
+    &__select {
+        min-width: 68px;
+    }
+
+    &__form-search {
+        min-width: 350px;
+    }
+
+    &__controls {
+        .btn {
+            min-width: 24px;
+            padding: 2.5px 0;
+            margin-left: 8px;
+            margin-right: 8px;
+        }
+    }
+
+    @media (max-width:1200px) {
+        &__head {
+            flex-wrap: wrap;
+
+            .btns {
+                width: 100%;
+            }
+        }
+
+        &__count {
+            margin-left: 0;
+        }
+
+        &__form-search {
+            min-width: 250px;
+            width: calc(100% - 201px);
+        }
+
+    }
+
+    @media (max-width:576px) {
+        &__head {
+            display: block;
+        }
+
+        &__form-search {
+            width: 100%;
+        }
+    }
+}

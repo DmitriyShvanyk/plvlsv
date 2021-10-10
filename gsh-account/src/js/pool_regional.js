@@ -1,0 +1,1 @@
+import '../pages/pool_regional.scss'

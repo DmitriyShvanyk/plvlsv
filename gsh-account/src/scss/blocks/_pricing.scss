@@ -1,0 +1,96 @@
+.pricing {
+
+    &__box {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__info {
+        display: flex;
+        align-items: center;
+    }
+
+    &__access {
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+    }
+
+    &__access-text {
+        margin-right: 24px;
+    }
+
+    &__access-date {
+        font-weight: 600;
+    }
+
+    &__duration {
+        margin-left: auto;
+        display: inline-flex;
+        align-items: center;
+
+        &-title {
+            margin: 0 18px 0 0;
+            font-size: 16px;
+        }
+
+        .nav-tabs {
+            border: none;
+            margin: 0;
+        }
+
+        .nav-link {
+            border: none;
+            padding: 13px 24px;
+            color: $gray-100;
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 14px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .nav-link.active {
+            background-color: $brand-orange;
+            color: $white;
+
+            .pricing__duration-discount {
+                background-color: $light-orange;
+                color: $gray-70;
+            }
+        }
+
+        &-discount {
+            font-size: 10px;
+            padding: 2px 4px 0;
+            margin-left: 4px;
+            font-weight: 600;
+        }
+    }
+
+    @media (max-width:880px) {
+        &__box {
+            display: block;
+        }
+
+        &__access {
+            margin-bottom: 16px;
+            margin-top: 8px;
+        }
+    }
+
+    @media (max-width:576px) {
+        &__duration {
+            &-title {
+                margin-right: 12px;
+                font-size: 14px;
+            }
+
+            .nav-link {
+                padding: 10px 12px;
+            }
+        }
+    }
+}

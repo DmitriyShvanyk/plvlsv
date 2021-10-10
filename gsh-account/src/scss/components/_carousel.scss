@@ -1,0 +1,88 @@
+.carousel{
+    padding: 8px;
+    background: $bg-brand-gradient;
+    box-shadow: $shadow-brand;    
+    z-index: 1;
+    overflow: hidden;
+    border-radius: 8px;
+    height: 100%;
+
+    &,
+    &-container{
+        width: 100%;
+        position: relative;
+    }
+
+    &-container{
+        margin-bottom: 32px;        
+
+        .btn-edit{
+            position: absolute; 
+            bottom: 16px;
+            right: 16px;
+            z-index: 99;
+        }
+    }
+
+    &-indicators li {
+        width: 10px;
+        height: 10px;
+        margin-right: 4px;
+        margin-left: 4px;
+        border: none;
+        opacity: .6;
+        border-radius: 50%;
+    }
+
+    &,
+    &-image{
+        border-radius: 8px;
+    }    
+
+    &-inner,
+    &-item,
+    &-image{
+        height: 100%;
+    }  
+
+    &-image{
+        object-fit: cover;
+    } 
+
+    &-control-prev,
+    &-control-next{
+        opacity: 1;
+    }
+
+    &-control-prev-i,
+    &-control-next-i{
+        position: absolute; top: 50%; 
+        width: 8px;
+        height: 8px;
+        border: 2px solid $white;
+        margin-top: -4px;
+        transform: rotate(45deg);  
+    }
+
+    &-control-prev-i{        
+        border-top: none;
+        border-right: none;              
+    }
+
+    &-control-next-i{
+        border-left: none;
+        border-bottom: none;       
+    }    
+
+    @media (max-width:767px) {        
+        &-container{
+            margin-bottom: 16px;
+        }
+    }
+
+    @media (max-width:576px) {
+        &-image{
+            min-height: 374px;
+        } 
+    }
+}

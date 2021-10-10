@@ -1,0 +1,22 @@
+.icon-plus {
+    display: inline-flex;
+    width: 16px;
+    height: 16px;
+    position: relative;
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 16px;
+        height: 2px;
+        margin: -1px 0 0 -8px;
+        background-color: $gray-100;
+    }
+
+    &::after {
+        transform: rotate(90deg);
+    }
+}

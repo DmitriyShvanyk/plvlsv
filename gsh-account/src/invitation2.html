@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Global Synergy Holding || Account</title>
+  <meta charset="utf-8">
+  <meta name="keywords" content='Global Synergy Holding || Account'>
+  <meta name="description" content='Global Synergy Holding || Account'>
+  <meta name="format-detection" content="telephone=no">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <!-- favicon -->
+  <link rel="shortcut icon" href="./favicon.ico">
+
+  <!-- preload style -->
+  <link rel="preload" href="<%= htmlWebpackPlugin.files.chunks.invitation.css %>" as="style">
+  <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.chunks.invitation.css %>">
+</head>
+
+<body class="root invitation">
+  <div class="invitation__pict">
+    <img class="invitation__bg" src="<%=require('./images/invitation/invitation-bg.jpg')%>" alt="">
+  </div>
+
+  <div class="invitation__box">
+    <h2 class="invitation__subtitle mb-3">Attend the event</h2>
+    <div class="invitation__status">online</div>
+    <h1 class="title invitation__title">Businesstime</h1>
+
+    <!--timer.begin-->
+    <div class="timer invitation__timer">
+      <h2 class="invitation__subtitle mb-2">It's a start:</h2>
+      <div class="timer__box" data-time="September 01,2020 23:59">
+        <div class="timer__days">45</div>
+        <div class="timer__hours">16</div>
+        <div class="timer__minutes">32</div>
+        <div class="timer__seconds">45</div>
+      </div>
+    </div>
+    <!--timer.end-->
+
+    <!--form.begin-->
+    <form action="#" class="invitation__form" method="POST">
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2 mb-4">
+          <input type="text" id="nameInvitation" class="form-control" placeholder="Name" required>
+        </div>
+      </div>      
+      <button type="submit" class="btn btn-warning btn-sm form-submit invitation__form-submit">Login</button>
+    </form>
+    <!--form.end-->
+  </div>  
+
+  <!--svg-sprites.begin-->
+  <svg class="sr-only" version="1.1" height="0" xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">          
+    <symbol id="i-tg" viewBox="0 0 24 24" fill="none">
+      <path
+        d="M20.6646 3.71682L2.93461 10.5538C1.72461 11.0398 1.73161 11.7148 2.71261 12.0158L7.26461 13.4358L17.7966 6.79082C18.2946 6.48782 18.7496 6.65082 18.3756 6.98282L9.84261 14.6838H9.84061L9.84261 14.6848L9.52861 19.3768C9.98861 19.3768 10.1916 19.1658 10.4496 18.9168L12.6606 16.7668L17.2596 20.1638C18.1076 20.6308 18.7166 20.3908 18.9276 19.3788L21.9466 5.15082C22.2556 3.91182 21.4736 3.35082 20.6646 3.71682Z"
+        fill="#27A7E7" />
+    </symbol>
+    <symbol id="i-viber" viewBox="0 0 24 24" fill="none">
+      <path
+        d="M20.2318 13.4297C20.7688 8.90941 19.9738 6.05566 18.5398 4.76491L18.5405 4.76416C16.226 2.55991 8.40954 2.23366 5.64054 4.86316C4.39704 6.14941 3.95904 8.03716 3.91104 10.3742C3.86304 12.7119 3.80604 17.0912 7.88679 18.2792H7.89054L7.88679 20.0934C7.88679 20.0934 7.85904 20.8284 8.32854 20.9762C8.86554 21.1502 9.10854 20.8089 10.7788 18.8139C13.5718 19.0562 15.7168 18.5012 15.9605 18.4202C16.5245 18.2312 19.7158 17.8089 20.2318 13.4297ZM11.054 17.5374C11.054 17.5374 9.28629 19.7417 8.73654 20.3139C8.55654 20.4999 8.35929 20.4827 8.36229 20.1137C8.36229 19.8714 8.37579 17.1017 8.37579 17.1017C4.91604 16.1102 5.12004 12.3812 5.15754 10.4304C5.19504 8.47891 5.55204 6.88066 6.60504 5.80441C9.03429 3.52666 15.887 4.03591 17.633 5.67691C19.7675 7.56916 19.0078 12.9152 19.0123 13.0974C18.5735 16.7529 15.9875 16.9847 15.512 17.1429C15.3088 17.2104 13.4225 17.6957 11.054 17.5374Z"
+        fill="#7E509B" />
+      <path
+        d="M12.1668 6.22266C11.878 6.22266 11.878 6.67266 12.1668 6.67641C14.407 6.69366 16.252 8.25516 16.2723 11.1194C16.2723 11.4217 16.7148 11.4179 16.711 11.1157H16.7103C16.6863 8.02941 14.6718 6.23991 12.1668 6.22266Z"
+        fill="#7E509B" />
+      <path
+        d="M15.1137 10.6448C15.1069 10.9433 15.5487 10.9575 15.5524 10.6553C15.5892 8.95353 14.5399 7.55178 12.5682 7.40403C12.2794 7.38303 12.2494 7.83678 12.5374 7.85778C14.2474 7.98753 15.1482 9.15453 15.1137 10.6448Z"
+        fill="#7E509B" />
+      <path
+        d="M14.6407 12.5806C14.2702 12.3661 13.8929 12.4996 13.7369 12.7103L13.4107 13.1326C13.2449 13.3471 12.9352 13.3186 12.9352 13.3186C10.6747 12.7208 10.0702 10.3553 10.0702 10.3553C10.0702 10.3553 10.0424 10.0351 10.2494 9.86333L10.6574 9.52583C10.8614 9.36383 10.9904 8.97383 10.7827 8.59058C10.2277 7.58783 9.85491 7.24208 9.66516 6.97658C9.46566 6.72683 9.16566 6.67058 8.85366 6.83933H8.84692C8.19817 7.21883 7.48792 7.92908 7.71517 8.66033C8.10292 9.43133 8.81541 11.8891 11.0864 13.7461C12.1537 14.6243 13.8427 15.5243 14.5597 15.7321L14.5664 15.7426C15.2729 15.9781 15.9599 15.2401 16.3267 14.5718V14.5666C16.4894 14.2433 16.4354 13.9373 16.1977 13.7371C15.7762 13.3261 15.1402 12.8723 14.6407 12.5806Z"
+        fill="#7E509B" />
+      <path
+        d="M12.877 9.07825C13.5978 9.12025 13.9473 9.49675 13.9848 10.27C13.9983 10.5723 14.437 10.5513 14.4235 10.249C14.3755 9.2395 13.849 8.677 12.901 8.6245C12.6123 8.60725 12.5853 9.061 12.877 9.07825Z"
+        fill="#7E509B" />
+    </symbol>
+    <symbol id="i-messenger" viewBox="0 0 48 48" fill="none">
+      <path
+        d="M23.9997 6C14.1597 6 6.17969 13.458 6.17969 22.664C6.17969 27.896 8.76169 32.568 12.8017 35.622V42L18.8837 38.626C20.5057 39.082 22.2197 39.326 24.0017 39.326C33.8417 39.326 41.8217 31.866 41.8217 22.664C41.8197 13.458 33.8397 6 23.9997 6ZM25.8757 28.344L21.2657 23.556L12.3897 28.464L22.1197 18.138L26.7297 22.928L35.6077 18.018L25.8757 28.344Z"
+        fill="#27A7E7" />
+    </symbol>   
+  </svg>
+  <!--svg-sprites.end-->
+
+  <!--scripts.begin-->
+  <script defer src="<%= htmlWebpackPlugin.files.chunks.invitation.entry %>"></script>
+  <!--scripts.end-->
+
+</body>
+
+</html>

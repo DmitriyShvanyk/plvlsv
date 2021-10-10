@@ -1,0 +1,234 @@
+$modal-shadow: 8px 8px 16px rgba(56, 71, 109, .08);
+
+.modal {
+    &-dialog {
+        box-shadow: $modal-shadow;
+    }
+
+    &-content {
+        background: $gray-13;
+        border: none;
+        position: relative;
+        padding: 40px 95px;
+        border-radius: 16px;
+    }
+
+    &-header,
+    &-body,
+    &-foot {
+        border: none;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    &-title {
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 1.29;
+    }
+
+    &-subtitle {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        color: $dark-blue2;
+    }
+
+    &-close {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        opacity: 1;
+        color: $gray-40;
+        font-weight: 600;
+        text-indent: -9999px;
+
+        &::before,
+        &::after {
+            background-color: $gray-40;
+        }
+    }
+
+    &-circle-check {
+        width: 54px;
+        height: 54px;
+        border: 5px solid $gray-15;
+        margin: 0 auto 22px auto;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $brand-orange;
+        box-shadow: $shadow-brand-sm;
+    }
+
+    .badge {
+        background: $gray-12;
+        box-shadow: $shadow-brand-sm;
+        border-radius: 500px;
+    }
+
+    @media (min-width: 576px) {
+        &-dialog {
+            max-width: 544px;
+        }
+    }
+
+    @media (max-width: 991px) {
+        &-content {
+            padding-left: 35px;
+            padding-right: 35px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        &-content {
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+    }
+
+    @media (max-width: 576px) {
+        &-close {
+            top: 20px;
+            right: 20px;
+        }
+
+        &-content {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+
+}
+
+
+
+
+/* modal-lg */
+
+.modal-lg {
+    max-width: 926px;
+    width: 100%;
+}
+
+
+
+/* modal-md */
+
+.modal-md {
+    max-width: 728px;
+    width: 100%;
+}
+
+
+/* modal-xs */
+
+.modal-xs {
+    max-width: 458px;
+    width: 100%;
+}
+
+
+
+/* modal-navigator-tasks */
+
+.modal-navigator-tasks {
+    &__inner {
+        width: 100%;
+    }
+
+    &__head {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 30px;
+        margin-top: 0;
+    }
+
+    &__text {
+        max-width: 640px;
+        color: $gray-100;
+    }
+
+    .modal-header {
+        padding-bottom: 0;
+    }
+
+    .modal-body {
+        padding-top: 8px;
+    }
+
+    .navigator-tasks__rating {
+        padding: 0;
+        border: none;
+        max-width: 300px;
+        margin-bottom: 35px;
+    }
+
+    @media (max-width: 576px) {
+        &__head {
+            flex-direction: column-reverse;
+        }
+
+        &__title {
+            font-size: 20px;
+            line-height: 1.3;
+        }
+    }
+}
+
+
+.modal-circle-check--success,
+.modal-circle-check--error {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.modal-circle-check--success,
+#modalNavigatorTasksSuccess .modal-title {
+    color: $green;
+}
+
+.modal-circle-check--error,
+#modalNavigatorTasksError .modal-title {
+    color: $red;
+}
+
+
+
+/* modal flatpickr-wrapper */
+
+.modal {
+    .flatpickr-wrapper {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+[id^=modalUser]{
+    .modal-dialog{
+        max-width: 264px;
+    }    
+
+    .modal-content {
+        padding: 8px;
+        border-radius: 8px;
+    }
+
+    .modal-body{
+        padding: 0;
+    }
+}

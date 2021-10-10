@@ -1,0 +1,47 @@
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+
+    &__control {
+        display: none;
+    }
+
+    &__label {
+        position: relative;
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+        margin-right: 8px;
+        margin-bottom: 0;
+
+        &:first-of-type {
+            margin-right: 0;
+        }
+    }
+
+    &__icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__icon--orange {
+        opacity: 0;
+    }
+
+    &__label:hover::before,
+    &__label:hover~&__label &__icon--orange {
+        opacity: 1 !important;
+    }
+
+    &__control:checked~&__label &__icon--orange {
+        opacity: 1;
+    }
+
+    &:hover>&__control:checked~&__label &__icon--orange {
+        opacity: .8;
+    }
+
+}

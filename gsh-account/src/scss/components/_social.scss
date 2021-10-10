@@ -1,0 +1,55 @@
+.social {
+    display: flex;
+    align-items: center;
+
+    &__title {
+        margin-top: 0;
+        margin-bottom: 0;
+        font-weight: 600;
+        font-size: 16px;
+        margin-right: 40px;
+        line-height: 1;
+    }
+
+    &__link {
+        margin-right: 24px;
+        transition: opacity .3s ease;
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+            opacity: .8;
+        }
+    }
+
+
+    /* social check */
+
+    &-check {
+        margin-right: 24px;
+        cursor: pointer;
+        background-color: $gray-10;
+        border-radius: 6px;
+        background: $bg-brand-gradient;
+        box-shadow: $shadow-brand;
+        transition: box-shadow .3s ease;
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+    }
+
+    &-check__content {
+        display: block;
+        transition: box-shadow .3s ease;
+        border-radius: 6px;  
+    }
+
+    &-check__control:checked~&-check__content {
+        box-shadow: 0 0 0 4px rgba($white, .5);          
+    }
+}

@@ -1,0 +1,18 @@
+.content {
+    width: calc(100% - 256px);
+    margin-left: 256px;
+    transition: margin-left .3s ease, width .3s ease;
+
+    &--toggle {
+        margin-left: 70px;
+        width: calc(100% - 70px);
+    }
+
+    @media (max-width:991px) {
+        &,
+        &--toggle {            
+            width: 100%;
+            margin-left: 0;
+        }
+    }
+}

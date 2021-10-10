@@ -1,0 +1,125 @@
+.menu-guest {
+    display: none;
+
+    &__body {
+        display: flex;
+        align-items: center;
+        min-height: 32px;
+    }
+
+    &__link {
+        font-size: 16px;
+        color: $gray-70;
+        margin-right: 32px;
+        transition: color .3s ease;
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: $gray-100;
+        }
+    }
+
+    &__head {
+        display: none;
+    }
+
+    &__close {
+        display: none;
+        border: none;
+        width: 24px;
+        height: 24px;
+        background-color: transparent;
+        outline: none;
+        margin-right: 20px;
+        position: relative;
+        transition: opacity .3s ease;
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 2px;
+            height: 22px;
+            margin: -11px 0 0 -1px;
+            background-color: $white;
+            border-radius: 2px;
+            transform: rotate(45deg);
+        }
+
+        &::after {
+            transform: rotate(-45deg);
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+            opacity: .8;
+        }
+    }    
+
+    @media (max-width:1200px) {
+        &__link {
+            font-size: 14px;
+        }
+    }
+
+    @media (max-width:991px) {
+
+        & {
+            background-color: $gray;
+            width: 256px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 999;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            transition: width .3s ease-out;
+            transform: translateX(-356px);
+            will-change: transform;
+            transition: transform .3s ease;
+        }
+
+        &--open {
+            transform: translateX(0);
+        }
+
+        &__head {
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            box-shadow: 4px 4px 12px rgba(56, 71, 109, .16), -4px -4px 12px $black;
+        }
+
+        &__head,
+        &__body {
+            padding: 16px 20px;
+        }
+
+        &__body,
+        &__close {
+            display: block;
+        }
+
+        &__link {
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding: 12px 0;
+            color: $gray-40;
+            transition: color .3s ease;
+
+            &:hover,
+            &:focus,
+            &:active {
+                color: $white;
+            }
+        }
+    }
+}

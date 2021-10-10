@@ -1,0 +1,66 @@
+.statuses {
+    &__title {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    &__form-add {
+        position: relative;
+    }
+
+    &__form-add-control {
+        padding-right: 40px;
+    }
+
+    &__form-add-submit {
+        background: transparent;
+        border-radius: 0;
+        padding: 0;
+        margin: 0;
+        outline: none;
+        border: none !important;
+        box-shadow: none !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transition: opacity .3s ease;
+
+        &:hover,
+        &:focus,
+        &:active {
+            opacity: .8;
+            box-shadow: none;
+        }
+    }
+
+    .badge {
+        cursor: pointer;
+        background: $gray-15;
+        box-shadow: $shadow-brand-sm;
+
+        &:hover {
+            color: $white;
+            background: linear-gradient(180deg, $brand-orange 0%, #FFCF54 100%);
+            box-shadow: none;
+
+            .badge-close::before,
+            .badge-close::after {
+                background-color: $white;
+                opacity: 1;
+            }
+        }
+    }
+
+    @media (max-width:991px) {
+        & {
+            margin-top: 24px;
+        }
+    }
+}

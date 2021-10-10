@@ -1,0 +1,19 @@
+.invites{
+    &__form-control-container{
+        max-width: 288px;
+        min-width: 220px;
+
+        .form-control-icon{
+            color: $gray-100;
+            transition: color .3s ease;
+        }
+
+        .form-control:focus ~ .form-control-icon {
+            color: $brand-orange;
+        }
+    }
+
+    .badge{
+        box-shadow: inset -1px -1px 2px #FFFFFF, inset 1px 1px 1px #CCCCDC;
+    }
+}

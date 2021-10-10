@@ -1,0 +1,63 @@
+.alert {
+    display: block;
+    color: $gray-90;
+    box-shadow: 2px 2px 6px rgba(56, 71, 109, .16), -2px -2px 6px $white;
+    border-radius: 12px;
+    margin-bottom: 8px;
+    padding-left: 32px;
+    padding-right: 32px;
+    position: relative;
+
+    &-success {
+        background-color: $bright-green;
+        border-color: $bright-green;
+    }
+
+    &-info {
+        background-color: $bright-blue;
+        border-color: $bright-blue;
+    }
+
+    &-warning {
+        background-color: $bright-orange;
+        border-color: $bright-orange;
+    }
+
+    &-danger {
+        background-color: $bright-red;
+        border-color: $bright-red;
+    }
+
+    &-bright-violet {
+        background-color: $bright-violet;
+        border-color: $bright-violet;
+    }
+
+    &-bright-yellow {
+        background-color: $bright-yellow;
+        border-color: $bright-yellow;
+    }
+
+    &-bright-pink {
+        background-color: $bright-pink;
+        border-color: $bright-pink;
+    }
+
+    &-bright-salad {
+        background-color: $bright-salad;
+        border-color: $bright-salad;
+    }
+
+    &-close {
+        position: absolute;
+        top: 14px;
+        right: 14px;
+        background: none!important;
+    }
+
+    @media (max-width:767px) {
+        & {
+            padding-left: 16px;
+        }
+    }
+}

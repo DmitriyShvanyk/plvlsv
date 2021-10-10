@@ -1,0 +1,78 @@
+.symbol-user {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-transform: uppercase;
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    color: $dark-blue2;
+    background: $bg-brand-gradient;
+    box-shadow: $shadow-brand;
+    border-radius: 50%;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 12.5%;
+        right: 12.5%;
+        top: 12.5%;
+        bottom: 12.5%;
+        box-shadow: $shadow-brand-sm;
+        border-radius: 50%;
+    }
+
+    &--md {
+        width: 64px;
+        height: 64px;
+        min-width: 64px;
+        font-weight: 500;
+        font-size: 24px;
+    }
+
+    &--violet {
+        background-color: $violet;
+    }
+
+    &--cyan {
+        background-color: $cyan;
+    }
+
+    &--orange {
+        background-color: $orange;
+    }
+
+    &--blue {
+        background-color: $blue;
+    }
+
+    &--green {
+        background-color: $green;
+    }
+
+    &--red-light {
+        background-color: $red-light;
+    }
+
+    &--brand-orange {
+        background-color: $brand-orange;
+    }
+
+    &--red {
+        background-color: $red;
+    }
+
+    &--success-green {
+        background-color: $success-green;
+    }
+
+    &--purple {
+        background-color: $purple;
+    }
+
+    &--yellow {
+        background-color: $yellow;
+    }
+}

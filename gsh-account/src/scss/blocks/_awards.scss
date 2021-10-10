@@ -1,0 +1,160 @@
+.awards {
+    &__head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__filter {
+        max-width: 550px;
+        width: 100%;
+
+        .row {
+            margin-left: -8px;
+            margin-right: -8px;
+        }
+
+        [class*=col-] {
+            padding-left: 8px;
+            padding-right: 8px;
+        }
+    }
+
+    &__top {
+
+        &-item {
+            text-align: center;
+            min-height: 203px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 4px 4px 12px rgba(56, 71, 109, 0.16), -4px -4px 12px #FFFFFF;
+            border-radius: 12px;
+            padding: 24px 24px 16px;
+            margin-bottom: 16px;
+        }
+
+        &-item--gold {
+            min-height: 267px;
+
+            .awards__top-line {
+                background-color: $bright-yellow;
+            }
+        }
+
+        &-item--silver {
+            min-height: 235px;
+
+            .awards__top-line {
+                background-color: $gray-15;
+            }
+        }
+
+        &-info {
+            margin-top: auto;
+        }
+
+        &-line {
+            height: 7px;
+            width: 100%;
+            background-color: $bright-orange;
+            border-radius: 12px;
+            margin-top: 8px;
+        }
+
+        .users__badges {
+            justify-content: center;
+        }
+
+        .symbol-user {
+            width: 64px;
+            height: 64px;
+            min-width: 64px;
+            font-size: 24px;
+        }
+
+        .users__name {
+            font-weight: 500;
+            font-size: 24px;
+        }
+
+    }
+
+
+    &__list {
+        padding-left: 0;
+        margin-top: 0;
+        list-style: none;
+        counter-reset: list 3;
+
+        &-item {
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid $gray-15;
+            box-shadow: 0 1px $white;
+            position: relative;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            padding-left: 25px;
+        }
+
+        &-item::before {
+            counter-increment: list;
+            content: counter(list) " ";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            font-weight: 600;
+            transform: translateY(-50%);
+        }
+
+        &-user {
+            width: 350px;
+        }
+    }
+
+    .nav-tabs {
+        margin-bottom: 8px;
+    }
+
+    .badge{
+        box-shadow: $shadow-brand-sm;
+    }
+
+    @media (max-width:800px) {
+        &__head {
+            display: block;
+        }
+
+        &__filter {
+            max-width: 100%;
+            margin-bottom: 24px;
+        }
+    }
+
+    @media (max-width:767px) {
+        &__list {
+            &-user {
+                width: 150px;
+                max-width: 150px;
+            }
+        }
+    }
+
+    @media (max-width:576px) {
+        &__filter {
+            margin-bottom: 0;
+        }
+
+        &__body {
+            max-width: calc(100% + 32px);
+            margin-left: -16px;
+            margin-right: -16px;
+        }
+
+        &__list {
+            &-item {
+                padding-left: 20px;
+            }
+        }
+    }
+}

@@ -1,0 +1,61 @@
+.close {
+    width: 12px;
+    height: 12px;
+    min-height: 12px;
+    max-height: 12px;
+    min-width: 12px;
+    max-width: 12px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding: 0;
+    box-shadow: none;
+    float: none;
+    position: relative;
+    cursor: pointer;
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 14px;
+        height: 2px;
+        background-color: $gray-40;
+        margin: -1px 0 0 -7px;
+        border-radius: 2px;
+        transform: rotate(45deg);
+        transition: background-color .3s ease;
+    }
+
+    &::after {
+        transform: rotate(-45deg);
+    }
+
+    &-xs {
+        width: 8px;
+        height: 8px;
+        min-height: 8px;
+        max-height: 8px;
+        min-width: 8px;
+        max-width: 8px;
+    }
+
+    &-xs::before,
+    &-xs::after {
+        width: 10px;
+        margin-left: -5px;
+    }
+
+    &:hover::before,
+    &:hover::after {
+        background-color: $gray-70;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+        box-shadow: none;
+    }
+}

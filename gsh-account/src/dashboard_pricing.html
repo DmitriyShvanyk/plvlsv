@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <title>Global Synergy Holding || Dashboard</title>
+  <meta charset="utf-8">
+  <meta name="keywords" content='Global Synergy Holding || Dashboard'>
+  <meta name="description" content='Global Synergy Holding || Dashboard'>
+  <meta name="format-detection" content="telephone=no">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <!-- favicon -->
+  <link rel="shortcut icon" href="./favicon.ico">
+
+  <!-- preload style -->
+  <link rel="preload" href="<%= htmlWebpackPlugin.files.chunks.dashboard_pricing.css %>" as="style">
+  <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.chunks.dashboard_pricing.css %>">
+</head>
+
+<body class="root scrollbar">
+
+  <!--sidebar.begin-->
+  <aside class="sidebar">
+    <div class="sidebar__head">
+      <button class="sidebar__close d-lg-none d-block"></button>
+      <a href="/" class="logo sidebar__logo">
+        <svg class="logo__icon sidebar__logo-icon" width="29" height="32">
+          <use xlink:href="#logo"></use>
+        </svg>
+        <span class="logo__text sidebar__logo-text">Global Synergy<br> Holding</span>
+      </a>
+      <button class="sidebar__toggler">
+        <svg class="sidebar__toggler-icon" width="13" height="12">
+          <use xlink:href="#i-double-arrow"></use>
+        </svg>
+      </button>
+    </div>
+    <div class="sidebar__body scrollbar">
+      <div class="sidebar__item">
+        <nav class="sidebar__menu">
+          <a href="dashboard.html" class="sidebar__link">
+            <span class="sidebar__link-icon">
+              <svg class="sidebar__link-icon" width="24" height="24">
+                <use xlink:href="#i-dashboard"></use>
+              </svg>
+            </span>
+            <span class="sidebar__link-text">Dashboard</span>
+          </a>
+          <a href="structure.html" class="sidebar__link">
+            <span class="sidebar__link-icon">
+              <svg class="sidebar__link-icon" width="24" height="24">
+                <use xlink:href="#i-network"></use>
+              </svg>
+            </span>
+            <span class="sidebar__link-text">Marketing</span>
+          </a>
+          <a href="dashboard_pricing.html" class="sidebar__link sidebar__link--active">
+            <span class="sidebar__link-icon">
+              <svg class="sidebar__link-icon" width="24" height="24">
+                <use xlink:href="#i-package"></use>
+              </svg>
+            </span>
+            <span class="sidebar__link-text">Package</span>
+          </a>
+          <a href="dashboard_gift_codes.html" class="sidebar__link">
+            <span class="sidebar__link-icon">
+              <svg class="sidebar__link-icon" width="24" height="24">
+                <use xlink:href="#i-gift"></use>
+              </svg>
+            </span>
+            <span class="sidebar__link-text">
+              Gift Codes
+            </span>
+          </a>
+          <a href="dashboard_earning.html" class="sidebar__link">
+            <span class="sidebar__link-icon">
+              <svg class="sidebar__link-icon sidebar__link-icon--wallet" width="24" height="24">
+                <use xlink:href="#i-payout"></use>
+              </svg>
+            </span>
+            <span class="sidebar__link-text">Earning and Payouts</span>
+          </a>
+          <a href="dashboard_invites.html" class="sidebar__link">
+            <span class="sidebar__link-icon">
+              <svg class="sidebar__link-icon" width="24" height="24">
+                <use xlink:href="#i-invites"></use>
+              </svg>
+            </span>
+            <span class="sidebar__link-text">Invites</span>
+          </a>
+          <a href="dashboard_downlines.html" class="sidebar__link">
+            <span class="sidebar__link-icon">
+              <svg class="sidebar__link-icon" width="24" height="24">
+                <use xlink:href="#i-downlines"></use>
+              </svg>
+            </span>
+            <span class="sidebar__link-text">Downlines</span>
+          </a>
+          <a href="dashboard_invites_user.html" class="sidebar__link">
+            <span class="sidebar__link-icon">
+              <svg class="sidebar__link-icon" width="24" height="24">
+                <use xlink:href="#i-users"></use>
+              </svg>
+            </span>
+            <span class="sidebar__link-text">Invited Users</span>
+          </a>
+        </nav>
+      </div>
+      <div class="sidebar__item">
+        <nav class="sidebar__menu">
+          <a href="dashboard_settings.html" class="sidebar__link">
+            <span class="sidebar__link-icon">
+              <svg class="sidebar__link-icon" width="24" height="24">
+                <use xlink:href="#i-settings"></use>
+              </svg>
+            </span>
+            <span class="sidebar__link-text">Settings</span>
+          </a>
+        </nav>
+      </div>
+      <div class="sidebar__item mt-0">
+        <div class="sidebar__btns d-flex flex-column d-lg-none">
+          <button class="btn sidebar__btn" data-toggle="modal" data-target="#modalDeposit">
+            Deposit
+          </button>
+          <button class="btn sidebar__btn" data-toggle="modal" data-target="#modalWithdrawal">
+            Withdrawal
+          </button>
+        </div>        
+      </div>
+    </div>
+    <div class="sidebar__foot">
+      <div class="sponlink">
+        <h2 class="sponlink__title">Ваша спонсорская ссылка</h2>         
+        <div class="form-control-container">
+          <input type="url" class="form-control form-control-with-icon-right sponlink__form-control" name="sponsoredLink" 
+          value="https://platform.gsh.one/link1234567890" title="https://platform.gsh.one/link1234567890" readonly>
+          <svg class="form-control-icon" width="24" height="24">
+            <use xlink:href="#i-copy"></use>
+          </svg>
+        </div>
+      </div> 
+      <div class="dropdown sidebar__lang">
+        <button class="btn btn-link dropdown-toggle sidebar__lang-toggle" type="button" id="dropdownLang"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          En<span class="sidebar__lang-span">glish</span>
+          <span class="dropdown__icon"></span>
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownLang">
+          <div class="dropdown-inners">
+            <a class="dropdown-item dropdown-item-active" href="#">En<span class="sidebar__lang-span">glish</span></a>
+            <a class="dropdown-item" href="#">Ru<span class="sidebar__lang-span">ssian</span></a>
+          </div>
+        </div>
+      </div>
+      <div class="sidebar__info">
+        <a href="#" class="sidebar__info-link">Terms</a>
+        <a href="#" class="sidebar__info-link">About</a>
+        <a href="support.html" class="sidebar__info-link">Support</a>
+      </div>
+      <div class="sidebar__address mt-3">
+        Global Synergy FZ LLE<br>
+        Office 1309, Floor 13,<br>
+        Creative Tower, Fujairah,<br>
+        the United Arab Emirates
+      </div>
+    </div>
+  </aside>
+  <!--sidebar.end-->
+
+  <!--content.begin-->
+  <div class="content">
+
+    <!--navbar.begin-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar-gsh">
+      <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icons">
+          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon"></span>
+        </span>
+      </button>
+
+      <a href="/" class="logo navbar__logo d-lg-none d-sm-flex">
+        <svg class="logo__icon navbar__logo-icon" width="29" height="32">
+          <use xlink:href="#logo"></use>
+        </svg>
+        <span class="logo__text d-none">Global Synergy<br> Holding</span>
+      </a>
+
+      <div class="navbar__inner d-lg-flex d-none">
+        <button class="btn btn-warning navbar__btn" data-toggle="modal" data-target="#modalDeposit">Deposit</button>
+        <button class="btn btn-light navbar__btn mr-4" data-toggle="modal"
+          data-target="#modalWithdrawal">Withdrawal</button>
+      </div>
+
+      <ul class="navbar-nav">
+        <li class="nav-item dropdown navbar__dropdown">
+          <a class="nav-link navbar__wallet" href="#">
+            <svg class="navbar__wallet-icon" width="24" height="24">
+              <use xlink:href="#i-union"></use>
+            </svg>
+            <span class="badge navbar__badge navbar__badge--success">0.01 Units</span>
+          </a>
+        </li>
+        <li class="nav-item dropdown navbar__dropdown navbar__dropdown--notification">
+          <a class="nav-link dropdown-toggle navbar__notification" href="#" id="dropdownNotification"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <svg class="navbar__notification-icon" width="24" height="24">
+              <use xlink:href="#i-mail"></use>
+            </svg>
+            <span class="badge navbar__badge">12</span>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right dropdown-menu-w240 animate slideIn"
+            aria-labelledby="dropdownNotification">
+            <div class="dropdown-inners">
+              <div class="dropdown-inner">
+                <button class="btn btn-warning btn-sm mb-1 pl-2 pr-2 w-100">
+                  <svg class="btn-icon" width="24" height="24">
+                    <use xlink:href="#i-mail"></use>
+                  </svg>
+                  <span class="btn-text">Send Message</span>
+                </button>                
+              </div>
+              <div class="dropdown-inner">
+                <div class="users users--notification">
+                  <div class="users__items">
+                    <a class="users__item" href="#">
+                      <span class="symbol-user symbol-user--purple users__symbol-user">JJ</span>           
+                      <div class="users__name mr-2 pr-0">Jacob Jones</div>
+                      <div class="users__text">Velit potenti a porta.</div>
+                    </a>
+                    <a class="users__item" href="#">
+                      <span class="symbol-user symbol-user--red users__symbol-user">AF</span>
+                      <div class="users__name mr-2 pr-0">Albert Flores</div>
+                      <div class="users__text">Posuere porta viverra.</div>
+                    </a>
+                    <a class="users__item" href="#">
+                      <span class="symbol-user symbol-user--cyan users__symbol-user">SN</span>
+                      <div class="users__name mr-2 pr-0">Savannah Nguyen</div>
+                      <div class="users__text">Scelerisque venenatis.</div>
+                    </a>
+                  </div>
+                  <div class="users__foot">
+                    <a class="dropdown-item users__link-all" href="#">
+                      <span class="dropdown-item-icon">
+                        <svg class="dropdown-item-svg" width="24" height="24">
+                          <use xlink:href="#i-mail"></use>
+                        </svg>
+                      </span>
+                      <span class="dropdown-item-text">All Messages</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item dropdown navbar__dropdown">
+          <a class="nav-link dropdown-toggle flex-xl-row flex-row-reverse" href="#" id="dropdownProfile"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="navbar__text d-xl-inline-flex d-none">
+              Hello, <span class="navbar__name">Alex Cooper</span>
+            </span>
+            <span class="dropdown__icon navbar__dropdown-icon"></span>
+            <span class="symbol-user navbar__symbol-user">AC</span>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right dropdown-menu-w240 animate slideIn"
+            aria-labelledby="dropdownProfile">
+            <div class="dropdown-inners">
+              <div class="dropdown-inner">
+                <a class="dropdown-item" href="#">
+                  <span class="dropdown-item-icon">
+                    <svg class="sidebar__link-icon" width="24" height="24">
+                      <use xlink:href="#i-account"></use>
+                    </svg>
+                  </span>
+                  <span class="dropdown-item-text">My Account</span>
+                </a>
+                <a class="dropdown-item" href="#">
+                  <span class="dropdown-item-icon">
+                    <svg class="sidebar__link-icon" width="24" height="24">
+                      <use xlink:href="#i-exit"></use>
+                    </svg>
+                  </span>
+                  <span class="dropdown-item-text">Log Out</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <!--navbar.end-->
+
+    <!--main.begin-->
+    <section class="main">
+      <div class="main__item">
+
+        <!--breadcrumb.begin-->
+        <nav class="breadcrumb" aria-label="breadcrumb">
+          <div class="container breadcrumb__container">
+            <ol class="breadcrumb__list">
+              <li class="breadcrumb__item">
+                <a href="dashboard.html" class="breadcrumb__link">Home</a>
+              </li>
+              <li class="breadcrumb__item breadcrumb__item--active" aria-current="page">Package</li>
+            </ol>
+          </div>
+        </nav>
+        <!--breadcrumb.end-->
+
+        <!--pricing.begin-->
+        <div class="pricing">
+
+          <!--heading.begin-->
+          <h1 class="title">Package</h1>
+          <!--heading.end-->
+
+          <!--packs.begin-->
+          <div class="packs">
+            <div class="row align-items-end">
+              <div class="col-lg-4 col-md-4">
+                <div class="packs__item packs__item--gold">
+                  <div class="packs__head">Gold</div>
+                  <div class="packs__body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dictumst vitae morbi at faucibus id
+                      lorem rhoncus. Imperdiet dolor ut mattis egestas. Nunc proin hac mi quis lorem quis. Id sed
+                      commodo sit eu, morbi vulputate suscipit. Bibendum scelerisque facilisi gravida eu. Nibh.</p>
+                    <ul class="list">
+                      <li class="list__item">Cum.</li>
+                      <li class="list__item">Varius.</li>
+                      <li class="list__item">Dui nibh aliquet id nunc etiam fames nisi.</li>
+                      <li class="list__item">Auctor eu hac.</li>
+                      <li class="list__item">Neque et.</li>
+                      <li class="list__item">Et.</li>
+                      <li class="list__item">Eu turpis.</li>
+                      <li class="list__item">Massa.</li>
+                      <li class="list__item">Dui nibh aliquet id nunc etiam fames nisi.</li>
+                      <li class="list__item">Id egestas et quis iaculis.</li>
+                      <li class="list__item">Morbi vel sit euismod placerat.</li>
+                    </ul>
+                  </div>
+                  <div class="packs__foot">
+                    <button class="btn btn-warning btn-sm w-100" data-toggle="modal"
+                      data-target="#modalPayment">Select</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-4">
+                <div class="packs__item packs__item--platinum">
+                  <div class="packs__head">Platinum</div>
+                  <div class="packs__body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dictumst vitae morbi at faucibus id
+                      lorem rhoncus. Imperdiet dolor ut mattis egestas. Nunc proin hac mi quis lorem quis. Id sed
+                      commodo sit eu, morbi vulputate suscipit. Bibendum scelerisque facilisi gravida eu. Nibh.</p>
+                    <ul class="list">
+                      <li class="list__item"><strong>Et faucibus a nunc at est lectus elementum.</strong></li>
+                      <li class="list__item">Morbi est amet varius aliquet sollicitudin.</li>
+                      <li class="list__item">Key partners and geography</li>
+                      <li class="list__item">Partner geography</li>
+                      <li class="list__item">Statistics on command</li>
+                      <li class="list__item">Welcome message for newcomers</li>
+                      <li class="list__item">Contacts</li>
+                      <li class="list__item">Ordering warm contacts</li>
+                      <li class="list__item">Business Assistant (telegram, viber, facebook messenger) with automatic
+                        reminders of objectives, tasks, events</li>
+                      <li class="list__item">Tasks</li>
+                      <li class="list__item">Integration with Google Calendar</li>
+                      <li class="list__item">Ribbon of activity</li>
+                      <li class="list__item">Landings (Online business card, Automatic funnels for Business and
+                        Goods)</li>
+                      <li class="list__item">Affiliate Program: 20% of invitees</li>
+                      <li class="list__item">Up to 1000 active partners in the team</li>
+                    </ul>
+                  </div>
+                  <div class="packs__foot">
+                    <button class="btn btn-warning btn-sm w-100" data-toggle="modal"
+                      data-target="#modalPayment">Select</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-4">
+                <div class="packs__item packs__item--silver">
+                  <div class="packs__head">Silver</div>
+                  <div class="packs__body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dictumst vitae morbi at faucibus id
+                      lorem rhoncus. Imperdiet dolor ut mattis egestas. Nunc proin hac mi quis lorem quis. Id sed
+                      commodo sit eu, morbi vulputate suscipit. Bibendum scelerisque facilisi gravida eu. Nibh.</p>
+                    <ul class="list">
+                      <li class="list__item"><strong>Feugiat fames nisl est.</strong></li>
+                      <li class="list__item"><strong>Feugiat fames nisl est.</strong></li>
+                      <li class="list__item">Up to 10,000 active teammates</li>
+                      <li class="list__item">Send out on command</li>
+                      <li class="list__item">Create events for the team</li>
+                    </ul>
+                  </div>
+                  <div class="packs__foot">
+                    <button class="btn btn-warning btn-sm w-100" data-toggle="modal"
+                      data-target="#modalPayment">Select</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--packs.end-->
+
+        </div>
+        <!--pricing.end-->
+
+      </div>
+    </section>
+    <!--main.end-->
+
+  </div>
+  <!--content.end-->
+
+  <!--modal deposit.begin-->
+  <div class="modal fade modal-deposit" id="modalDeposit" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-xs" role="document">
+      <div class="modal-content">
+        <button type="button" class="close modal-close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="modal-header pb-0">
+          <h2 class="modal-title">Deposit</h2>
+        </div>
+        <div class="modal-body">
+          <form class="form" action="#" method="POST">
+            <div class="form-item mb-3">
+              <h3 class="modal-subtitle mb-2">Amount</h3>
+              <div class="form-control-container modal-deposit__amount-control-container">
+                <input type="number" class="form-control form-control-with-icon" name="amountDeposit" placeholder="0.00"
+                  required>
+                <div class="select">
+                  <select class="form-control select__control" name="amountDepositCurr">
+                    <option value="TKN" selected>TKN</option>
+                    <option value="BTC">BTC</option>
+                    <option value="USD">USD</option>
+                  </select>
+                  <span class="select__icon"></span>
+                </div>
+                <svg class="form-control-icon" width="24" height="24">
+                  <use xlink:href="#i-visa"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="form-item mb-3">
+              <h3 class="modal-subtitle mb-2">Choose youre payment method</h3>
+              <div class="checkbox-custom">
+                <label class="checkbox-custom__label">
+                  <input type="radio" class="checkbox-custom__control sr-only" name="paymentMethod" checked>
+                  <span class="checkbox-custom__block">
+                    <span class="checkbox-custom__pict">
+                      <svg class="checkbox-custom__icon" width="24" height="24">
+                        <use xlink:href="#i-btc"></use>
+                      </svg>
+                    </span>
+                    <span class="checkbox-custom__text">BTC</span>
+                  </span>
+                </label>
+                <label class="checkbox-custom__label">
+                  <input type="radio" class="checkbox-custom__control sr-only" name="paymentMethod">
+                  <span class="checkbox-custom__block">
+                    <span class="checkbox-custom__pict">
+                      <svg class="checkbox-custom__icon" width="24" height="24">
+                        <use xlink:href="#i-usd"></use>
+                      </svg>
+                    </span>
+                    <span class="checkbox-custom__text">USD</span>
+                  </span>
+                </label>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-warning btn-sm btn-w160 mt-2" data-toggle="modal"
+              data-target="#modalPaymentBTC">Pay</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--modal deposit.end-->
+
+  <!--modal payment btc.begin-->
+  <div class="modal fade" id="modalPaymentBTC" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <button type="button" class="close modal-close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="modal-header pb-0">
+          <h2 class="modal-title">BTC payment</h2>
+        </div>
+        <div class="modal-body">
+          <form class="form" action="#" method="POST">
+            <p class="text-lead mb-4">You pay <strong>0.032145</strong> BTC</p>
+            <div class="mb-3 text-center">
+              <img class="img-fluid" src="<%=require('./images/qr.png')%>" loading="lazy" alt="">
+            </div>
+            <div class="form-item mb-3">
+              <h3 class="modal-subtitle mb-2">Amount</h3>
+              <div class="form-control-container">
+                <input type="text" class="form-control form-control-with-icon-right" name="amountDeposit"
+                  placeholder="bc1qrzn039mqsdhapuh5rh8glrkdq5x0xz" required>
+                <svg class="form-control-icon" width="24" height="24">
+                  <use xlink:href="#i-copy"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="text-center">
+              <button type="submit" class="btn btn-warning btn-sm btn-w160 mt-2">Close</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--modal payment btc.end-->
+
+  <!--modal withdrawal.begin-->
+  <div class="modal fade modal-withdrawal" id="modalWithdrawal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-xs" role="document">
+      <div class="modal-content">
+        <button type="button" class="close modal-close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="modal-header pb-0">
+          <h2 class="modal-title">Withdraw</h2>
+        </div>
+        <div class="modal-body">
+          <form class="form" action="#" method="POST">
+            <div class="form-item mb-3">
+              <h3 class="modal-subtitle mb-2">Amount</h3>
+              <div class="form-control-container modal-withdrawal__amount-control-container">
+                <input type="number" class="form-control" name="amountWithdrawal" placeholder="0.00" required>
+                <div class="select">
+                  <select class="form-control select__control" name="amountWithdrawalCurr">
+                    <option value="TKN" selected>TKN</option>
+                    <option value="BTC">BTC</option>
+                    <option value="USD">USD</option>
+                  </select>
+                  <span class="select__icon"></span>
+                </div>
+              </div>
+            </div>
+            <div class="form-item mb-3">
+              <h3 class="modal-subtitle mb-2">Account number</h3>
+              <div class="form-control-container">
+                <select class="form-control form-control-with-icon select__control select__control--right"
+                  name="accountNumberWithdrawal">
+                  <option value="1440 XXXX XXXX 6545" selected>1440 XXXX XXXX 6545</option>
+                  <option value="1440 XXXX XXXX 6545">1440 XXXX XXXX 6545</option>
+                  <option value="1440 XXXX XXXX 6545">1440 XXXX XXXX 6545</option>
+                </select>
+                <span class="select__icon"></span>
+                <svg class="form-control-icon" width="24" height="24">
+                  <use xlink:href="#i-visa"></use>
+                </svg>
+              </div>
+            </div>
+
+            <div class="text-center">
+              <button type="submit" class="btn btn-warning btn-sm btn-w160 mt-2">Withdraw</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--modal withdrawal.end-->
+
+  <!--modal payment.begin-->
+  <div class="modal fade" id="modalPayment" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <button type="button" class="close modal-close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="modal-header pb-0">
+          <h2 class="modal-title">Payment</h2>
+        </div>
+        <div class="modal-body">
+          <form class="form" action="#" method="POST">
+            <div class="form-item mb-3">
+              <h3 class="modal-subtitle mb-2">Choose youre payment method</h3>
+              <div class="checkbox-custom">
+                <label class="checkbox-custom__label">
+                  <input type="radio" class="checkbox-custom__control sr-only" name="paymentMethodPack" value="BTC"
+                    checked>
+                  <span class="checkbox-custom__block">
+                    <span class="checkbox-custom__pict">
+                      <svg class="checkbox-custom__icon" width="24" height="24">
+                        <use xlink:href="#i-btc"></use>
+                      </svg>
+                    </span>
+                    <span class="checkbox-custom__text">BTC</span>
+                  </span>
+                </label>
+                <label class="checkbox-custom__label">
+                  <input type="radio" class="checkbox-custom__control sr-only" name="paymentMethodPack" value="USD">
+                  <span class="checkbox-custom__block">
+                    <span class="checkbox-custom__pict">
+                      <svg class="checkbox-custom__icon" width="24" height="24">
+                        <use xlink:href="#i-usd"></use>
+                      </svg>
+                    </span>
+                    <span class="checkbox-custom__text">USD</span>
+                  </span>
+                </label>
+                <label class="checkbox-custom__label">
+                  <input type="radio" class="checkbox-custom__control sr-only" name="paymentMethodPack"
+                    value="Gift Card">
+                  <span class="checkbox-custom__block">
+                    <span class="checkbox-custom__pict">
+                      <svg class="checkbox-custom__icon" width="24" height="24">
+                        <use xlink:href="#i-gift-2"></use>
+                      </svg>
+                    </span>
+                    <span class="checkbox-custom__text">Gift Card</span>
+                  </span>
+                </label>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-warning btn-sm btn-w160 mt-2" data-toggle="modal"
+              data-target="#modalGiftCard" data-dismiss="modal">
+              Select
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--modal deposit.end-->
+
+  <!--modal gift card.begin-->
+  <div class="modal fade" id="modalGiftCard" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <button type="button" class="close modal-close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="modal-header pb-0">
+          <h2 class="modal-title">Gift card</h2>
+        </div>
+        <div class="modal-body">
+          <form class="form" action="#" method="POST">
+            <div class="row mb-3">
+              <div class="col-md-10">
+                <h3 class="modal-subtitle mb-2">Enter the code</h3>
+                <div class="form-control-container">
+                  <input type="text" class="form-control form-control-with-icon-right" name="codeGiftCard"
+                    placeholder="Enter the code" value="sds54asd455" required>
+                  <svg class="form-control-icon" width="24" height="24">
+                    <use xlink:href="#i-success"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-warning btn-sm btn-w160 mt-2"  data-toggle="modal"
+            data-target="#modalGiftCardSuccess" data-dismiss="modal">
+              Redeem
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--modal gift card.end-->
+
+  <!--modal gift card success.begin-->
+  <div class="modal fade" id="modalGiftCardSuccess" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <button type="button" class="close modal-close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="modal-header text-center flex-column align-items-center pb-0">
+          <div class="modal-circle-check">
+            <svg class="modal-circle-check-icon" width="24" height="24">
+              <use xlink:href="#i-check"></use>
+            </svg>
+          </div>
+          <h2 class="modal-title">Success!</h2>
+        </div>
+        <div class="modal-body text-center">
+          <h3 class="modal-subtitle mb-4">Your package is upgraded!</h3>
+          <a href="dashboard.html" class="btn btn-warning btn-sm btn-w160 mt-2">
+            To dashboard
+          </a>          
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--modal gift card success.end-->
+
+  <!--svg-sprites.begin-->
+  <svg class="sr-only" version="1.1" height="0" xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+    <symbol id="logo" viewBox="0 0 56 64">
+      <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M28.5002 0.133385C28.1904 -0.0444614 27.8096 -0.0444619 27.4998 0.133385L0.504457 15.6335C0.192417 15.8126 0 16.145 0 16.5049V47.4951C0 47.855 0.192416 48.1874 0.504456 48.3665L27.4998 63.8666C27.8096 64.0445 28.1904 64.0445 28.5002 63.8666L55.4955 48.3665C55.8076 48.1874 56 47.855 56 47.4951V16.5049C56 16.145 55.8076 15.8126 55.4955 15.6335L28.5002 0.133385ZM4.8115 15.8796C4.47685 16.072 4.47518 16.5543 4.80849 16.749L27.3872 29.9388C27.698 30.1203 28.0822 30.1217 28.3943 29.9424L40.5911 22.9342C40.9272 22.7411 40.9273 22.2561 40.5912 22.063L29.4342 15.6488L26.3452 17.4165L35.1242 22.4635L35.0607 22.4987L35.0769 22.5077L27.7665 26.5882L10.2062 16.3299L10.238 16.3117L10.2309 16.3077L27.8973 6.18877L48.6304 18.3004L51.7195 16.5327L28.3923 2.90575C28.0814 2.72414 27.6971 2.7228 27.385 2.90225L4.8115 15.8796ZM29.2136 33.5467L32.3026 31.779V43.9319L50.6162 33.4521V21.1729L53.9259 19.4052V47.2463L50.6162 49.014V37.2084L32.3026 47.6883V59.6202L28.9929 61.3879L29.2136 33.5467ZM2.82584 20.0564L5.16312 21.3938V21.3978L26.3452 33.5467V37.0821L5.16312 24.9332V33.3298L23.3646 43.7692L25.8154 45.084C26.1416 45.259 26.3452 45.5992 26.3452 45.9694V60.0787C26.3452 60.4648 25.9278 60.7066 25.593 60.5145L2.07407 47.0254V43.49L23.2561 55.6389V47.4633L2.57894 35.604C2.26667 35.4249 2.07407 35.0924 2.07407 34.7323V20.4924C2.07407 20.1065 2.49097 19.8647 2.82584 20.0564Z"
+        fill="#F79F1A" />
+    </symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24" fill="none">
+      <rect x="6" y="9" width="9" height="11" rx="1" stroke="currentColor" stroke-width="2" />
+      <path d="M9 8V7C9 6.44772 9.44772 6 10 6H17C17.5523 6 18 6.44772 18 7V16C18 16.5523 17.5523 17 17 17H15"
+        stroke="currentColor" stroke-width="2" />
+    </symbol>
+    <symbol id="i-union" viewBox="0 0 24 24" fill="none">
+      <path d="M12 20C16.3648 20 19.9132 16.5045 19.9984 12.1601L17.9979 12.1597C17.9133 15.3996 15.2603 18 12 18C8.68629 18 6 15.3137 6 12C6 8.68629 8.68629 6 12 6C12.0516 6 12.103 6.00065 12.1543 6.00195L12.1547 4.00147C12.1032 4.00049 12.0517 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20Z" fill="currentColor"/>
+      <path d="M17.9968 4L19.9961 5.9994L18.4722 7.52328L16.4728 5.52388L17.9968 4Z" fill="currentColor"/>
+      <path d="M10 11.8737V14H12.1241L18 8.12634L15.8759 6L10 11.8737Z" fill="currentColor"/>
+    </symbol>
+    <symbol id="i-double-arrow" viewBox="0 0 13 12" fill="none">
+      <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M8.707 5.99997L13 10.293L11.586 11.707L5.879 5.99997L11.586 0.292969L13 1.70697L8.707 5.99997ZM3.41403 5.99997L7.70703 10.293L6.29303 11.707L0.586033 5.99997L6.29303 0.292968L7.70703 1.70697L3.41403 5.99997Z"
+        fill="currentColor" />
+    </symbol>
+    <symbol id="i-dashboard" viewBox="0 0 24 24" fill="none">
+      <rect x="4.5" y="4.5" width="6" height="4" rx="0.5" stroke="currentColor" />
+      <rect x="4.5" y="11.5" width="6" height="8" rx="0.5" stroke="currentColor" />
+      <rect x="13.5" y="4.5" width="6" height="7" rx="0.5" stroke="currentColor" />
+      <rect x="13.5" y="14.5" width="6" height="5" rx="0.5" stroke="currentColor" />
+    </symbol>
+    <symbol id="i-token" viewBox="0 0 24 24" fill="none">
+      <rect x="3.5" y="3.5" width="17" height="17" rx="8.5" stroke="currentColor" />
+      <rect x="5.5" y="5.5" width="13" height="13" rx="6.5" stroke="currentColor" stroke-dasharray="2 2" />
+      <path
+        d="M8.16987 9.78868L12 7.57735L15.8301 9.78868V14.2113L12 16.4226L8.16987 14.2113V9.78868ZM11.85 16.5093C11.8501 16.5092 11.8502 16.5091 11.8503 16.5091L11.85 16.5093ZM12.1497 16.5091C12.1498 16.5091 12.1499 16.5092 12.15 16.5093L12.1497 16.5091Z"
+        stroke="currentColor" />
+    </symbol>
+    <symbol id="i-payout" viewBox="0 0 487.6 487.6" fill="none">
+      <g>
+        <path fill="currentColor" d="M460.3,216.55h-11.6v-69.7c0-28.5-23.2-51.6-51.6-51.6h-10.7l0.1-25.9c0-19.2-15.6-34.8-34.8-34.8H42.3
+        c-23.1,0-42,18.6-42.3,41.7c0,0.2,0,0.4,0,0.6v341.4c0,19.2,15.6,34.8,34.8,34.8h362.4c28.5,0,51.6-23.2,51.6-51.6v-69.8h11.6
+        c15,0,27.2-12.2,27.2-27.2v-60.7C487.5,228.75,475.3,216.55,460.3,216.55z M42.3,58.55h309.4c5.9,0,10.8,4.8,10.8,10.7l-0.1,26
+        H42.3c-10.1,0-18.3-8.2-18.3-18.3S32.2,58.55,42.3,58.55z M424.7,401.35c0,15.2-12.4,27.6-27.6,27.6H34.7
+        c-5.9,0-10.8-4.8-10.8-10.8v-303.1c5.6,2.7,11.8,4.2,18.4,4.2h354.8c15.2,0,27.6,12.4,27.6,27.6v69.7h-81.9
+        c-15,0-27.2,12.2-27.2,27.2v60.7c0,15,12.2,27.2,27.2,27.2h81.9V401.35z M463.5,304.45c0,1.8-1.4,3.2-3.2,3.2H342.9
+        c-1.8,0-3.2-1.4-3.2-3.2v-60.7c0-1.7,1.4-3.2,3.2-3.2h117.4c1.7,0,3.2,1.4,3.2,3.2L463.5,304.45L463.5,304.45z" />
+      </g>
+      <g>
+      </g>
+      <g>
+      </g>
+      <g>
+      </g>
+      <g>
+      </g>
+      <g>
+      </g>
+      <g>
+      </g>
+      <g>
+      </g>
+      <g>
+      </g>
+      <g>
+      </g>
+      <g>
+      </g>
+      <g>
+      </g>
+      <g>
+      </g>
+      <g>
+      </g>
+      <g>
+      </g>
+      <g>
+      </g>
+    </symbol>
+    <symbol id="i-package" viewBox="0 0 24 24" fill="none">
+      <rect x="-0.5" y="0.5" width="3" height="10" rx="0.5" transform="matrix(-1 0 0 1 13 5)" stroke="currentColor" />
+      <rect x="-0.5" y="0.5" width="3" height="11" rx="0.5" transform="matrix(-1 0 0 1 18 4)" stroke="currentColor" />
+      <rect x="5.5" y="7.5" width="3" height="8" rx="0.5" stroke="currentColor" />
+      <rect x="4.5" y="17.5" width="15" height="2" rx="0.5" stroke="currentColor" />
+    </symbol>
+    <symbol id="i-gift" viewBox="0 0 24 24" fill="none">
+      <rect x="-0.5" y="0.5" width="3" height="5" rx="0.5" transform="matrix(-1 0 0 1 13 6)" stroke="currentColor" />
+      <rect x="-0.5" y="0.5" width="3" height="3" rx="0.5" transform="matrix(-1 0 0 1 15 3)" stroke="currentColor" />
+      <rect x="-0.5" y="0.5" width="3" height="2" rx="0.5" transform="matrix(-1 0 0 1 11 4)" stroke="currentColor" />
+      <rect x="-0.5" y="0.5" width="3" height="5" rx="0.5" transform="matrix(-1 0 0 1 13 14)" stroke="currentColor" />
+      <rect x="-0.5" y="-0.5" width="3" height="15" rx="0.5" transform="matrix(1.19249e-08 -1 -1 -1.19249e-08 19 14)"
+        stroke="currentColor" />
+      <rect x="4.5" y="6.5" width="15" height="13" rx="0.5" stroke="currentColor" />
+    </symbol>
+    <symbol id="i-invites" viewBox="0 0 24 24" fill="none">
+      <rect x="-0.5" y="-0.5" width="17" height="17" rx="8.5" transform="matrix(1.19249e-08 -1 -1 -1.19249e-08 20 20)"
+        stroke="currentColor" />
+      <path
+        d="M10 10.4999H10.5V9.99994V6.99994C10.5 6.7238 10.7239 6.49994 11 6.49994L13 6.49994C13.2761 6.49994 13.5 6.7238 13.5 6.99994V9.99994V10.4999H14L17 10.4999C17.2761 10.4999 17.5 10.7238 17.5 10.9999V12.9999C17.5 13.2761 17.2761 13.4999 17 13.4999H14H13.5V13.9999L13.5 16.9999C13.5 17.2761 13.2761 17.4999 13 17.4999H11C10.7239 17.4999 10.5 17.2761 10.5 16.9999V13.9999V13.4999H10L7 13.4999C6.72386 13.4999 6.5 13.2761 6.5 12.9999L6.5 10.9999C6.5 10.7238 6.72386 10.4999 7 10.4999L10 10.4999Z"
+        stroke="currentColor" />
+    </symbol>
+    <symbol id="i-downlines" viewBox="0 0 24 24" fill="none">
+      <rect x="9.5" y="4.5" width="5" height="3" rx="0.5" stroke="currentColor" />
+      <rect x="10.5" y="16.5" width="3" height="3" rx="0.5" stroke="currentColor" />
+      <rect x="13.5" y="10.5" width="6" height="3" rx="0.5" stroke="currentColor" />
+      <rect x="4.5" y="16.5" width="3" height="3" rx="0.5" stroke="currentColor" />
+      <rect x="4.5" y="10.5" width="6" height="3" rx="0.5" stroke="currentColor" />
+      <rect x="16.5" y="16.5" width="3" height="3" rx="0.5" stroke="currentColor" />
+    </symbol>
+    <symbol id="i-users" viewBox="0 0 24 24" fill="none">
+      <rect x="8.5" y="4.5" width="7" height="7" rx="3.5" stroke="currentColor" />
+      <rect x="19.25" y="14.25" width="0.5" height="4.5" rx="0.25" stroke="currentColor" stroke-width="0.5" />
+      <rect x="21.75" y="16.25" width="0.5" height="4.5" rx="0.25" transform="rotate(90 21.75 16.25)"
+        stroke="currentColor" stroke-width="0.5" />
+      <rect x="15.5" y="12.5" width="8" height="8" rx="3.5" stroke="currentColor" />
+      <path
+        d="M15.5 16.9999C15.5 17.925 15.7794 18.785 16.2579 19.4999L4.57055 19.4999C5.05559 16.1079 7.97328 13.4999 11.4997 13.4999L12.4997 13.4999C13.7013 13.4999 14.831 13.8023 15.8182 14.3349C15.6128 14.8503 15.5 15.4124 15.5 15.9999V16.9999Z"
+        stroke="currentColor" />
+    </symbol>
+    <symbol id="i-settings" viewBox="0 0 24 24" fill="none">
+      <path
+        d="M18.7101 13.4999H18.3373L18.2309 13.8573C18.1023 14.2893 17.93 14.7025 17.7191 15.0918L17.5414 15.4198L17.8051 15.6836L18.7177 16.5961C18.9129 16.7914 18.9129 17.1079 18.7177 17.3032L17.3034 18.7174C17.1082 18.9127 16.7916 18.9127 16.5963 18.7174L15.6839 17.8049L15.4201 17.5412L15.0921 17.7189C14.7027 17.9299 14.2894 18.1023 13.8574 18.2308L13.5 18.3372V18.7101V19.9999C13.5 20.2761 13.2761 20.4999 13 20.4999H11C10.7239 20.4999 10.5 20.2761 10.5 19.9999V18.7101V18.3372L10.1426 18.2308C9.71062 18.1023 9.29737 17.9299 8.90798 17.7189L8.57999 17.5412L8.31621 17.805L7.40377 18.7174C7.2085 18.9127 6.89192 18.9127 6.69666 18.7174L5.28244 17.3032C5.08718 17.108 5.08718 16.7914 5.28244 16.5961L6.19491 15.6836L6.45869 15.4199L6.28096 15.0919C6.06998 14.7025 5.89767 14.2893 5.76911 13.8573L5.66275 13.4999H5.28988H4C3.72386 13.4999 3.5 13.2761 3.5 12.9999L3.5 10.9999C3.5 10.7238 3.72386 10.4999 4 10.4999H5.28988H5.66275L5.76911 10.1426C5.89769 9.71053 6.07003 9.29725 6.28105 8.90785L6.45879 8.57986L6.195 8.31607L5.28263 7.40371C5.08737 7.20844 5.08737 6.89186 5.28263 6.6966L6.69685 5.28238C6.89211 5.08712 7.20869 5.08712 7.40395 5.28238L8.31637 6.19481L8.58015 6.45858L8.90813 6.28086C9.29747 6.0699 9.71067 5.8976 10.1426 5.76904L10.5 5.66268V5.28982V3.99994C10.5 3.7238 10.7239 3.49994 11 3.49994L13 3.49994C13.2761 3.49994 13.5 3.7238 13.5 3.99994V5.28982V5.66268L13.8574 5.76904C14.2894 5.89761 14.7026 6.06992 15.0919 6.2809L15.4199 6.45863L15.6837 6.19485L16.5962 5.2824C16.7914 5.08714 17.108 5.08714 17.3033 5.2824L17.6568 4.92885L17.3033 5.2824L18.7175 6.69661C18.9127 6.89188 18.9127 7.20846 18.7175 7.40372L17.805 8.31615L17.5413 8.57993L17.719 8.90792C17.93 9.29731 18.1023 9.71056 18.2309 10.1426L18.3373 10.4999H18.7101H20C20.2761 10.4999 20.5 10.7238 20.5 10.9999V12.9999C20.5 13.2761 20.2761 13.4999 20 13.4999H18.7101ZM12 8.49994C10.067 8.49994 8.5 10.0669 8.5 11.9999C8.5 13.9329 10.067 15.4999 12 15.4999C13.933 15.4999 15.5 13.9329 15.5 11.9999C15.5 10.0669 13.933 8.49994 12 8.49994Z"
+        stroke="currentColor" />
+    </symbol>
+    <symbol id="i-account" viewBox="0 0 24 24" fill="none">
+      <rect x="8.5" y="4.5" width="7" height="7" rx="3.5" stroke="#374A58" />
+      <path
+        d="M12.4997 13.4999C16.3112 13.4999 19.1882 16.4537 19.4762 19.4999H4.57055C5.05559 16.1079 7.97328 13.4999 11.4997 13.4999L12.4997 13.4999Z"
+        stroke="#374A58" />
+    </symbol>
+    <symbol id="i-exit" viewBox="0 0 24 24" fill="none">
+      <path
+        d="M16.5 9V8.5C16.5 6.84315 15.1569 5.5 13.5 5.5H7.5C5.84315 5.5 4.5 6.84315 4.5 8.5V16.5C4.5 18.1569 5.84315 19.5 7.5 19.5H13.5C15.1569 19.5 16.5 18.1569 16.5 16.5V16"
+        stroke="currentColor" />
+      <path d="M10 12.5H22" stroke="currentColor" />
+      <path d="M19.5 9.5L22 12.5L19.5 15.5" stroke="currentColor" />
+    </symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24" fill="none">
+      <path d="M10 17C10 17 10.2857 20 12 20C13.7143 20 14 17 14 17" stroke="currentColor" />
+      <path d="M13 6C13 6 12.8571 4 12 4C11.1429 4 11 6 11 6" stroke="currentColor" />
+      <path
+        d="M7.27273 11.8235C7.27273 7.61765 8.84689 6 12 6C15.1531 6 16.7273 7.61765 16.7273 11.8235C16.7273 16.0294 20 17 20 17L4 17C4 17 7.27273 16.0294 7.27273 11.8235Z"
+        stroke="currentColor" />
+    </symbol>
+    <symbol id="i-visa" viewBox="0 0 24 24" fill="none">
+      <path
+        d="M16.539 9.186C16.217 9.064 15.713 8.935 15.088 8.935C13.488 8.935 12.358 9.741 12.35 10.898C12.34 11.748 13.153 12.227 13.768 12.511C14.399 12.803 14.61 12.987 14.608 13.248C14.604 13.645 14.104 13.825 13.639 13.825C13 13.825 12.651 13.736 12.114 13.513L11.915 13.42L11.688 14.752C12.077 14.914 12.778 15.053 13.502 15.065C15.203 15.065 16.315 14.264 16.328 13.033C16.342 12.354 15.902 11.841 14.976 11.417C14.413 11.142 14.064 10.958 14.064 10.679C14.064 10.432 14.363 10.168 14.988 10.168C15.527 10.16 15.902 10.276 16.201 10.397L16.351 10.464L16.578 9.177L16.539 9.186ZM20.691 9.043H19.441C19.052 9.043 18.759 9.15 18.589 9.536L16.185 14.982H17.886L18.226 14.089L20.302 14.091C20.351 14.3 20.501 14.982 20.501 14.982H22.001L20.691 9.043ZM10.049 8.993H11.67L10.656 14.935H9.03705L10.049 8.991V8.993ZM5.93405 12.268L6.10205 13.093L7.68605 9.043H9.40305L6.85205 14.974H5.13905L3.73905 9.952C3.70905 9.865 3.67405 9.807 3.59005 9.753C3.11505 9.506 2.58605 9.305 1.99805 9.164L2.02005 9.039H4.62905C4.98305 9.053 5.26805 9.164 5.36305 9.542L5.93305 12.271V12.268H5.93405ZM18.691 12.874L19.337 11.212C19.329 11.23 19.47 10.869 19.552 10.646L19.663 11.159L20.038 12.873H18.69V12.874H18.691Z"
+        fill="currentColor" />
+    </symbol>
+    <symbol id="i-btc" viewBox="0 0 24 24" fill="none">
+      <path
+        d="M11.9528 8.819L11.4058 11.009C12.0248 11.163 13.9348 11.793 14.2438 10.553C14.5658 9.262 12.5708 8.974 11.9528 8.819ZM11.1308 12.115L10.5278 14.53C11.2708 14.715 13.5648 15.451 13.9038 14.089C14.2588 12.667 11.8748 12.3 11.1308 12.115Z"
+        fill="currentColor" />
+      <path
+        d="M14.4208 2.29899C9.0638 0.963986 3.6408 4.22399 2.3058 9.58099C0.969798 14.936 4.2298 20.361 9.5828 21.697C14.9398 23.032 20.3658 19.773 21.6998 14.416C23.0358 9.05999 19.7758 3.63499 14.4208 2.29899ZM16.4118 10.574C16.2668 11.548 15.7258 12.019 15.0098 12.185C15.9948 12.697 16.4948 13.483 16.0188 14.846C15.4268 16.537 14.0208 16.68 12.1488 16.326L11.6948 18.146L10.5988 17.873L11.0458 16.079C10.7628 16.008 10.4718 15.933 10.1708 15.851L9.7218 17.655L8.6268 17.38L9.0808 15.557C8.8238 15.491 8.5638 15.421 8.2988 15.355L6.8698 15L7.4158 13.744C7.4158 13.744 8.2238 13.959 8.2128 13.943C8.5238 14.02 8.6608 13.818 8.7148 13.682L9.4338 10.807C9.4738 10.817 9.5128 10.827 9.5488 10.836C9.5048 10.818 9.4658 10.807 9.4348 10.799L9.9468 8.74599C9.9598 8.51199 9.8808 8.21799 9.4358 8.10699C9.4538 8.09599 8.6388 7.90899 8.6388 7.90899L8.9298 6.73699L10.4438 7.11499L10.4428 7.11999C10.6698 7.17699 10.9038 7.23099 11.1428 7.28499L11.5918 5.48299L12.6888 5.75599L12.2488 7.52199C12.5428 7.58899 12.8398 7.65699 13.1278 7.72899L13.5658 5.97399L14.6628 6.24699L14.2138 8.04899C15.5978 8.52799 16.6098 9.24399 16.4118 10.574Z"
+        fill="currentColor" />
+    </symbol>
+    <symbol id="i-usd" viewBox="0 0 24 24" fill="none">
+      <path
+        d="M12 2C6.486 2 2 6.486 2 12C2 17.514 6.486 22 12 22C17.514 22 22 17.514 22 12C22 6.486 17.514 2 12 2ZM13 16.915V18H11V16.92C8.661 16.553 8 14.918 8 14H10C10.011 14.143 10.159 15 12 15C13.38 15 14 14.415 14 14C14 13.676 14 13 12 13C8.52 13 8 11.12 8 10C8 8.712 9.029 7.416 11 7.085V6.012H13V7.121C14.734 7.531 15.4 8.974 15.4 10H14.4L13.4 10.018C13.386 9.638 13.185 9 12 9C10.701 9 10 9.516 10 10C10 10.374 10 11 12 11C15.48 11 16 12.88 16 14C16 15.288 14.971 16.584 13 16.915Z"
+        fill="currentColor" />
+    </symbol>
+    <symbol id="i-gift-2" viewBox="0 0 24 24" fill="none">
+      <path
+        d="M5 12H4V20C4 21.104 4.896 22 6 22H11V12H6H5ZM18 12H13V22H18C19.104 22 20 21.104 20 20V12H19H18ZM18.791 7C18.922 6.589 19 6.096 19 5.5C19 3.57 17.43 2 15.5 2C13.878 2 12.795 3.482 12.096 5.085C11.407 3.57 10.269 2 8.5 2C6.57 2 5 3.57 5 5.5C5 6.096 5.079 6.589 5.209 7H2V11H11V9H12H13V9.091V11H22V7H18.791ZM7 5.5C7 4.673 7.673 4 8.5 4C9.388 4 10.214 5.525 10.698 7H8C7.626 7 7 7 7 5.5ZM15.5 4C16.327 4 17 4.673 17 5.5C17 7 16.374 7 16 7H13.523C14.033 5.424 14.774 4 15.5 4Z"
+        fill="currentColor" />
+    </symbol>
+    <symbol id="i-success" viewBox="0 0 24 24" fill="none">
+      <path
+        d="M12 3C7.0374 3 3 7.0374 3 12C3 16.9626 7.0374 21 12 21C16.9626 21 21 16.9626 21 12C21 7.0374 16.9626 3 12 3ZM12 19.2C8.0301 19.2 4.8 15.9699 4.8 12C4.8 8.0301 8.0301 4.8 12 4.8C15.9699 4.8 19.2 8.0301 19.2 12C19.2 15.9699 15.9699 19.2 12 19.2Z"
+        fill="#428D57" />
+      <path d="M11.2056 13.5638L9.21969 11.5853L8 12.806L11.2073 16L17 10.219L15.7786 9L11.2056 13.5638Z"
+        fill="#428D57" />
+    </symbol>
+    <symbol id="i-check" viewBox="0 0 15 12" fill="none">
+      <path
+        d="M4.99997 8.58603L1.70697 5.29303L0.292969 6.70703L4.99997 11.414L14.707 1.70703L13.293 0.29303L4.99997 8.58603Z"
+        fill="currentColor" />
+    </symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24" fill="none">
+      <rect x="3.5" y="5.5" width="17" height="13" rx="0.5" stroke="currentColor" />
+      <path d="M19.8773 5.50009L12 14.2526L4.12269 5.50001L19.8773 5.50009Z" stroke="currentColor" />
+      <path
+        d="M7.87163 14.3344L9.99581 11.9979L11.6262 13.8322L11.9999 14.2526L12.3737 13.8322L14.0042 11.9979L16.1283 14.3345L16.13 14.3363L19.8773 18.5L4.12268 18.4999L7.86995 14.3363L7.87163 14.3344Z"
+        stroke="currentColor" />
+    </symbol>
+  </svg>
+  <!--svg-sprites.end-->
+
+  <!--scripts.begin-->
+  <script defer src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
+  <script defer src="<%= htmlWebpackPlugin.files.chunks.dashboard_pricing.entry %>"></script>
+  <!--scripts.end-->
+
+</body>
+
+</html>

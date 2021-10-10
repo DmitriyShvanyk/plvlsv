@@ -1,0 +1,59 @@
+.contacts-cards {
+
+    &__items{
+        max-width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+
+    &__item,
+    &__block {
+        background: $bg-brand-gradient;
+        box-shadow: $shadow-brand;
+        border-radius: 8px;
+    }
+
+    &__item {
+        padding: 16px 16px 24px;
+        margin-bottom: 24px;
+    }
+
+    &__block {
+        position: relative;
+        padding: 8px 16px 24px;
+
+        .users__item{
+            &:hover{
+                opacity: 1;
+            }
+        }
+
+        .badge {
+            margin-top: 4px;
+            margin-bottom: 4px;
+            background: none;
+            box-shadow: none;
+        }
+
+        .badge-icon {
+            width: 24px;
+            height: 24px;
+        }
+    }
+
+    &__block+&__block {
+        margin-top: 8px;
+    }
+
+    &__block-time {
+        color: $gray-40;
+    }
+
+    @media (max-width: 767px){
+        &__items{
+            max-width: calc(100% + 32px);
+            width: calc(100% + 32px);
+            margin-left: -16px;
+        }
+    }
+}

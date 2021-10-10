@@ -1,0 +1,32 @@
+.settings {
+    &__integration {
+        &-body {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        &-text {
+            font-size: 16px;
+            line-height: 1.5;
+            margin: 8px 24px 8px 0;
+        }
+    }
+
+    @media (max-width:767px) {
+        &__integration {
+            &-text {
+                font-size: 14px;
+                margin-right: 0;
+            }
+        }
+    }
+
+    @media (max-width:576px) {
+        &__integration {
+            .btn {
+                font-size: 14px;
+            }
+        }
+    }
+}

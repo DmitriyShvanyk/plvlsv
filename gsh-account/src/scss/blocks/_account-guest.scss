@@ -1,0 +1,52 @@
+.account-guest {
+    flex-direction: column;
+
+    .sidebar,
+    .navbar__dropdown,
+    .btn-create-event,
+    .box--event-members {
+        display: none;
+    }
+
+    .navbar__logo {
+        display: flex !important;
+
+        .logo__text {
+            display: block !important;
+        }
+    }
+
+    .nav-item-wallet{
+        margin-right: 0;
+    }
+
+    .content {
+        width: 100%;
+        margin-left: 0;
+        transition: margin-left 0s ease;
+    }
+
+    .menu-guest,
+    .footer {
+        display: block;
+    }
+
+    .events-title{
+        width: auto!important;
+    }
+
+    @media (min-width:1441px){
+        .categories [class*=col-] {
+            flex: 0 0 25%;
+            max-width: 25%;            
+        }
+    }
+
+    @media (min-width:1201px){
+        .cards [class*=col-],
+        .news-top [class*=col-]{
+            flex: 0 0 25%;
+            max-width: 25%;            
+        }
+    }
+}

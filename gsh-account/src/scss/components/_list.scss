@@ -1,0 +1,21 @@
+.list {
+    padding-left: 0;
+    list-style: none;
+
+    &__item {
+        padding-left: 19px;
+        position: relative;
+        margin-bottom: 8px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 5px;
+            left: 0;
+            width: 5px;
+            height: 5px;
+            background-color: $gray-40;
+            border-radius: 50%;
+        }
+    }
+}

@@ -1,0 +1,28 @@
+.modal-deposit,
+.modal-withdrawal {
+    &__amount-control-container {
+        .form-control {
+            padding-right: 70px;
+            text-align: right;
+        }
+
+        .select {
+            width: 60px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 99;
+        }
+
+        .select__control {
+            position: relative;
+            left: 0;
+            top: 0;
+            padding: 8px 5px 5px;
+            box-shadow: none;
+            border: none;
+            background-color: transparent;
+            color: $gray-40;
+        }
+    }
+}

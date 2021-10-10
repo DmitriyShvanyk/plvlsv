@@ -1,0 +1,68 @@
+.pagination {
+    &-text {
+        font-size: 16px;
+        color: $gray-40;
+        margin-bottom: 1rem;
+    }
+
+    .page-item {
+        font-weight: 600;
+        font-size: 16px;
+        margin-right: 2px;
+        text-align: center;
+    }
+
+    .page-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 1;
+        min-width: 32px;
+        height: 32px;
+        color: $gray-40;
+        margin: 0;
+        padding: .3rem .3rem .2rem;
+        background: $bg-brand-gradient;
+        box-shadow: $shadow-brand;
+        border-radius: 4px;
+        transition: background-color .3s ease;
+        border: none;
+    }
+
+    .page-link-more {
+        color: $gray-40;
+        box-shadow: none;
+        border: none;
+    }
+
+    .page-link:hover,
+    .page-link:focus,
+    .page-link:active {
+        color: $gray-100;
+        background: $bg-brand-gradient;
+        box-shadow: $shadow-brand;
+    }
+
+    .active .page-link,
+    .active .page-link:hover,
+    .active .page-link:focus,
+    .active .page-link:active {
+        color: $gray-40;
+        background: $gray-15;
+        box-shadow: none;
+    }
+
+    .page-link-disabled,
+    .page-link-disabled:hover,
+    .page-link-disabled:focus,
+    .page-link-disabled:active {
+        background: $gray-10;
+        box-shadow: inset 0 0 0 1px $gray-15;
+        color: $gray-40;
+        cursor: not-allowed;
+    }
+
+    .page-icon-reverse {
+        transform: scale(-1, 1);
+    }
+}

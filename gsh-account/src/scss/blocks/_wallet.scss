@@ -1,0 +1,94 @@
+.wallet {
+
+    &__box {
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+
+    &__info{
+        display: flex;
+        align-items: center;
+    }
+
+    &__balance {
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+    }
+
+    &__balance-text {
+        margin-right: 24px;        
+    }
+
+    &__balance-count {
+        font-weight: 600;
+    }
+
+    &__btns {
+        margin-left: auto;
+
+        .btn:last-of-type {
+            margin-right: 0;
+        }
+    }
+
+
+    .table{
+        tbody td{
+            padding-top: 14.5px;
+            padding-bottom: 14.5px;
+        }
+    }
+
+    &__table-time{
+        width: 30%;
+    }
+
+    &__table-amount {
+        font-weight: 600;
+        font-size: 16px;
+
+        &--success {
+            color: $success-green;
+        }
+
+        &--error {
+            color: $red;
+        }
+    }
+
+    @media (min-width:1201px){
+        .table{
+            thead th,
+            tbody td{
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+        }
+    }
+    
+    @media (max-width:1200px){
+        &__table-time{
+            width: 70px;
+        }
+    }
+
+    @media (max-width:767px){
+        &__info{
+           display: block;
+        }
+
+        &__balance {
+            margin-bottom: 16px;
+            margin-top: 8px;
+        }
+    }
+
+    @media (max-width:576px){
+        &__btns {    
+            .btn {
+                margin-right: 8px;
+            }
+        }
+    }
+}

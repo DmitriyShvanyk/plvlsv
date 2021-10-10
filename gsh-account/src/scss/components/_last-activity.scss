@@ -1,0 +1,24 @@
+.last-activity {
+    .users__item {
+        padding-top: 8px;
+        padding-bottom: 8px;
+        margin-bottom: 0;
+        border-bottom: 1px solid $white;
+        box-shadow: 0 1px $gray-15;
+    }
+
+    .users__name-main {
+        color: $gray-100;
+    }
+
+    .users__name-text {
+        color: $gray-40;
+        font-weight: 400;
+    }
+
+    .users__time {
+        top: 50%;
+        color: $gray-40;
+        transform: translateY(-50%);
+    }
+}

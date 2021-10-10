@@ -1,0 +1,93 @@
+.badge {
+    display: inline-flex;
+    align-items: center;
+    color: $dark-blue2;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    padding: 4px 8px;
+    border: none;
+    background: $gray-12;
+    border-radius: 40px;
+    transition: opacity .3s ease;
+
+    &-icon {
+        width: 16px;
+        height: 16px;
+        margin-right: 4px;
+    }
+
+    &-icon-wh12 {
+        width: 12px;
+        height: 12px;
+    }
+
+    &-success {
+        background-color: $bright-green;
+    }
+
+    &-info {
+        background-color: $bright-blue;
+    }
+
+    &-warning {
+        background-color: $bright-orange;
+    }
+
+    &-danger {
+        background-color: $bright-red;
+    }
+
+    &-bright-yellow {
+        background-color: $bright-yellow;
+    }
+
+    &-bright-violet {
+        background-color: $bright-violet;
+    }
+
+    &-brand {
+        background-color: $brand-orange;
+        color: $white;
+    }
+
+    &-secondary {
+        background-color: $gray-15;
+    }
+
+    &-platinum {
+        background-color: $gray-10;
+    }
+
+    &-white {
+        background: rgba($white, .5);
+    }
+
+    &-light {
+        background-color: transparent;
+        color: $brand-orange;
+    }
+
+    &-close {
+        display: inline-flex;
+        margin-left: 8px;
+    }
+
+
+    &-circle {
+        width: 24px;
+        height: 24px;
+        padding: 0;
+        justify-content: center;
+    }
+
+    &-circle &-icon {
+        margin-right: 0;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+        opacity: .8;
+    }
+}
