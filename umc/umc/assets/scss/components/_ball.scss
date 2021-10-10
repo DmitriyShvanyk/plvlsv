@@ -1,0 +1,21 @@
+.ball {
+  position: absolute;
+  width: 1178px;
+  height: 1178px;
+  border-radius: 50%;
+  pointer-events: none;
+
+  @media (max-width:1440px){
+    &{
+      width: 1000px;
+      height: 1000px;
+    }
+  }
+
+  @media (max-width:1200px){
+    &{
+      width: 600px;
+      height: 600px;
+    }
+  }
+}

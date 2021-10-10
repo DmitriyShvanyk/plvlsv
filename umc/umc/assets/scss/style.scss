@@ -1,0 +1,61 @@
+@charset 'utf-8';
+
+/* ==================== PLUGINS ==================== */
+
+@import url('./../vendor/swiper/swiper.min.css');
+
+
+/* ==================== ABSTRACTS ==================== */
+
+@import 'abstracts/variable';
+
+
+/* ==================== BASE ==================== */
+
+@import 'base/normalize';
+@import 'base/fonts';
+@import 'base/basic';
+
+
+/* ==================== COMPONENTS ==================== */
+
+@import 'components/container';
+@import 'components/preloader';
+@import 'components/btn';
+@import 'components/title';
+@import 'components/subtitle';
+@import 'components/logo';
+@import 'components/lang';
+@import 'components/video';
+@import 'components/social';
+@import 'components/smartphone';
+@import 'components/box';
+@import 'components/info';
+@import 'components/mouse-scroll';
+@import 'components/ball';
+@import 'components/social-scroller';
+@import 'components/dot-decor';
+@import 'components/exchanges';
+@import 'components/modal-video';
+
+
+/* ==================== BLOCKS ==================== */
+
+@import 'blocks/navbar';
+@import 'blocks/header';
+@import 'blocks/about';
+@import 'blocks/otherness';
+@import 'blocks/market-problems';
+@import 'blocks/solving';
+@import 'blocks/techno';
+@import 'blocks/earth';
+@import 'blocks/umc';
+@import 'blocks/team';
+@import 'blocks/partners';
+@import 'blocks/token';
+@import 'blocks/umc-illustration';
+@import 'blocks/features';
+@import 'blocks/distribution';
+@import 'blocks/roadmap';
+@import 'blocks/news';
+@import 'blocks/footer';

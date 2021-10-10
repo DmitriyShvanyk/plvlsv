@@ -1,0 +1,73 @@
+$boxColorIcon: #717B87;
+
+.box {
+  margin: 0 auto 49px auto;
+  text-align: center;
+  padding: 8px 10px 10px;
+  width: 136px;
+  height: 136px;
+  background-color: #282A50;
+  border-radius: 4px;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 12px;
+  line-height: 1.333;
+  font-weight: 700;
+  letter-spacing: $letterSpacing;
+  text-transform: uppercase;
+  cursor: pointer;
+  position: relative;
+  color: $boxColorIcon;
+  pointer-events: none;
+  transition: color .3s ease, background-color .3s ease, box-shadow .3s ease;
+
+  &,
+  &__pict,
+  &__text {
+    display: flex;
+    align-items: center;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 8px;
+    height: 8px;
+    background-color: $green;
+    border-radius: 50%;
+    will-change: transform;
+    transform: scale(0);
+    transition: transform .3s ease;
+  }
+
+  &__text {
+    color: $white;
+    margin-top: 5px;
+    min-height: 32px;
+  }
+
+  &__pict {
+    width: 80px;
+    height: 80px;
+    justify-content: center;
+  }
+
+  &__icon {
+    stroke: $boxColorIcon;
+    color: $boxColorIcon;
+    stroke-dasharray: 0;
+    stroke-dashoffset: 0;
+  }
+
+  &--active {
+    color: $green;
+    background-color: #535EC8;
+    box-shadow: 0px 4px 24px rgba(12, 108, 227, .5);
+
+    &::before {
+      transform: scale(1);
+    }
+  }
+}

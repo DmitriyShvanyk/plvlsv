@@ -1,0 +1,43 @@
+/* rubik-700 - latin-ext_latin_cyrillic */
+@font-face {
+  font-family: 'Rubik';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 700;
+  src: local('Rubik Bold'),
+  local('Rubik-Bold'),
+  url('#{$pathAssets}fonts/rubik-v9-latin-ext_latin_cyrillic-700.woff') format('woff');
+}
+
+/* open-sans-regular - latin-ext_latin_cyrillic-ext_cyrillic */
+@font-face {
+  font-family: 'Open Sans';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans Regular'),
+  local('OpenSans-Regular'),
+  url('#{$pathAssets}fonts/open-sans-v17-latin-ext_latin_cyrillic-ext_cyrillic-regular.woff') format('woff');
+}
+
+/* open-sans-600 - latin-ext_latin_cyrillic-ext_cyrillic */
+@font-face {
+  font-family: 'Open Sans';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 600;
+  src: local('Open Sans SemiBold'),
+  local('OpenSans-SemiBold'),
+  url('#{$pathAssets}fonts/open-sans-v17-latin-ext_latin_cyrillic-ext_cyrillic-600.woff') format('woff');
+}
+
+/* open-sans-700 - latin-ext_latin_cyrillic-ext_cyrillic */
+@font-face {
+  font-family: 'Open Sans';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 700;
+  src: local('Open Sans Bold'),
+  local('OpenSans-Bold'),
+  url('#{$pathAssets}fonts/open-sans-v17-latin-ext_latin_cyrillic-ext_cyrillic-700.woff') format('woff');
+}

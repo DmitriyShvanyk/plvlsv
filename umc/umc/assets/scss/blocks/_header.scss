@@ -1,0 +1,135 @@
+.header {
+
+  &,
+  &__container,
+  &__content {
+    position: relative;
+  }
+
+  &__ball-1 {
+    left: -254px;
+    top: -835px;
+    background: linear-gradient(27.15deg, #2B1940 14.77%, rgba(43, 25, 65, 0) 68.46%);
+    z-index: 1;
+  }
+
+  &__ball-2 {
+    left: 170px;
+    top: -415px;
+    background: linear-gradient(28.13deg, rgba(45, 89, 211, .13) 11.25%, rgba(49, 141, 241, 0) 30.2%);
+    transform: rotate(-60deg);
+  }
+
+  &__container {
+    z-index: 9;
+    padding-bottom: 150px;
+  }
+
+  &__content {
+    max-width: 800px;
+    margin-top: 13px;
+    z-index: 1;
+  }
+
+  &__subtitle {
+    font-weight: 400;
+    max-width: 580px;
+    margin-bottom: 47px;
+  }
+
+  &__tablet,
+  &__mobile,
+  &__mouse-scroll {
+    position: absolute;
+  }
+
+  &__tablet {
+    top: 5%;
+    right: -270px;
+    pointer-events: none;
+    max-width: 65%;
+  }
+
+  &__mobile {
+    top: 10%;
+    right: -5%;
+    pointer-events: none;
+  }
+
+  &__mouse-scroll {
+    bottom: 1%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @media (min-width: 1441px) {
+    &__tablet {
+      top: 15%;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    &__container {
+      padding-bottom: 50px;
+    }
+
+    &__mouse-scroll {
+      display: none;
+    }
+  }
+
+  @media (max-width: 991px) {
+    &__tablet {
+      position: relative;
+      top: 0;
+      right: 0;
+      max-width: 50%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    &__mobile {
+      top: 9%;
+      right: auto;
+      left: 35%;
+      max-width: 30%;
+    }
+
+    &__content {
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+
+    &__subtitle {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    &__btns {
+      .btn {
+        margin-bottom: 16px;
+        margin-left: 8px;
+        margin-right: 8px;
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    &__container {
+      padding-bottom: 1px;
+    }
+
+    &__tablet {
+      max-width: 80%;
+    }
+
+    &__mobile {
+      top: 5%;
+      left: 35%;
+      max-width: 45%;
+    }
+  }
+
+}

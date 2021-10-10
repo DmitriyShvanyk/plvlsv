@@ -1,0 +1,86 @@
+.umc-illustration {
+  pointer-events: none;
+
+  &__img{
+    max-width: 100%;
+    height: auto;
+  }
+
+  &__line-1,
+  &__line-2,
+  &__line-3,
+  &__line-4,
+  &__line-5,
+  &__line-6,
+  &__cube,
+  &__cube-2,
+  &__cube-3 {
+    opacity: 0;
+    animation: animUMCIllustration 10s linear infinite;
+  }
+
+  &__line-2 {
+    animation-duration: 12s;
+    animation-delay: 2s;
+  }
+
+  &__line-3 {
+    animation-duration: 13s;
+    animation-delay: 3s;
+  }
+
+  &__line-4,
+  &__line-6 {
+    animation-duration: 16s;
+    animation-delay: 6s;
+  }
+
+  &__line-5 {
+    animation-duration: 18s;
+    animation-delay: 3s;
+  }
+
+  &__cube {
+    animation-duration: 8s;
+  }
+
+  &__cube-2 {
+    animation-duration: 10s;
+    animation-delay: 1s;
+  }
+
+  &__cube-3 {
+    animation-duration: 11s;
+    animation-delay: 2s;
+  }
+
+  @media (max-width: 991px) {
+    &__illustration {
+      margin: 0 auto;
+      max-width: 700px;
+    }
+
+    &__illustration-img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+
+@keyframes animUMCIllustration {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -50%, 0);
+  }
+
+  5%,
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate3d(0, 50%, 100%);
+  }
+}

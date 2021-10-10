@@ -1,0 +1,18 @@
+.social {
+  display: inline-flex;
+  align-items: center;
+
+  &__item {
+    padding: 10px 5px;
+    color: $white;
+    text-decoration: none;
+    transition: color .3s ease;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $gray;
+      text-decoration: none;
+    }
+  }
+}

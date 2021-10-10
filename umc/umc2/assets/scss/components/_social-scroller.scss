@@ -1,0 +1,43 @@
+.social-scroller {
+  position: fixed;
+  top: 50%;
+  right: 1%;
+  width: 56px;
+  background: rgba(9, 26, 50, 0.9);
+  border: 1px solid #322A41;
+  border-radius: 50px;
+  transform: translateY(-50%);
+  z-index: 99;
+  padding: 8.5px 0;
+
+  &__social{
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .social__item{
+    color: $gray;    
+    text-align: center;
+    transition: color .3s ease;
+
+    &:hover,
+    &:focus,
+    &:active{
+      color: $white;
+    }
+  }
+
+  @media (min-width: 1441px){
+    &{
+      right: 5.8%;
+    }
+  }
+
+  @media (max-width: 576px){
+    &{
+      display: none;
+    }
+  }
+}

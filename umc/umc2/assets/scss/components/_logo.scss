@@ -1,0 +1,18 @@
+.logo {
+  display: inline-block;
+  vertical-align: top;
+  text-decoration: none;
+  will-change: opacity;
+  transition: opacity .3s ease;
+
+  &__img {
+    display: block;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: none;
+    opacity: .9;
+  }
+}

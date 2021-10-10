@@ -1,0 +1,159 @@
+.techno {
+
+  &,
+  &__container,
+  &__inner {
+    position: relative;
+  }
+
+  &__container {
+    z-index: 2;
+  }
+
+  &__ball-1 {
+    top: 420px;
+    right: -240px;
+    background: linear-gradient(27.15deg, #2B1940 14.77%, rgba(43, 25, 65, 0) 68.46%);
+    transform: rotate(-180deg);
+    z-index: -1;
+  }
+
+  &__container {
+    padding-bottom: 27px;
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: 65px;
+  }
+
+  &__subtitle {
+    margin-top: 25px;
+  }
+
+  &__pict {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    z-index: 1;
+  }
+
+  &__inner,
+  &__content {
+    min-height: 504px;
+  }
+
+  &__content,
+  &__btns {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__content {
+    padding-right: 57%;
+  }
+
+  &__btns {
+    align-items: flex-start;
+    margin-top: auto;
+
+    .btn {
+      margin-top: 12px;
+      margin-bottom: 12px;
+    }
+  }
+
+  &__dot-decor-1,
+  &__dot-decor-2,
+  &__dot-decor-3,
+  &__dot-decor-4{
+    z-index: 9;
+  }
+
+  &__dot-decor-1 {
+    top: 140%;
+    left: 44%;
+  }
+
+  &__dot-decor-2 {
+    top: auto;
+    bottom: -142%;
+    left: 47%;
+  }
+
+  &__dot-decor-3 {
+    top: auto;
+    bottom: -90%;
+    left: 55%;
+  }
+
+  &__dot-decor-4 {
+    top: 100%;
+    left: auto;
+    right: 5%;
+  }
+
+  @media (min-width:992px) {
+    &__btns {
+      .btn {
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  @media (max-width:1440px) {
+    &__subtitle {
+      margin-top: 0;
+    }
+  }
+
+  @media (max-width:991px) {
+
+    &__inner,
+    &__content {
+      min-height: 1px;
+    }
+
+    &__inner {
+      text-align: center;
+    }
+
+    &__content {
+      padding: 0;
+    }
+
+    &__pict {
+      position: relative;
+    }
+
+    &__earth {
+      max-width: 439px;
+      margin: 50px auto;
+    }
+
+    &__btns {
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 30px;
+
+      .btn {
+        margin-left: 8px;
+        margin-right: 8px;
+      }
+    }
+  }
+
+  @media (max-width:576px) {
+    &__title {
+      margin-bottom: 35px;
+    }
+
+    &__earth {
+      margin: 0 auto 20px auto;
+    }
+  }
+}

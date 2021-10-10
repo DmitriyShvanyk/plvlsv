@@ -1,0 +1,1472 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>UMC || Создание умной рекламы в мессенджерах</title>
+	<meta charset="utf-8">
+	<meta name="keywords" content='UMC || Создание умной рекламы в мессенджерах'>
+	<meta name="description" content='UMC || Создание умной рекламы в мессенджерах'>
+	<meta name="format-detection" content="telephone=no">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<meta property="og:url" content="">
+	<meta property="og:image" content="">
+
+	<!-- favicon -->
+	<link rel="shortcut icon" href="favicon.ico">
+
+	<!-- preload fonts -->
+	<link rel="preload" href="fonts/open-sans-v17-latin-ext_latin_cyrillic-ext_cyrillic-600.woff" as="font"
+		type="font/woff" crossorigin="anonymous">
+	<link rel="preload" href="fonts/open-sans-v17-latin-ext_latin_cyrillic-ext_cyrillic-700.woff" as="font"
+		type="font/woff" crossorigin="anonymous">
+	<link rel="preload" href="fonts/open-sans-v17-latin-ext_latin_cyrillic-ext_cyrillic-regular.woff" as="font"
+		type="font/woff" crossorigin="anonymous">
+	<link rel="preload" href="fonts/rubik-v9-latin-ext_latin_cyrillic-700.woff" as="font" type="font/woff"
+		crossorigin="anonymous">
+
+	<!-- preload style -->
+	<link rel="preload" href="css/style.min.css?v=29" as="style">
+
+	<!-- main style -->
+	<link href="css/style.min.css?v=29" rel="stylesheet">
+</head>
+
+<body class="root" id="root">
+
+	<!--preloader.begin-->
+	<div class="preloader">
+		<img class="preloader__logo" src="img/logo.png" data-srcset="img/logo@2x.png 2x" alt="UMC">
+		<span class="preloader__icon"></span>
+	</div>
+	<!--preloader.end-->
+
+	<!--navbar.begin-->
+	<nav class="navbar">
+		<div class="container navbar__container">
+			<a href="#root" class="logo navbar__logo js-scroll">
+				<img class="logo__img navbar__logo-img lazyload" data-sizes="auto" src="#" data-src="img/logo.png"
+					data-srcset="img/logo@2x.png 2x" alt="UMC">
+			</a>
+			<div class="lang">
+				<button class="lang__label">
+					<span class="lang__flag lang__flag--ru"></span>
+					<span class="lang__text">RU</span>
+				</button>
+				<div class="lang__list">
+					<a href="index.html" class="lang__item">EN</a>
+					<a href="index-ru.html" class="lang__item">RU</a>
+				</div>
+			</div>
+			<div class="navbar__collapse">
+				<ul class="navbar__menu">
+					<li class="navbar__menu-item"><a href="#about" class="navbar__menu-link js-scroll">О нас</a></li>
+					<li class="navbar__menu-item"><a href="#umc" class="navbar__menu-link js-scroll">umc</a></li>
+					<li class="navbar__menu-item"><a href="#team" class="navbar__menu-link js-scroll">Команда</a></li>
+					<li class="navbar__menu-item"><a href="#token" class="navbar__menu-link js-scroll">токен</a></li>
+					<li class="navbar__menu-item"><a href="#roadmap" class="navbar__menu-link js-scroll">roadmap</a></li>
+				</ul>
+				<a href="https://my.umccoin.io" class="btn btn--outline btn--outline-icon navbar__btn" target="_blank"
+					rel="noreferrer">
+					<span class="btn__text">
+						<svg class="btn__icon" width="22" height="23" viewBox="0 0 22 23">
+							<use xlink:href="#icon-files"></use>
+						</svg>
+						Зарегистрироваться
+					</span>
+				</a>
+
+				<div class="social navbar__social">
+					<a href="#" class="social__item" target="_blank" aria-label="Telegram">
+						<svg class="social__icon" width="24" height="24" viewBox="0 0 24 24">
+							<use xlink:href="#icon-telegram"></use>
+						</svg>
+					</a>
+					<a href="#" class="social__item" target="_blank" aria-label="Linkedin">
+						<svg class="social__icon" width="24" height="24" viewBox="0 0 24 24">
+							<use xlink:href="#icon-linkedin"></use>
+						</svg>
+					</a>
+					<a href="#" class="social__item" target="_blank" aria-label="Facebook">
+						<svg class="social__icon" width="24" height="24" viewBox="0 0 24 24">
+							<use xlink:href="#icon-fb"></use>
+						</svg>
+					</a>
+					<a href="#" class="social__item" target="_blank" aria-label="Twitter">
+						<svg class="social__icon" width="24" height="24" viewBox="0 0 24 24">
+							<use xlink:href="#icon-tw"></use>
+						</svg>
+					</a>
+					<a href="#" class="social__item" target="_blank" aria-label="BTC">
+						<svg class="social__icon" width="24" height="24" viewBox="0 0 24 24">
+							<use xlink:href="#icon-btc"></use>
+						</svg>
+					</a>
+				</div>
+			</div>
+			<button class="navbar__hamburger" aria-label="Open the menu">
+				<span class="navbar__hamburger-line"></span>
+				<span class="navbar__hamburger-line"></span>
+				<span class="navbar__hamburger-line"></span>
+			</button>
+		</div>
+	</nav>
+	<!--navbar.end-->
+
+	<!--header.begin-->
+	<header class="header">
+		<div class="container header__container">
+			<div class="header__tablet rellax" data-rellax-speed="1">
+				<img class="header__tablet-img lazyload" data-sizes="auto" src="#" data-src="img/header/tablet.png" alt="">
+			</div>
+			<div class="header__mobile rellax" data-rellax-speed="2">
+				<img class="header__mobile-img lazyload" data-sizes="auto" src="#" data-src="img/header/mobile.png" alt="">
+			</div>
+			<div class="header__content">
+				<h1 class="title header__title">
+					Создание умной&nbsp;рекламы в&nbsp;мессенджерах</h1>
+				<h2 class="subtitle header__subtitle">Без затраты времени на организацию процессов развития и продвижения вашего
+					бизнеса</h2>
+				<div class="btns header__btns">
+					<a href="https://my.umccoin.io" class="btn" target="_blank" rel="noreferrer">Зарегистрироваться</a>
+					<a href="files/whitepiper.pdf" class="btn btn--outline btn--outline-icon" target="_blank">
+						<span class="btn__text">
+							<svg class="btn__icon" width="22" height="23" viewBox="0 0 22 23">
+								<use xlink:href="#icon-files"></use>
+							</svg>
+							Whitepaper
+						</span>
+					</a>
+					<a data-fancybox href="https://www.youtube.com/watch?v=ni5hRK1ehzk"
+						class="btn btn--outline btn--outline-icon">
+						<span class="btn__text">
+							<svg class="btn__icon" width="22" height="23" viewBox="0 0 22 23">
+								<use xlink:href="#icon-play"></use>
+							</svg>
+							Смотреть видео
+						</span>
+					</a>
+				</div>
+
+				<div class="exchanges">
+					<p class="exchanges__text">Токен доступен на биржах:</p>
+					<div class="exchanges__items">
+						<a href="#" class="exchanges__item" target="_blank" aria-label="Simex">
+							<img class="exchanges__img lazyload" data-sizes="auto" src="#" data-src="img/exchanges/simex.png" alt="">
+						</a>
+						<a href="#" class="exchanges__item" target="_blank" aria-label="Alterdice">
+							<img class="exchanges__img lazyload" data-sizes="auto" src="#" data-src="img/exchanges/alterdice.png"
+								alt="">
+						</a>
+						<a href="#" class="exchanges__item" target="_blank" aria-label="Coinsbit">
+							<img class="exchanges__img lazyload" data-sizes="auto" src="#" data-src="img/exchanges/coinsbit.png"
+								alt="">
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<a href="#about" class="mouse-scroll js-scroll header__mouse-scroll">
+				<span class="mouse-scroll__text">Узнай</span>
+				<span class="mouse-scroll__box">
+					<span class="mouse-scroll__arrows"></span>
+				</span>
+				<span class="mouse-scroll__text">больше</span>
+			</a>
+		</div>
+
+		<div class="ball header__ball-1 rellax" data-rellax-speed="1"></div>
+		<div class="ball header__ball-2 rellax" data-rellax-speed="2"></div>
+	</header>
+	<!--header.end-->
+
+	<!--content.begin-->
+	<main class="main">
+
+		<!--about.begin-->
+		<section class="about" id="about">
+			<div class="container about__container">
+				<div class="about__row about__row--1">
+					<h2 class="title about__title">
+						<span class="color-success">платформа</span>
+						umc
+					</h2>
+					<div class="about__video">
+						<a data-fancybox href="https://www.youtube.com/watch?v=ni5hRK1ehzk" class="video">
+							<img class="video__poster lazyload" data-sizes="auto" src="#" data-src="img/about/01.jpg" alt="">
+							<span class="video__bar">
+								<span class="video__caption">Начать просмотр</span>
+								<span class="video__icon"></span>
+							</span>
+						</a>
+					</div>
+				</div>
+				<div class="about__row about__row--2 rellax" data-rellax-speed=".2">
+					<div class="about__video-2">
+						<a data-fancybox href="https://www.youtube.com/watch?v=ni5hRK1ehzk" class="video video--md">
+							<img class="video__poster lazyload" data-sizes="auto" src="#" data-src="img/about/02.jpg" alt="">
+							<span class="video__bar">
+								<span class="video__caption">Начать просмотр</span>
+								<span class="video__icon"></span>
+							</span>
+						</a>
+					</div>
+					<div class="about__content">
+						<p>UMC - надежная платформа-агрегатор для создания умной рекламы в мессенджерах с использованием
+							блокчейн-технологий и искусственного интеллекта. Вам больше не нужно тратить время и деньги на поиск и
+							аналитику рекламных каналов - все удобные инструменты и процессы автоматизированы и доступны каждому
+							внутри экосистемы UMC.</p>
+						<p>Управляйте рекламными кампаниями в мессенджерах, эффективно развивайте свой бизнес или личный бренд и
+							получайте новых клиентов на одной платформе</p>
+						<a href="#" class="btn about__btn">Начать</a>
+					</div>
+				</div>
+
+			</div>
+		</section>
+		<!--about.end-->
+
+		<!--otherness.begin-->
+		<section class="otherness">
+			<div class="container otherness__container">
+				<div class="otherness__inner">
+					<div class="otherness__head">
+						<h2 class="title title--sm otherness__title">
+							Что отличает платформу <span class="color-success">UMC</span> от конкурентов
+						</h2>
+						<div class="otherness__text">
+							<p>UMC функционирует с использованием технологии блокчейн, искусственного интеллекта и смарт-контрактов
+							</p>
+							<div class="otherness__line"></div>
+							<p>Это гарантирует выполнение всех заключенных соглашений в экосистеме и обеспечивает легкость и
+								надежность управления всеми процессами запуска рекламных кампаний</p>
+						</div>
+					</div>
+					<div class="otherness__body">
+						<div class="swiper-container otherness__slider-thumbs">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="box">
+										<div class="box__pict">
+											<svg class="box__icon" width="80" height="80" viewBox="0 0 80 80">
+												<use xlink:href="#icon-telegram2"></use>
+											</svg>
+										</div>
+										<div class="box__text">мессенджеры</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="box">
+										<div class="box__pict">
+											<svg class="box__icon" width="80" height="80" viewBox="0 0 80 80">
+												<use xlink:href="#icon-brain"></use>
+											</svg>
+										</div>
+										<div class="box__text">искусственный интеллект</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="box">
+										<div class="box__pict">
+											<svg class="box__icon" width="80" height="80" viewBox="0 0 80 80">
+												<use xlink:href="#icon-cloud"></use>
+											</svg>
+										</div>
+										<div class="box__text">хранилище данных</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="box">
+										<div class="box__pict">
+											<svg class="box__icon" width="50" height="70" viewBox="0 0 50 70">
+												<use xlink:href="#icon-ergo"></use>
+											</svg>
+										</div>
+										<div class="box__text">эргономика</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="box">
+										<div class="box__pict">
+											<svg class="box__icon" width="43" height="70" viewBox="0 0 43 70">
+												<use xlink:href="#icon-dollar"></use>
+											</svg>
+										</div>
+										<div class="box__text">платежи</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-container otherness__slider-top">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="info">
+										<h3 class="subtitle info__subtitle color-success"><span
+												class="info__subtitle-icon"></span>Интеграция в популярные мессенджеры</h3>
+										<p>Используйте эффективную рекламу для увеличения вашей целевой аудитории в Telegram, Viber,
+											WhatsApp, Facebook
+											Messenger, WeChat, QQ, KakaoTalk, Skype, Line.</p>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="info">
+										<h3 class="subtitle info__subtitle color-success"><span
+												class="info__subtitle-icon"></span>искусственный интеллект</h3>
+										<p>Искусственный интеллект Online Assistant значительно упрощает вашу работу на платформе</p>
+										<p>Персональный AI помощник предложит пользователю помощь в эффективной настройке рекламы
+											кампании прямо в вашем аккаунте, помогут вам выбрать наиболее эффективные каналы для рекламы и
+											найти новых клиентов еще быстрее.</p>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="info">
+										<h3 class="subtitle info__subtitle color-success"><span class="info__subtitle-icon"></span>хранилище
+											данных</h3>
+										<p>Ваши транзакции защищены благодаря технологии блокчейн и Smart Contracts</p>
+										<p>Использование новейших технологий, таких как блокчейн и Smart Contracts, устраняет несоответствие
+											соглашениями между рекламодателями и владельцами рекламных компаний, упрощающие
+											контроль за выполнением обязательств.</p>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="info">
+										<h3 class="subtitle info__subtitle color-success"><span
+												class="info__subtitle-icon"></span>эргономика</h3>
+										<p>Быстрые и дешевые расчеты благодаря токену UMCC</p>
+										<p>Возможность оплаты токенами за проведение рекламных кампаний на платформе UMC, экономия
+											рекламный бюджет.</p>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="info">
+										<h3 class="subtitle info__subtitle color-success"><span class="info__subtitle-icon"></span>платежи
+										</h3>
+										<p>UMC успешно используется владельцами мессенджеров, медиа, бизнеса и стартапов
+											представители по всему миру.</p>
+										<p>Благодаря автоматизации процессов и искусственному интеллекту, пользователи смогут быстро и
+											Эффективно запускать рекламные кампании для своей целевой аудитории, выбирая нужные направления.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-button-next swiper-button-white"></div>
+							<div class="swiper-button-prev swiper-button-white"></div>
+						</div>
+
+						<div class="btns otherness__btns">
+							<a href="https://my.umccoin.io" class="btn" target="_blank" rel="noreferrer">Зарегистрироваться</a>
+							<a href="files/whitepiper.pdf" class="btn btn--outline btn--outline-icon" target="_blank">
+								<span class="btn__text">
+									<svg class="btn__icon" width="22" height="23" viewBox="0 0 22 23">
+										<use xlink:href="#icon-files"></use>
+									</svg>
+									Whitepaper
+								</span>
+							</a>
+							<a data-fancybox href="https://www.youtube.com/watch?v=ni5hRK1ehzk"
+								class="btn btn--outline btn--outline-icon">
+								<span class="btn__text">
+									<svg class="btn__icon" width="22" height="23" viewBox="0 0 22 23">
+										<use xlink:href="#icon-play"></use>
+									</svg>
+									Смотреть видео
+								</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="ball otherness__ball-1 rellax" data-rellax-speed="1"></div>
+			<div class="ball otherness__ball-2 rellax" data-rellax-speed="2"></div>
+		</section>
+		<!--otherness.end-->
+
+		<!--market-problems.begin-->
+		<section class="market-problems">
+			<div class="container market-problems__container">
+				<div class="market-problems__inner">
+					<div class="market-problems__head">
+						<h2 class="title title--sm market-problems__title">
+							<span class="color-success">Проблемы рынка рекламы</span> в мессенджерах
+						</h2>
+						<div class="market-problems__lead">
+							<p>Рынок рекламы в мессенджерах сегментирован. Большинство мессенджеров ограничивают возможности
+								пользователей. Универсальных инструментов организации рекламных кампаний в мессенджерах нет. А те, что
+								есть, не обладают ни богатой функциональностью, ни средствами встроенной аналитики, ни эргономичным
+								интерфейсом.</p>
+						</div>
+					</div>
+					<div class="market-problems__body">
+						<div class="market-problems__columns">
+							<div class="market-problems__column">
+								<div class="swiper-container market-problems__slider-thumbs">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<div class="market-problems__thumb">
+												<div class="market-problems__pict">
+													<svg class="market-problems__icon" width="40" height="40" viewBox="0 0 40 40">
+														<use xlink:href="#icon-diagram"></use>
+													</svg>
+												</div>
+												<p class="market-problems__text">Отсутствие систем аналитики</p>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="market-problems__thumb">
+												<div class="market-problems__pict">
+													<svg class="market-problems__icon" width="40" height="40" viewBox="0 0 40 40">
+														<use xlink:href="#icon-stopwatch"></use>
+													</svg>
+												</div>
+												<p class="market-problems__text">Ресурсозатратность</p>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="market-problems__thumb">
+												<div class="market-problems__pict">
+													<svg class="market-problems__icon" width="40" height="40" viewBox="0 0 40 40">
+														<use xlink:href="#icon-team"></use>
+													</svg>
+												</div>
+												<p class="market-problems__text">Незащищенность</p>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="market-problems__thumb">
+												<div class="market-problems__pict">
+													<svg class="market-problems__icon" width="40" height="40" viewBox="0 0 40 40">
+														<use xlink:href="#icon-chat"></use>
+													</svg>
+												</div>
+												<p class="market-problems__text">Сложность операций</p>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="market-problems__thumb">
+												<div class="market-problems__pict">
+													<svg class="market-problems__icon" width="40" height="40" viewBox="0 0 40 40">
+														<use xlink:href="#icon-helping"></use>
+													</svg>
+												</div>
+												<p class="market-problems__text">Отсутствие технологичных инструментов</p>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="market-problems__thumb">
+												<div class="market-problems__pict">
+													<svg class="market-problems__icon" width="40" height="40" viewBox="0 0 40 40">
+														<use xlink:href="#icon-hand"></use>
+													</svg>
+												</div>
+												<p class="market-problems__text">Большие комиссии</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="market-problems__column">
+								<div class="smartphone market-problems__smartphone">
+									<div class="smartphone__row">
+										<div class="swiper-container market-problems__slider-top">
+											<div class="swiper-wrapper">
+												<div class="swiper-slide">
+													<div class="market-problems__pict">
+														<svg class="market-problems__icon" width="40" height="40" viewBox="0 0 40 40">
+															<use xlink:href="#icon-diagram"></use>
+														</svg>
+													</div>
+													<p class="market-problems__text">Аналитика</p>
+												</div>
+												<div class="swiper-slide">
+													<div class="market-problems__pict">
+														<svg class="market-problems__icon" width="40" height="40" viewBox="0 0 40 40">
+															<use xlink:href="#icon-stopwatch"></use>
+														</svg>
+													</div>
+													<p class="market-problems__text">Ресурсозатратность</p>
+												</div>
+												<div class="swiper-slide">
+													<div class="market-problems__pict">
+														<svg class="market-problems__icon" width="40" height="40" viewBox="0 0 40 40">
+															<use xlink:href="#icon-team"></use>
+														</svg>
+													</div>
+													<p class="market-problems__text">Незащищенность</p>
+												</div>
+												<div class="swiper-slide">
+													<div class="market-problems__pict">
+														<svg class="market-problems__icon" width="40" height="40" viewBox="0 0 40 40">
+															<use xlink:href="#icon-chat"></use>
+														</svg>
+													</div>
+													<p class="market-problems__text">Сложность операций</p>
+												</div>
+												<div class="swiper-slide">
+													<div class="market-problems__pict">
+														<svg class="market-problems__icon" width="40" height="40" viewBox="0 0 40 40">
+															<use xlink:href="#icon-helping"></use>
+														</svg>
+													</div>
+													<p class="market-problems__text">Отсутствие технологичных инструментов</p>
+												</div>
+												<div class="swiper-slide">
+													<div class="market-problems__pict">
+														<svg class="market-problems__icon" width="40" height="40" viewBox="0 0 40 40">
+															<use xlink:href="#icon-hand"></use>
+														</svg>
+													</div>
+													<p class="market-problems__text">Большие комиссии</p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="smartphone__row">
+										<a href="/" class="logo smartphone__logo">
+											<img class="logo__img lazyload" data-sizes="auto" src="#" data-src="img/logo.png"
+												data-srcset="img/logo@2x.png 2x" alt="UMC">
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--market-problems.end-->
+
+		<!--solving.begin-->
+		<section class="solving">
+			<div class="container solving__container">
+				<h2 class="title solving__title">
+					<span class="color-info">UMC</span> – это <span class="color-info">решение</span> проблем
+				</h2>
+				<h3 class="subtitle solving__subtitle color-success">Получите доступные эргономичные инструменты для создания
+					рекламы и расширения бизнеса</h3>
+				<div class="solving__inner">
+					<div class="solving__columns">
+						<div class="solving__column">
+							<div class="solving__items">
+								<div class="solving__item solving__item--reverse">
+									<div class="solving__pict">
+										<svg class="solving__icon" width="40" height="40" viewBox="0 0 40 40">
+											<use xlink:href="#icon-diagram"></use>
+										</svg>
+									</div>
+									<div class="solving__content">
+										<div class="solving__name">Аналитика</div>
+										<div class="solving__text">
+											<p>Вам больше не нужно тратить деньги на услуги по анализу рекламных каналов или поиску аналитики
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="solving__item solving__item--reverse">
+									<div class="solving__pict">
+										<svg class="solving__icon" width="40" height="40" viewBox="0 0 40 40">
+											<use xlink:href="#icon-stopwatch"></use>
+										</svg>
+									</div>
+									<div class="solving__content">
+										<div class="solving__name">Время</div>
+										<div class="solving__text">
+											<p>У вас есть выбор как ручного, так и полностью автоматического режимов управления рекламной
+												кампанией</p>
+										</div>
+									</div>
+								</div>
+								<div class="solving__item solving__item--reverse">
+									<div class="solving__pict">
+										<svg class="solving__icon" width="40" height="40" viewBox="0 0 40 40">
+											<use xlink:href="#icon-team"></use>
+										</svg>
+									</div>
+									<div class="solving__content">
+										<div class="solving__name">Персонал</div>
+										<div class="solving__text">
+											<p>Выполнение соглашений точно в срок благодаря использованию Smart Contracts</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="solving__column">
+							<div class="smartphone solving__smartphone">
+								<div class="smartphone__row">
+									<div class="smartphone__column">
+										<svg class="smartphone__icon" width="40" height="40" viewBox="0 0 40 40">
+											<use xlink:href="#icon-stopwatch"></use>
+										</svg>
+									</div>
+									<div class="smartphone__column">
+										<svg class="smartphone__icon" width="40" height="40" viewBox="0 0 40 40">
+											<use xlink:href="#icon-diagram"></use>
+										</svg>
+									</div>
+									<div class="smartphone__column">
+										<svg class="smartphone__icon" width="40" height="40" viewBox="0 0 40 40">
+											<use xlink:href="#icon-team"></use>
+										</svg>
+									</div>
+								</div>
+								<div class="smartphone__row">
+									<a href="/" class="logo smartphone__logo">
+										<img class="logo__img lazyload" data-sizes="auto" src="#" data-src="img/logo.png"
+											data-srcset="img/logo@2x.png 2x" alt="UMC">
+									</a>
+								</div>
+								<div class="smartphone__row">
+									<div class="smartphone__column smartphone__column--second">
+										<svg class="smartphone__icon" width="40" height="40" viewBox="0 0 40 40">
+											<use xlink:href="#icon-helping"></use>
+										</svg>
+									</div>
+									<div class="smartphone__column">
+										<svg class="smartphone__icon" width="40" height="40" viewBox="0 0 40 40">
+											<use xlink:href="#icon-chat"></use>
+										</svg>
+									</div>
+									<div class="smartphone__column">
+										<svg class="smartphone__icon" width="40" height="40" viewBox="0 0 40 40">
+											<use xlink:href="#icon-hand"></use>
+										</svg>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="solving__column">
+							<div class="solving__items">
+								<div class="solving__item">
+									<div class="solving__pict">
+										<svg class="solving__icon" width="40" height="40" viewBox="0 0 40 40">
+											<use xlink:href="#icon-chat"></use>
+										</svg>
+									</div>
+									<div class="solving__content">
+										<div class="solving__name">Коммуникации</div>
+										<div class="solving__text">
+											<p>Создавайте и управляйте рекламными кампаниями без дополнительной платы</p>
+										</div>
+									</div>
+								</div>
+								<div class="solving__item">
+									<div class="solving__pict">
+										<svg class="solving__icon" width="40" height="40" viewBox="0 0 40 40">
+											<use xlink:href="#icon-helping"></use>
+										</svg>
+									</div>
+									<div class="solving__content">
+										<div class="solving__name">Интуитивно понятный интерфейс</div>
+										<div class="solving__text">
+											<p>Выполняйте все действия быстро и удобно через user-friendly интерфейс</p>
+										</div>
+									</div>
+								</div>
+								<div class="solving__item">
+									<div class="solving__pict">
+										<svg class="solving__icon" width="40" height="40" viewBox="0 0 40 40">
+											<use xlink:href="#icon-hand"></use>
+										</svg>
+									</div>
+									<div class="solving__content">
+										<div class="solving__name">Деньги</div>
+										<div class="solving__text">
+											<p>Выполняйте все действия быстро и удобно через user-friendly интерфейс</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="solving__bg"></div>
+		</section>
+		<!--solving.end-->
+
+		<!--techno.begin-->
+		<section class="techno">
+			<div class="container techno__container">
+				<h2 class="title techno__title">новые технологии</h2>
+				<div class="techno__inner">
+					<div class="techno__content">
+						<h2 class="title title--sm techno__subtitle">
+							Комплексная<br> <span class="color-success">ЭКО-СИСТЕМА UMC</span>
+						</h2>
+						<p>Доход UMC получен от комиссионных платежей за финансовые операции, проводимые в UMC. Схема получения
+							дохода выглядит следующим образом:</p>
+						<div class="techno__pict">
+							<div class="earth techno__earth">
+								<div class="earth__pict">
+									<img class="earth__img lazyload" data-sizes="auto" src="#" data-src="img/techno/earth.png" alt="">
+									<div class="earth__tooltip earth__tooltip--1">Рекламодатели</div>
+									<div class="earth__tooltip earth__tooltip--bl earth__tooltip--2">Медиа сеть</div>
+									<div class="earth__tooltip earth__tooltip--bl earth__tooltip--3">Разработчики ботов</div>
+									<div class="earth__tooltip earth__tooltip--tr earth__tooltip--4">Продавцы рекламы</div>
+									<div class="earth__tooltip earth__tooltip--tr earth__tooltip--5">Пользователи мессенджеров</div>
+									<div class="earth__tooltip earth__tooltip--white earth__tooltip--tl earth__tooltip--6">AI</div>
+									<div class="earth__tooltip earth__tooltip--white earth__tooltip--tl earth__tooltip--7">Pep-to-Per
+										Реклама</div>
+									<div class="earth__tooltip earth__tooltip--white earth__tooltip--tl earth__tooltip--8">BOT Market
+										Place</div>
+									<div class="earth__tooltip earth__tooltip--white earth__tooltip--tr earth__tooltip--9">Pep-to-Per
+										Token Trading</div>
+								</div>
+							</div>
+						</div>
+						<div class="btns techno__btns">
+							<a href="https://my.umccoin.io" class="btn" target="_blank" rel="noreferrer">Зарегистрироваться</a>
+							<a href="files/whitepiper.pdf" class="btn btn--outline btn--outline-icon" target="_blank">
+								<span class="btn__text">
+									<svg class="btn__icon" width="22" height="23" viewBox="0 0 22 23">
+										<use xlink:href="#icon-files"></use>
+									</svg>
+									Whitepaper
+								</span>
+							</a>
+							<a data-fancybox href="https://www.youtube.com/watch?v=ni5hRK1ehzk"
+								class="btn btn--outline btn--outline-icon">
+								<span class="btn__text">
+									<svg class="btn__icon" width="22" height="23" viewBox="0 0 22 23">
+										<use xlink:href="#icon-play"></use>
+									</svg>
+									Смотреть видео
+								</span>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="dot-decor techno__dot-decor-1 rellax" data-rellax-speed="1"></div>
+				<div class="dot-decor dot-decor--md techno__dot-decor-2 rellax" data-rellax-speed="1.1"></div>
+				<div class="dot-decor techno__dot-decor-3 rellax" data-rellax-speed=".8"></div>
+				<div class="dot-decor techno__dot-decor-4 rellax" data-rellax-speed=".9"></div>
+			</div>
+			<div class="ball techno__ball-1 rellax" data-rellax-speed="1"></div>
+		</section>
+		<!--techno.end-->
+
+		<!--umc.begin-->
+		<section class="umc" id="umc">
+			<div class="container umc__container">
+				<h2 class="title umc__title">UMC</h2>
+				<p class="umc__lead">Cервис по управлению умной рекламы в мессенджерах, доступный для каждого</p>
+				<div class="umc__inner">
+					<div class="umc__body">
+						<div class="umc__pc">
+							<img class="umc__pc-img rellax lazyload" data-sizes="auto" src="#" data-rellax-speed=".05"
+								data-rellax-xs-speed="0" data-rellax-mobile-speed="0" data-src="img/umc/pc.png"
+								data-srcset="img/umc/pc@2x.png 2x" alt="">
+						</div>
+						<div class="swiper-container umc__slider">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="umc__item">
+										<div class="umc__pict">
+											<svg class="umc__icon" width="40" height="40" viewBox="0 0 40 40">
+												<use xlink:href="#icon-diagram"></use>
+											</svg>
+										</div>
+										<div class="umc__caption">Автоматизируйте ключевые аспекты вашего бизнеса, избавьтесь от трудоемких
+											и повторяющихся задач</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="umc__item">
+										<div class="umc__pict">
+											<svg class="umc__icon" width="40" height="40" viewBox="0 0 40 40">
+												<use xlink:href="#icon-diagram"></use>
+											</svg>
+										</div>
+										<div class="umc__caption">Ускорьте процесс генерации лидов, не упустите возможность</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="umc__item">
+										<div class="umc__pict">
+											<svg class="umc__icon" width="40" height="40" viewBox="0 0 40 40">
+												<use xlink:href="#icon-diagram"></use>
+											</svg>
+										</div>
+										<div class="umc__caption">Активируйте свой бизнес с помощью рекламы в мессенджерах</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="umc__item">
+										<div class="umc__pict">
+											<svg class="umc__icon" width="40" height="40" viewBox="0 0 40 40">
+												<use xlink:href="#icon-diagram"></use>
+											</svg>
+										</div>
+										<div class="umc__caption">Зарегистрируйтесь и начните развивать свой бизнес с UMC прямо сейчас</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-button-prev"></div>
+							<div class="swiper-button-next"></div>
+						</div>
+					</div>
+					<div class="umc__foot">
+						<a href="https://my.umccoin.io" class="btn" target="_blank" rel="noreferrer">Зарегистрироваться</a>
+					</div>
+
+					<div class="dot-decor umc__dot-decor-1 rellax" data-rellax-speed="1"></div>
+					<div class="dot-decor umc__dot-decor-2 rellax" data-rellax-speed="1.1"></div>
+					<div class="dot-decor dot-decor--md umc__dot-decor-3 rellax" data-rellax-speed=".9"></div>
+					<div class="dot-decor umc__dot-decor-4 rellax" data-rellax-speed=".8"></div>
+				</div>
+			</div>
+		</section>
+		<!--umc.end-->
+
+		<!--team.begin-->
+		<section class="team" id="team">
+			<div class="container team__container">
+				<div class="team__inner">
+					<div class="team__head">
+						<h2 class="title team__title">команда <span class="color-success">UMC</span></h2>
+						<p class="team__lead">Команда UMC – это профессионалы с многолетним опытом в сфере рекламы, SMM-маркетинга,
+							управления проектами и разработки ПО</p>
+					</div>
+					<div class="team__body">
+						<div class="team__columns">
+							<div class="team__column">
+								<div class="team__item">
+									<div class="team__pict">
+										<img class="team__img lazyload" data-sizes="auto" src="#" data-src="img/team/sergii-petryk.jpg"
+											alt="">
+									</div>
+									<div class="team__content">
+										<h3 class="team__name">Сергей Петрик</h3>
+										<h4 class="team__position">Co-Founder / CSO</h4>
+										<p>Предприниматель. Блокчейн-энтузиаст. Основатель сообщества CryptoTime</p>
+									</div>
+								</div>
+							</div>
+							<div class="team__column">
+								<div class="team__item">
+									<div class="team__pict">
+										<img class="team__img lazyload" data-sizes="auto" src="#" data-src="img/team/02.jpg" alt="">
+									</div>
+									<div class="team__content">
+										<h3 class="team__name">Дмитрий Козловский</h3>
+										<h4 class="team__position">CEO</h4>
+										<p>Предприниматель. Профессиональный менеджер-практик. Более 13 лет опыта управления на руководящих
+											должностях.</p>
+									</div>
+								</div>
+							</div>
+							<div class="team__column">
+								<div class="team__item">
+									<div class="team__pict">
+										<img class="team__img lazyload" data-sizes="auto" src="#" data-src="img/team/03.jpg" alt="">
+									</div>
+									<div class="team__content">
+										<h3 class="team__name">Григорий Рыбальченко</h3>
+										<h4 class="team__position">Co-founder / CIO</h4>
+										<p>Предприниматель. Владелец 3 компаний в сфере IT, консалтинга и финтех-разработок.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="team__foot">
+						<a href="#" class="btn btn--outline team__btn-all"><span class="btn__text">показать всю команду</span></a>
+					</div>
+				</div>
+			</div>
+			<div class="team__bg"></div>
+		</section>
+		<!--team.end-->
+
+		<!--partners.begin-->
+		<section class="partners">
+			<div class="container partners__container">
+				<h2 class="title partners__title">партнеры</h2>
+				<div class="partners__inner">
+					<div class="swiper-container partners__slider">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="partners__item">
+									<div class="partners__pict">
+										<img class="partners__img swiper-lazy" src="#" data-src="img/partners/01.svg" alt="">
+										<div class="swiper-lazy-preloader"></div>
+									</div>
+									<div class="partners__caption">Pizza Hut</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="partners__item">
+									<div class="partners__pict">
+										<img class="partners__img swiper-lazy" src="#" data-src="img/partners/02.svg" alt="">
+										<div class="swiper-lazy-preloader"></div>
+									</div>
+									<div class="partners__caption">General Electric</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="partners__item">
+									<div class="partners__pict">
+										<img class="partners__img swiper-lazy" src="#" data-src="img/partners/03.svg" alt="">
+										<div class="swiper-lazy-preloader"></div>
+									</div>
+									<div class="partners__caption">The Walt Disney Company</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="partners__item">
+									<div class="partners__pict">
+										<img class="partners__img swiper-lazy" src="#" data-src="img/partners/04.svg" alt="">
+										<div class="swiper-lazy-preloader"></div>
+									</div>
+									<div class="partners__caption">Bank of America</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="partners__item">
+									<div class="partners__pict">
+										<img class="partners__img swiper-lazy" src="#" data-src="img/partners/05.svg" alt="">
+										<div class="swiper-lazy-preloader"></div>
+									</div>
+									<div class="partners__caption">L'Oréal</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="partners__item">
+									<div class="partners__pict">
+										<img class="partners__img swiper-lazy" src="#" data-src="img/partners/06.svg" alt="">
+										<div class="swiper-lazy-preloader"></div>
+									</div>
+									<div class="partners__caption">Johnson & Johnson</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="partners__item">
+									<div class="partners__pict">
+										<img class="partners__img swiper-lazy" src="#" data-src="img/partners/06.svg" alt="">
+										<div class="swiper-lazy-preloader"></div>
+									</div>
+									<div class="partners__caption">Johnson & Johnson 2</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-pagination"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--partners.end-->
+
+		<!--token.begin-->
+		<section class="token" id="token">
+			<div class="container token__container">
+				<h2 class="title token__title"><span class="color-success">токен</span> umcc</h2>
+				<p class="token__lead">UMCC - токен платформы UMC для проведения удобных и взаимовыгодных расчетов на платформе
+				</p>
+				<div class="token__inner">
+					<div class="token__columns">
+						<div class="token__column">
+							<div class="token__list">
+								<div class="token__list-item">
+									<div class="token__list-pict">
+										<svg class="token__list-icon" width="40" height="40" viewBox="0 0 40 40">
+											<use xlink:href="#icon-symbol"></use>
+										</svg>
+									</div>
+									<div class="token__list-text">Символ – UMCC</div>
+								</div>
+								<div class="token__list-item">
+									<div class="token__list-pict">
+										<svg class="token__list-icon" width="40" height="40" viewBox="0 0 40 40">
+											<use xlink:href="#icon-tools"></use>
+										</svg>
+									</div>
+									<div class="token__list-text">Тип токена – ERC20</div>
+								</div>
+								<div class="token__list-item">
+									<div class="token__list-pict">
+										<svg class="token__list-icon" width="40" height="40" viewBox="0 0 40 40">
+											<use xlink:href="#icon-garant"></use>
+										</svg>
+									</div>
+									<div class="token__list-text">Общая эмиссия: 100 млн</div>
+								</div>
+							</div>
+							<div class="features">
+								<h2 class="title title--sm color-success token__title-sm">
+									Характеристики токена
+								</h2>
+								<div class="swiper-container features__slider-thumbs">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<div class="box">
+												<div class="box__pict">
+													<svg class="box__icon" width="64" height="64" viewBox="0 0 64 64">
+														<use xlink:href="#icon-gear"></use>
+													</svg>
+												</div>
+												<div class="box__text">универсальность</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="box">
+												<div class="box__pict">
+													<svg class="box__icon" width="64" height="64" viewBox="0 0 64 64">
+														<use xlink:href="#icon-teamwork"></use>
+													</svg>
+												</div>
+												<div class="box__text">удобство</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="box">
+												<div class="box__pict">
+													<svg class="box__icon" width="64" height="64" viewBox="0 0 64 64">
+														<use xlink:href="#icon-computer"></use>
+													</svg>
+												</div>
+												<div class="box__text">прозрачность</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="swiper-container features__slider-top">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<div class="info features__info">
+												<h3 class="subtitle info__subtitle color-success"><span
+														class="info__subtitle-icon"></span>Универсальность</h3>
+												<p>Легкое и удобное хранение токена на любых кошельках, которые поддерживают стандарт ERC20</p>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="info features__info">
+												<h3 class="subtitle info__subtitle color-success"><span
+														class="info__subtitle-icon"></span>удобство</h3>
+												<p>Вы можете оплатить токенами любую рекламу и услуги на платформе UMC. Все финансовые операции
+													на платформе UMC осуществляются в токенах UMCC</p>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="info features__info">
+												<h3 class="subtitle info__subtitle color-success"><span
+														class="info__subtitle-icon"></span>прозрачность</h3>
+												<p>Полная прозрачность всех транзакций на платформе благодаря универсальному стандарту ERC-20
+													гарантируется.</p>
+												<p>Вы экономите свой рекламный бюджет, покупая токен UMCC. Оплачивайте токенами любые рекламные
+													услуги в UMC</p>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-button-next swiper-button-white"></div>
+									<div class="swiper-button-prev swiper-button-white"></div>
+								</div>
+							</div>
+						</div>
+						<div class="token__column">
+							<div class="umc-illustration token__umc-illustration"></div>
+						</div>
+					</div>
+					<div class="dot-decor token__dot-decor-1 rellax" data-rellax-speed="1"></div>
+					<div class="dot-decor dot-decor--md token__dot-decor-2 rellax" data-rellax-speed="1.2"></div>
+					<div class="dot-decor token__dot-decor-3 rellax" data-rellax-speed=".8"></div>
+					<div class="dot-decor token__dot-decor-4 rellax" data-rellax-speed=".9"></div>
+				</div>
+			</div>
+			<div class="ball token__ball-1 rellax" data-rellax-speed=".7"></div>
+		</section>
+		<!--token.end-->
+
+		<!--distribution.begin-->
+		<section class="distribution">
+			<div class="container distribution__container">
+				<h2 class="title distribution__title">распределение <span class="color-success">токенов и бюджета</span></h2>
+				<div class="distribution__inner">
+					<div class="distribution__body">
+						<div class="distribution__columns">
+							<div class="distribution__column">
+								<div class="distribution__item">
+									<div class="distribution__pict">
+										<img class="distribution__img lazyload" data-sizes="auto" src="#" data-src="img/distribution/01.png"
+											data-srcset="img/distribution/01@2x.png 2x" alt="">
+									</div>
+									<div class="distribution__content">
+										<h3 class="subtitle distribution__subtitle color-success">Распределение токенов</h3>
+										<ul class="distribution__list">
+											<li class="distribution__list-item">64% Участники Токен Sale</li>
+											<li class="distribution__list-item">14% Команда Проекта</li>
+											<li class="distribution__list-item">10% Резерв платформы UMC</li>
+											<li class="distribution__list-item">5% Маркетинг</li>
+											<li class="distribution__list-item">5% Адвайзеры</li>
+											<li class="distribution__list-item">2% Bounty & Aridrop</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="distribution__column">
+								<div class="distribution__item">
+									<div class="distribution__pict">
+										<img class="distribution__img lazyload" data-sizes="auto" src="#" data-src="img/distribution/02.png"
+											data-srcset="img/distribution/02@2x.png 2x" alt="">
+									</div>
+									<div class="distribution__content">
+										<h3 class="subtitle distribution__subtitle color-success">Распределение бюджета</h3>
+										<ul class="distribution__list distribution__list--budget">
+											<li class="distribution__list-item">41% Маркетинг</li>
+											<li class="distribution__list-item">29% Разработка (ЗП, ПО, Железо)</li>
+											<li class="distribution__list-item">13% Операционные расходы</li>
+											<li class="distribution__list-item">10% Неклассифицируемые</li>
+											<li class="distribution__list-item">7% Юридические услуги</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="distribution__foot">
+						<div class="btns distribution__btns">
+							<a href="#" class="btn">Следите за новостями</a>
+							<a href="#" class="btn btn--outline btn--outline-icon">
+								<span class="btn__text">
+									<svg class="btn__icon" width="22" height="23" viewBox="0 0 22 23">
+										<use xlink:href="#icon-files"></use>
+									</svg>
+									Присоединяйтесь к комьюнити
+								</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="ball distribution__ball-1 rellax" data-rellax-speed="1"></div>
+		</section>
+		<!--distribution.end-->
+
+		<!--roadmap.begin-->
+		<section class="roadmap" id="roadmap">
+			<div class="container roadmap__container">
+				<h2 class="title roadmap__title">roadmap</h2>
+				<p class="roadmap__lead color-success">Кликни на этап и узнай больше</p>
+				<h3 class="subtitle roadmap__subtitle">Этап в процессе</h3>
+
+				<div class="roadmap__inner">
+					<div class="roadmap__outer">
+						<div class="roadmap__contents">
+							<div class="roadmap__content roadmap__content--1 roadmap__content--active">
+								<div class="roadmap__row">
+									<div class="roadmap__column">
+										<p class="roadmap__text">Odio ante sed leo feugiat nulla.</p>
+									</div>
+									<div class="roadmap__column">
+										<div class="roadmap__block">
+											<p class="roadmap__text">Sit integer dictum ipsum.</p>
+											<p class="roadmap__text">Lorem ipsum dolor vulputate sem
+												ut.</p>
+										</div>
+									</div>
+									<div class="roadmap__column">
+										<div class="roadmap__block">
+											<p class="roadmap__text">Sit integer dictum ipsum.</p>
+											<p class="roadmap__text">Lorem ipsum dolor vulputate sem
+												ut.</p>
+										</div>
+									</div>
+								</div>
+								<div class="roadmap__row">
+									<div class="roadmap__column">
+										<p class="roadmap__text">Odio ante sed leo feugiat nulla.</p>
+									</div>
+									<div class="roadmap__column">
+										<div class="roadmap__block">
+											<p class="roadmap__text">Sit integer dictum ipsum.</p>
+											<p class="roadmap__text"> Iure soluta culpa maiores quam
+												mollitia minima? Sint repellat voluptatem eos deserunt exercitationem. Quod fugit dignissimos
+												voluptates obcaecati, eius incidunt rem aperiam odio nobis temporibus est quibusdam facilis illo
+												nisi impedit quaerat hic! Nemo, quo! Distinctio, eos.</p>
+										</div>
+									</div>
+									<div class="roadmap__column">
+										<div class="roadmap__block">
+											<p class="roadmap__text">Sit integer dictum ipsum.</p>
+											<p class="roadmap__text">Lorem ipsum dolor vulputate sem
+												ut.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="roadmap__content roadmap__content--2">
+								<div class="roadmap__row">
+									<div class="roadmap__column">
+										<p class="roadmap__text">Odio ante sed leo feugiat nulla.</p>
+									</div>
+									<div class="roadmap__column">
+										<div class="roadmap__block">
+											<p class="roadmap__text">Sit integer dictum ipsum.</p>
+											<p class="roadmap__text">Lorem ipsum dolor vulputate sem
+												ut.</p>
+										</div>
+									</div>
+									<div class="roadmap__column">
+										<div class="roadmap__block">
+											<p class="roadmap__text">Sit integer dictum ipsum.</p>
+											<p class="roadmap__text">Lorem ipsum dolor vulputate sem
+												ut.</p>
+										</div>
+									</div>
+								</div>
+								<div class="roadmap__row">
+									<div class="roadmap__column">
+										<p class="roadmap__text">Odio ante sed leo feugiat nulla.</p>
+									</div>
+									<div class="roadmap__column">
+										<div class="roadmap__block">
+											<p class="roadmap__text">Sit integer dictum ipsum.</p>
+											<p class="roadmap__text"> Iure soluta culpa maiores quam
+												mollitia minima? Sint repellat voluptatem eos deserunt exercitationem. Quod fugit dignissimos
+												voluptates obcaecati, eius incidunt rem aperiam odio nobis temporibus est quibusdam facilis illo
+												nisi impedit quaerat hic! Nemo, quo! Distinctio, eos.</p>
+										</div>
+									</div>
+									<div class="roadmap__column">
+										<div class="roadmap__block">
+											<p class="roadmap__text">Sit integer dictum ipsum.</p>
+											<p class="roadmap__text">Lorem ipsum dolor vulputate sem
+												ut.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="roadmap__content roadmap__content--3">
+								<div class="roadmap__row">
+									<div class="roadmap__column">
+										<p class="roadmap__text">Odio ante sed leo feugiat nulla.</p>
+									</div>
+									<div class="roadmap__column">
+										<div class="roadmap__block">
+											<p class="roadmap__text">Sit integer dictum ipsum.</p>
+											<p class="roadmap__text">Lorem ipsum dolor vulputate sem
+												ut.</p>
+										</div>
+									</div>
+									<div class="roadmap__column">
+										<div class="roadmap__block">
+											<p class="roadmap__text">Sit integer dictum ipsum.</p>
+											<p class="roadmap__text">Lorem ipsum dolor vulputate sem
+												ut.</p>
+										</div>
+									</div>
+								</div>
+								<div class="roadmap__row">
+									<div class="roadmap__column">
+										<p class="roadmap__text">Odio ante sed leo feugiat nulla.</p>
+									</div>
+									<div class="roadmap__column">
+										<div class="roadmap__block">
+											<p class="roadmap__text">Sit integer dictum ipsum.</p>
+											<p class="roadmap__text"> Iure soluta culpa maiores quam
+												mollitia minima? Sint repellat voluptatem eos deserunt exercitationem. Quod fugit dignissimos
+												voluptates obcaecati, eius incidunt rem aperiam odio nobis temporibus est quibusdam facilis illo
+												nisi impedit quaerat hic! Nemo, quo! Distinctio, eos.</p>
+										</div>
+									</div>
+									<div class="roadmap__column">
+										<div class="roadmap__block">
+											<p class="roadmap__text">Sit integer dictum ipsum.</p>
+											<p class="roadmap__text">Lorem ipsum dolor vulputate sem
+												ut.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="roadmap__content roadmap__content--4">
+								<div class="roadmap__row">
+									<div class="roadmap__column">
+										<p class="roadmap__text">Odio ante sed leo feugiat nulla.</p>
+									</div>
+									<div class="roadmap__column">
+										<div class="roadmap__block">
+											<p class="roadmap__text">Sit integer dictum ipsum.</p>
+											<p class="roadmap__text">Lorem ipsum dolor vulputate sem
+												ut.</p>
+										</div>
+									</div>
+									<div class="roadmap__column">
+										<div class="roadmap__block">
+											<p class="roadmap__text">Sit integer dictum ipsum.</p>
+											<p class="roadmap__text">Lorem ipsum dolor vulputate sem
+												ut.</p>
+										</div>
+									</div>
+								</div>
+								<div class="roadmap__row">
+									<div class="roadmap__column">
+										<p class="roadmap__text">Odio ante sed leo feugiat nulla.</p>
+									</div>
+									<div class="roadmap__column">
+										<div class="roadmap__block">
+											<p class="roadmap__text">Sit integer dictum ipsum.</p>
+											<p class="roadmap__text"> Iure soluta culpa maiores quam
+												mollitia minima? Sint repellat voluptatem eos deserunt exercitationem. Quod fugit dignissimos
+												voluptates obcaecati, eius incidunt rem aperiam odio nobis temporibus est quibusdam facilis illo
+												nisi impedit quaerat hic! Nemo, quo! Distinctio, eos.</p>
+										</div>
+									</div>
+									<div class="roadmap__column">
+										<div class="roadmap__block">
+											<p class="roadmap__text">Sit integer dictum ipsum.</p>
+											<p class="roadmap__text">Lorem ipsum dolor vulputate sem
+												ut.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="roadmap__items">
+							<div class="roadmap__item roadmap__item--1 roadmap__item--active">
+								<div class="roadmap__dot"></div>
+								<h3 class="subtitle roadmap__years">IV кв. 2017</h3>
+								<p class="roadmap__caption">Sagittis tortor.</p>
+							</div>
+							<div class="roadmap__item roadmap__item--2">
+								<div class="roadmap__dot"></div>
+								<h3 class="subtitle roadmap__years">IV кв. 2017</h3>
+								<p class="roadmap__caption">Massa et.</p>
+							</div>
+							<div class="roadmap__item roadmap__item--3">
+								<div class="roadmap__dot"></div>
+								<h3 class="subtitle roadmap__years">IV кв. 2017</h3>
+								<p class="roadmap__caption">Ultricies sed.</p>
+							</div>
+							<div class="roadmap__item roadmap__item--4">
+								<div class="roadmap__dot"></div>
+								<h3 class="subtitle roadmap__years">IV кв. 2017</h3>
+								<p class="roadmap__caption">Pretium urna.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<div class="roadmap__bg"></div>
+			<div class="ball roadmap__ball-1 rellax" data-rellax-speed="1"></div>
+		</section>
+		<!--roadmap.end-->
+
+	</main>
+	<!--content.end-->
+
+	<!--footer.begin-->
+	<footer class="footer">
+		<div class="container footer__container">
+			<div class="footer__inner">
+				<div class="footer__box">
+					<a href="#root" class="logo footer__logo js-scroll">
+						<img class="logo__img lazyload" data-sizes="auto" src="#" data-src="img/logo.png"
+							data-srcset="img/logo@2x.png 2x" alt="UMC">
+					</a>
+					<div class="footer__columns">
+						<div class="footer__column">
+							<h3 class="footer__title">Universal Marketing Company</h3>
+							<p class="footer__paragraph">6th Floor, South Bank House,<br> Barrow Street, Dublin<br> D04 TR29. Ireland
+							</p>
+							<p class="footer__paragraph">© UMC 2020</p>
+						</div>
+						<div class="footer__column">
+							<h3 class="footer__title">Условия и Документы</h3>
+							<p class="footer__paragraph"><a href="#" class="footer__link">Условия использования</a></p>
+							<p class="footer__paragraph"><a href="#" class="footer__link">Правила Конфиденциальности</a></p>
+							<a href="files/whitepiper.pdf" class="btn footer__btn-whitepapper" target="_blank">whitepapper</a>
+						</div>
+						<div class="footer__column">
+							<h3 class="footer__title">
+								Мы в социальных сетях
+							</h3>
+							<div class="social footer__social">
+								<a href="#" class="social__item" target="_blank" aria-label="Telegram">
+									<svg class="social__icon" width="24" height="24" viewBox="0 0 24 24">
+										<use xlink:href="#icon-telegram"></use>
+									</svg>
+								</a>
+								<a href="#" class="social__item" target="_blank" aria-label="Linkedin">
+									<svg class="social__icon" width="24" height="24" viewBox="0 0 24 24">
+										<use xlink:href="#icon-linkedin"></use>
+									</svg>
+								</a>
+								<a href="#" class="social__item" target="_blank" aria-label="Facebook">
+									<svg class="social__icon" width="24" height="24" viewBox="0 0 24 24">
+										<use xlink:href="#icon-fb"></use>
+									</svg>
+								</a>
+								<a href="#" class="social__item" target="_blank" aria-label="Twitter">
+									<svg class="social__icon" width="24" height="24" viewBox="0 0 24 24">
+										<use xlink:href="#icon-tw"></use>
+									</svg>
+								</a>
+								<a href="#" class="social__item" target="_blank" aria-label="BTC">
+									<svg class="social__icon" width="24" height="24" viewBox="0 0 24 24">
+										<use xlink:href="#icon-btc"></use>
+									</svg>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer__box">
+					<div class="footer__info">
+						<p class="footer__paragraph"><strong>UMC Technologies Limited</strong></p>
+						<p class="footer__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam et amet,
+							consequat sed erat vitae. In dis faucibus faucibus nunc.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer__bg"></div>
+	</footer>
+	<!--footer.end-->
+
+	<!--social-scroller.begin-->
+	<div class="social-scroller">
+		<div class="social social-scroller__social">
+			<a href="#" class="social__item" target="_blank" aria-label="Telegram">
+				<svg class="social__icon" width="24" height="24" viewBox="0 0 24 24">
+					<use xlink:href="#icon-telegram"></use>
+				</svg>
+			</a>
+			<a href="#" class="social__item" target="_blank" aria-label="Linkedin">
+				<svg class="social__icon" width="24" height="24" viewBox="0 0 24 24">
+					<use xlink:href="#icon-linkedin"></use>
+				</svg>
+			</a>
+			<a href="#" class="social__item" target="_blank" aria-label="Facebook">
+				<svg class="social__icon" width="24" height="24" viewBox="0 0 24 24">
+					<use xlink:href="#icon-fb"></use>
+				</svg>
+			</a>
+			<a href="#" class="social__item" target="_blank" aria-label="Twitter">
+				<svg class="social__icon" width="24" height="24" viewBox="0 0 24 24">
+					<use xlink:href="#icon-tw"></use>
+				</svg>
+			</a>
+			<a href="#" class="social__item" target="_blank" aria-label="BTC">
+				<svg class="social__icon" width="24" height="24" viewBox="0 0 24 24">
+					<use xlink:href="#icon-btc"></use>
+				</svg>
+			</a>
+		</div>
+	</div>
+	<!--social-scroller.end-->
+
+	<!--scripts.begin-->
+	<script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script defer src="vendor/swiper/swiper.min.js"></script>
+	<script defer src="vendor/fancybox/jquery.fancybox.min.js"></script>
+	<script defer src="vendor/rellax/rellax.min.js"></script>
+	<script defer src="js/scripts.js?v=29"></script>
+	<script async src="js/renderSvg.js?v=29"></script>
+	<script async src="vendor/lazysizes/lazysizes.min.js"></script>
+	<!--scripts.end-->
+
+</body>
+
+</html>

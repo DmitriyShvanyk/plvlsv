@@ -1,0 +1,47 @@
+/* title */
+
+.title {
+  font-size: 64px;
+  font-weight: 700;
+  font-family: $fontTitle;
+  letter-spacing: $letterSpacing;
+  text-transform: uppercase;
+  line-height: $lineHeightTitle;
+  margin-top: 0;
+  margin-bottom: 22px;
+
+  &--sm{
+    font-size: 40px;
+    line-height: 1.2;
+  }
+
+  @media (max-width: 991px) {
+    & {
+      font-size: 54px;
+    }   
+    
+    &--sm{
+      font-size: 35px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    & {
+      font-size: 44px;
+    }
+
+    &--sm{
+      font-size: 30px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    & {
+      font-size: 9.25vw;
+    }
+
+    &--sm{
+      font-size: 7vw;
+    }
+  }
+}

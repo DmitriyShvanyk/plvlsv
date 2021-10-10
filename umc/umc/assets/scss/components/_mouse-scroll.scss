@@ -1,0 +1,79 @@
+.mouse-scroll {
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: $letterSpacing;
+  text-transform: uppercase;
+  color: $green;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+
+  &__box{
+    position: relative;
+    width: 14px;
+    height: 20px;
+    border: 2px solid $green;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+
+    &::before{
+      content: '';
+      position: absolute; top: 3px; left: 50%;
+      width: 2px;
+      height: 6px;
+      background-color: $green;
+      border-radius: 2px;
+      margin-left: -1px;
+      animation: animMouseBoxLine 2s linear infinite;
+    }    
+  }
+
+  &__arrows{
+    position: absolute; top: calc(100% + 20px);
+    left: 50%;
+    margin-left: -8px;
+    width: 16px;
+    height: 16px;
+    animation: animMouseBoxLine 2s linear infinite;
+
+    &::before,
+    &::after{
+      content: '';
+      position: absolute; top: -10px; left: 50%;
+      margin-left: -6px;
+      width: 12px;
+      height: 12px;
+      border: 2px solid $white;
+      border-top: none;
+      border-left: none;
+      transform: rotateX(45deg) rotateY(0deg) rotateZ(45deg);
+    }
+
+    &::before{
+      border-color: rgba($white, .5);
+    }
+
+    &::after{
+      top: -4px;
+    }
+  }
+
+  &:hover,
+  &:focus,
+  &:active{
+    text-decoration: none;
+  }
+}
+
+@keyframes animMouseBoxLine{
+  0%{
+    transform: translateY(0px);
+  }
+  100%{
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}

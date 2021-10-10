@@ -1,0 +1,167 @@
+.otherness {
+  position: relative;
+
+  &__ball-1 {
+    top: -180px;
+    left: -50px;
+    background: linear-gradient(28.13deg, rgba(45, 89, 211, .13) 11.25%, rgba(49, 141, 241, 0) 30.2%);
+    transform: rotate(90deg);
+  }
+
+  &__ball-2 {
+    top: -550px;
+    right: -200px;
+    background: linear-gradient(27.15deg, #2B1940 14.77%, rgba(43, 25, 65, 0) 68.46%);
+    transform: rotate(-180deg);
+  }
+
+  &__container {
+    padding-bottom: 120px;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__inner {
+    display: flex;
+    margin-left: -16px;
+    margin-right: -16px;
+  }
+
+  &__head,
+  &__body {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  &__head {
+    width: 412px;
+  }
+
+  &__body {
+    order: -1;
+    width: calc(100% - 412px);
+  }
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__line {
+    height: 2px;
+    width: 100%;
+    max-width: 274px;
+    background-color: $green;
+    margin-top: 27px;
+    margin-bottom: 24px;
+  }
+
+  &__slider-thumbs {
+
+    .swiper-slide-thumb-active {
+      .box {
+        background-color: #535EC8;
+        box-shadow: 0px 4px 24px rgba(12, 108, 227, .5);
+
+        &::before {
+          transform: scale(1);
+        }
+      }
+
+      .box__icon {
+        stroke: $green;
+        color: $green;
+        stroke-dasharray: 500;
+        stroke-dashoffset: 500;
+        animation: dash 2s linear forwards;
+      }
+    }
+  }
+
+  &__slider-top {
+
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+      font-size: 15px;
+      transform: rotateY(-45deg);
+      display: none;
+    }
+  }
+
+  &__btns {
+    margin-top: 50px;
+  }
+
+  @media (max-width:1200px) {
+    &__inner {
+      display: block;
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    &__head,
+    &__body {
+      padding-left: 0;
+      padding-right: 0;
+      width: 100%;
+    }
+
+    &__head {
+      text-align: center;
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto 50px auto;
+    }
+
+    &__line {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    &__btns {
+      text-align: center;
+
+      .btn {
+        margin-bottom: 16px;
+        margin-left: 8px;
+        margin-right: 8px;
+      }
+    }
+  }
+
+  @media (max-width:767px) {
+    &__container {
+      padding-bottom: 80px;
+    }
+
+    &__slider-top {
+      .swiper-button-next {
+        right: 5px;
+      }
+
+      .swiper-button-prev {
+        left: 5px;
+      }
+
+      .swiper-button-next::after,
+      .swiper-button-prev::after {
+        display: block;
+      }
+    }
+  }
+
+  @media (max-width:576px) {
+    &__container {
+      padding-bottom: 50px;
+    }
+
+    &__btns {
+      margin-top: 35px;
+    }
+  }
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}

@@ -1,0 +1,108 @@
+.lang {
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: $letterSpacing;
+  text-transform: uppercase;
+  position: relative;
+
+  &__label {
+    background-color: transparent;
+    border: none;
+    color: $white;
+    outline: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    &::after {
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      width: 6px;
+      height: 6px;
+      min-width: 6px;
+      border: 1px solid $white;
+      border-top: none;
+      border-left: none;
+      margin-left: 7px;
+      margin-top: -2px;
+      will-change: transform;
+      transform: rotate(45deg);
+      transition: transform .3s ease;
+    }
+  }
+
+  &:hover &__label::after,
+  &__label:hover::after,
+  &__label:focus::after,
+  &__label:active::after {
+    margin-top: 3px;
+    transform: rotate(-135deg);
+  }
+
+  &:hover &__list,
+  &__label:hover+&__list,
+  &__label:focus+&__list,
+  &__label:active+&__list {
+    transform: scale(1);
+    z-index: 99;
+  }
+
+  &__flag {
+    width: 17px;
+    height: 17px;
+    min-width: 17px;
+    min-height: 17px;
+    background-color: $darkblue;
+    border-radius: 50%;
+    background-image: url(#{$pathAssets}img/lang/en.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right: 7px;
+
+    &--en {
+      background-image: url(#{$pathAssets}img/lang/en.svg);
+    }
+
+    &--ru {
+      background-image: url(#{$pathAssets}img/lang/ru.svg);
+    }
+  }
+
+  &__list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+    padding-top: 10px;
+    will-change: transform;
+    transform: scale(0);
+    transform-origin: center center;
+    transition: transform .5s ease;
+  }
+
+  &__item {
+    display: block;
+    width: 100%;
+    color: $white;
+    padding: 5px 15px;
+    text-decoration: none;
+    background-color: $darkblue;
+  }
+
+  &__item+&__item {
+    border-top: 1px solid rgba($white, .1);
+  }
+
+  &__item:first-of-type {
+    border-radius: 4px 4px 0 0;
+  }
+
+  &__item:last-of-type {
+    border-radius: 0 0 4px 4px;
+  }
+
+}
