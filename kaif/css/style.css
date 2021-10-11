@@ -141,6 +141,7 @@ img{
 
 .whitelist__form {
     margin-top: 48px;
+    position: relative;
 }
 
 .whitelist__form-item{
@@ -149,10 +150,10 @@ img{
 }
 
 .whitelist__form-control{
-    padding: 7px 24px;
+    padding: 7px 190px 7px 24px;
     display: block;
     width: 100%;
-    height: 44px;
+    height: 54px;
     border: none;
     box-shadow: inset 0px 2px 0px rgba(0, 0, 0, 0.08);
     border-radius: 2px;
@@ -164,6 +165,7 @@ img{
 }
 
 .whitelist__form-submit{    
+    position: absolute; top: 0; right: 0;
     font-size: 24px;
     line-height: 1;
     padding: 14px 24px;
@@ -199,6 +201,47 @@ img{
 
 .whitelist__icon-check{
     margin-top: 48px;
+}
+
+.whitelist__btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.whitelist__btn {
+    background-color: rgba(255,255,255,1);
+    outline: none;
+    border: none;
+    padding: .5em 1em;
+    color: #000;
+    text-decoration: none;
+    font-weight: 600;
+    margin: 0 .5em;
+    font-size: 1.25em;
+    transition: .3s ease;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    flex-basis: 0;
+}
+
+.whitelist__btn:nth-child(1) {
+    margin-left: 0;
+}
+
+.whitelist__btn:nth-child(2) {
+    margin-right: 0;
+}
+
+.whitelist__btn:hover,
+.whitelist__btn:focus,
+.whitelist__btn:active {
+    background-color: rgba(255,255,255,.8);
+    color: #000;
+    text-decoration: none;
 }
 
 @media (max-width: 1024px){
@@ -241,11 +284,35 @@ img{
     .whitelist__title{    
         font-size: 14vw;
     }
+
+    .whitelist__form-item {
+        margin-bottom: 24px;
+    }
+
+    .whitelist__form-control{
+        padding: 7px 145px 7px 14px;
+    }
+
+    .whitelist__form-submit {
+        font-size: 1.2em;
+        padding: .5em .8em;
+        height: 100%;
+    }
+
+    .whitelist__btn {
+        margin: 1.5em .25em 0;
+        font-size: 1em;
+        min-width: 1px;
+    }
 }
 
 @media (max-width: 374px){
     .whitelist__lead{
         font-size: 4vw;
+    }
+
+    .whitelist__form-control{
+        padding-right: 120px;
     }
 }
 
