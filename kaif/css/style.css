@@ -132,6 +132,11 @@ img{
     margin: 0 0 24px;
 }
 
+.whitelist__title + .whitelist__btn{
+    display: inline-flex;
+    margin-bottom: 48px;
+}
+
 .whitelist__lead{
     margin: 0;
     font-size: 24px;
@@ -206,7 +211,7 @@ img{
 .whitelist__btns {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .whitelist__btn {
@@ -224,8 +229,7 @@ img{
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-grow: 1;
-    flex-basis: 0;
+    min-width: 170px;
 }
 
 .whitelist__btn:nth-child(1) {
