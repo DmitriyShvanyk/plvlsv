@@ -1,0 +1,26 @@
+.title {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 1;
+    margin-top: 0;
+    margin-bottom: 30px;
+
+    @media (max-width:1024px) {
+        & {
+            font-size: 40px;
+        }
+    }
+
+    @media (max-width:991px) {
+        & {
+            font-size: 35px;
+        }
+    }
+
+    @media (max-width:576px) {
+        & {
+            font-size: 7.7vw;
+        }
+    }
+}

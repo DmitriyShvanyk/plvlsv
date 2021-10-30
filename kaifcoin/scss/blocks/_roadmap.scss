@@ -1,0 +1,69 @@
+.roadmap {
+    &__container {
+        padding-top: 80px;
+        padding-bottom: 78px;
+        max-width: 1000px;
+        position: relative;
+        z-index: 9;
+    }
+
+    &__title {
+        margin-bottom: 104px;
+    }
+
+    &__item {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        
+        & + & {
+            border-top: 1px solid #494A59;
+        }
+    }
+
+    &__subtitle {        
+        span {
+            color: #7549F1;
+        }
+    }
+
+    &__list {
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
+        max-width: 470px;
+
+        li {
+            position: relative;
+            padding-left: 43px;
+            margin-bottom: 10px;
+
+            &::before{
+                content: '';
+                position: absolute; top: 6px; left: 3px;
+                width: 8px;
+                height: 8px;
+                background-color: $white;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    @media (max-width: 1200px) {
+        &__title {
+            margin-bottom: .5em;
+        }
+
+        &__list {
+            max-width: 570px;
+    
+            li {
+                padding-left: 28px;
+    
+                &::before{
+                    top: 6px; 
+                    left: 0;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,7 @@
+.logo {
+    display: inline-flex;
+
+    &__img {
+        transition: max-height .7s ease;
+    }
+}

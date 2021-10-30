@@ -1,0 +1,53 @@
+.modal {
+    display: none;
+}
+
+.modal--history {
+    max-width: 1440px;
+    width: 100%;
+    padding-bottom: 0!important;
+
+    .article__container {
+        padding: 0;
+    }
+}
+
+@media (min-width:1200px){
+    .modal--history {
+        min-height: 100vh!important;
+    }
+}
+
+
+.compensate-for-scrollbar {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+
+.fancybox__slide {
+    padding: 0;
+}
+
+.fancybox__content>.carousel__button.is-close {
+    top: 10px;
+    right: 10px;
+    color: var(--fancybox-color, #fff);
+    display: none;
+}
+
+.carousel__button svg {
+    stroke: #000;
+    opacity: .5;
+}
+
+.fancybox__content {
+    padding: 36px 15px;
+}

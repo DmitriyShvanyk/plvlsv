@@ -1,0 +1,32 @@
+.list {
+    padding-left: 0;
+    margin: 0;
+    list-style: none;
+
+    &__item {
+        position: relative;
+        padding-left: 36px;
+        margin-bottom: 22px;
+    }
+
+    &__i {
+        position: absolute;
+        top: -4px;
+        left: -1px;
+        width: 24px;
+        height: 24px;
+        color: #90FFFF;
+    }
+
+    &--danger {
+        .list__i {
+            color: #FF4C00;
+        }
+    }
+
+    &--violet {
+        .list__i {
+            color: #7549F1;
+        }
+    }
+}

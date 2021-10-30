@@ -1,0 +1,53 @@
+.menu {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: normal;
+    width: 100%;
+
+    &__link {
+        color: $white;
+        display: inline-flex;
+        align-items: center;
+        position: relative;
+        text-decoration: none;
+        text-transform: uppercase;
+        padding-left: 15px;
+        padding-right: 15px;
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: rgba($white, .8);
+            text-decoration: none;            
+        }
+    }
+
+
+    &__link--active {
+        color: $white;        
+    }
+
+    @media (max-width: 1200px) {
+        &__link {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        &__link {
+            color: $white;
+    
+            &:hover,
+            &:focus,
+            &:active {
+                color: $white;
+            }
+        }
+
+        &__link--active {
+            color: $white;
+        }
+    }
+}

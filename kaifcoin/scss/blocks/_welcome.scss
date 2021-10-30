@@ -1,0 +1,126 @@
+.welcome {
+    position: relative;
+
+    &__container {
+        max-width: 1325px;
+        padding-bottom: 29px;
+    }
+
+    &__box {
+        padding: 130px 164px 96px;
+        background: rgba(93, 76, 191, 0.3);
+        background: rgba(117, 73, 241, 0.19);
+        box-shadow: 0px 28px 64px rgba(0, 0, 0, 0.24);
+        position: relative;
+        z-index: 9;
+        overflow: hidden;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 500%;
+            pointer-events: none;
+            background: url(../img/header/stars.svg) repeat center top;
+            animation: animStarts 115s linear infinite;
+        }
+    }
+
+    &__title {
+        margin-bottom: 20px;
+    }
+
+    &__do {
+        position: relative;
+        z-index: 9;
+
+        .do__head {
+            text-transform: none;
+            margin-bottom: 30px;
+        }
+
+        .do__body {
+            max-width: 690px;
+            margin-bottom: 28px;
+        }
+
+        .do__caption {
+            font-size: 14px;
+            color: rgba($white, .3);
+        }
+    }
+
+    &__shape {
+        pointer-events: none;
+        position: absolute;
+        width: 89px;
+        height: 188px;
+
+        &-inner {
+            display: block;
+            width: 100%;
+            height: 100%;
+            transform: rotate(-30.39deg);
+
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 89px;
+                height: 174px;
+                background: radial-gradient(45.18% 45.18% at 37.65% 25.18%, rgba(55, 55, 55, 0.495) 0%, rgba(2, 2, 2, 0.5) 92.16%), linear-gradient(138.74deg, rgba(255, 255, 255, 0.07) 14.95%, rgba(255, 255, 255, 0) 85.54%), #000000;
+                box-shadow: 50px 100px 100px rgba(0, 0, 0, 0.3);
+                transform: rotate(0);
+                border-radius: 0 0 25% 25%;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 89px;
+                height: 28px;
+                background: radial-gradient(111.05% 198.31% at -5.76% 23.6%, rgba(55, 55, 55, 0.495) 0%, rgba(2, 2, 2, 0.5) 100%), linear-gradient(138.74deg, rgba(255, 255, 255, 0.07) 14.95%, rgba(255, 255, 255, 0) 85.54%), #000000;
+                box-shadow: 50px 100px 100px rgba(0, 0, 0, 0.3);
+                border-radius: 50%;
+            }
+        }
+    }
+
+    &__shape--1 {
+        top: 25%;
+        left: 15%;
+    }
+
+    &__shape--2 {
+        top: 0px;
+        right: 4%;
+        transform: matrix(-0.86, -0.51, -0.51, 0.86, 0, 0);
+
+        .welcome__shape-inner {
+            transform: rotate(30.39deg);
+        }
+    }
+
+    @media (max-width: 1200px) {
+        &__box {
+            padding: 100px 100px 85px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        &__box {
+            padding: 70px 50px 50px;
+        }
+    }
+
+    @media (max-width: 640px) {
+        &__box {
+            padding: 50px 25px 40px;
+        }
+    }
+}

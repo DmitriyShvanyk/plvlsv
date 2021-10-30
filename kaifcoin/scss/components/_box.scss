@@ -1,0 +1,106 @@
+.box {
+    max-width: 956px;
+    width: 100%;
+    background-color: $black;
+    border: 1px solid rgba($white, .2);
+    padding: 86px 180px 90px 188px;
+    position: relative;
+    z-index: 9;
+
+    &__subtitle {
+        position: relative;
+        white-space: nowrap;
+    }
+
+    &__subtitle-i {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+    }
+
+    &__subtitle,
+    &__body {
+        padding-left: 134px;
+    }
+
+    &__lines {
+        position: absolute;
+        bottom: 50px;
+        left: calc(100% + 1px);
+        width: 100%;
+        height: 116px;
+        pointer-events: none;
+        background: url(../img/inno/lines1.svg) repeat-x left top;
+    }
+
+
+    &--author,
+    &--collectors {
+        font-size: 16px;
+    }
+
+    &--collectors {
+        margin-top: 74px;
+        margin-left: 164px;
+        padding-top: 76px;
+        padding-bottom: 53px;
+        padding-right: 130px;
+
+        .box__subtitle {
+            margin-bottom: 55px;
+        }
+
+        .box__subtitle-i {
+            top: calc(50% - 6px);
+        }
+
+        .box__lines {
+            bottom: 29px;
+            left: auto;
+            right: calc(100% + 1px);
+            background: url(../img/inno/lines2.svg) repeat-x right top;
+        }
+    }
+
+    @media (max-width: 1300px) {
+        &--collectors {
+            margin-left: 0;
+        }
+    }
+
+    @media (max-width: 991px) {
+        & {
+            padding: 70px 70px 40px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        & {
+            padding: 30px 30px 30px;
+        }
+
+        &--collectors {
+            margin-top: 2.75em;
+        }
+
+        &__subtitle {
+            white-space: normal;
+        }
+
+        &__subtitle-i {
+            display: block;
+            position: relative;
+            top: 0;
+            transform: translateY(0);
+            margin: 0 auto 1.5em auto;
+            max-height: 70px;
+            width: auto;
+        }
+
+        &__subtitle,
+        &__body {
+            padding-left: 0;
+        }
+    }
+}

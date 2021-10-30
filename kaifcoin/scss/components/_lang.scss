@@ -1,0 +1,38 @@
+.lang {
+    display: flex;
+    font-size: 14px;
+
+    &__link {
+        text-decoration: none;
+        text-transform: none;
+        color: rgba($white, .4);
+        transition: color .3s ease;
+
+        &+& {
+            margin-left: 13px;
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: rgba($white, .8);
+        }
+    }
+
+    &__link--active {
+        color: rgba($white, 1);
+        text-decoration: underline;
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: rgba($white, 1);
+        }
+    }
+
+    @media (max-width:767px) {
+        & {
+            font-size: 13px;
+        }
+    }
+}

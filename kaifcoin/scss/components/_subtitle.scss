@@ -1,0 +1,21 @@
+.subtitle {    
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 1;
+    margin-top: 0;
+    margin-bottom: 37px;
+    text-transform: uppercase;
+    letter-spacing: .11px;
+
+    @media (max-width: 991px) {
+        & {
+            font-size: 30px;
+        }
+    }
+
+    @media (max-width: 576px) {
+        & {
+            font-size: 6vw;
+        }
+    }
+}
