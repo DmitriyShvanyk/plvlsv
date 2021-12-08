@@ -1,0 +1,108 @@
+.rend {
+    padding: 16px;
+
+    &__head,
+    &__body {
+        border-bottom: 1px solid $bluegrey70;
+    }
+
+    &__body,
+    &__foot {
+        padding-top: 16px;
+        padding-bottom: 20px;
+    }
+
+    &__topup {
+        display: inline-flex;
+        flex-direction: column;
+    }
+
+    &__topup-btn {
+        min-width: 132px;
+        box-shadow: none;
+    }
+}
+
+
+
+#chartStaking {
+    .apexcharts-legend-series+.apexcharts-legend-series {
+        margin-top: 15px !important;
+    }
+
+    .apexcharts-legend-value {
+        font-weight: 600;
+        font-size: 18px;
+        color: $white;
+        display: block;
+        padding-left: 9px;
+    }
+}
+
+
+
+
+.modal-rend {
+    &__control {
+        border-bottom: 1px solid #373974;
+        background-color: #120634;
+        padding-right: 15px;
+        padding-left: 17px;
+    }
+
+    .control__input {
+        text-align: left;
+        font-weight: 600;
+
+        &::placeholder {
+            color: #676F9D;
+            font-weight: 600;
+        }
+    }
+
+    .control__cur {
+        color: #98A0C6;
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+
+
+.radio-period {
+    .row {
+        margin-left: -4px;
+        margin-right: -4px;
+    }
+
+    [class*=col-] {
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+
+    &__item {
+        margin-bottom: 8px;
+    }
+
+    &__item,
+    &__text {
+        display: block;
+    }
+
+    &__text {
+        width: 100%;
+        border: 1px solid #515989;
+        border-radius: 2px;
+        padding: 2px 8px;
+        white-space: nowrap;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    &__control:checked~&__text {
+        border-color: $blue1;
+    }
+}

@@ -1,0 +1,17 @@
+.scrollbar{
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+        width: 4px;
+    }
+    &::-webkit-scrollbar-track {
+        background-color: $bluegrey80;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: $bluegrey70;
+        border-radius: 4px;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+        background-color: $bluegrey50;
+    }
+}

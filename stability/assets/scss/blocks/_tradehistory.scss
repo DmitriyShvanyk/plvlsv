@@ -1,0 +1,16 @@
+@media (max-width:991px){
+    .tradehistory {
+        .tabs__head{
+            flex-direction: column-reverse;
+            align-items: flex-start;
+        }
+
+        .nav-tabs{
+            overflow-x: auto;
+            white-space: nowrap;
+            display: flex;
+            flex-wrap: nowrap;
+            max-width: calc(100% + 8px);
+        }
+    }
+}

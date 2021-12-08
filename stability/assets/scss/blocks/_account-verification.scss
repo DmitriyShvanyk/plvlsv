@@ -1,0 +1,108 @@
+.account-verification {
+    width: 100%;
+    margin-top: 16px;
+    background-color: $bluegrey80;
+    box-shadow: 0px 4px 4px rgba($black, .6);
+    border-radius: 6px;
+
+    &__head {
+        display: flex;
+        align-items: center;
+        padding: 20px 23px 15px;
+        border-bottom: 1px solid $bluegrey70;
+    }
+
+    &__title {
+        color: $white;
+        margin: 0;
+        margin-right: 28px;
+        line-height: 1;
+    }
+
+    &__head,
+    &__body {
+        border-bottom: 1px solid $bluegrey70;
+    }
+
+    &__item {
+        padding: 16px 23px;
+
+        &+& {
+            border-top: 1px solid $bluegrey70;
+        }
+    }
+
+    &__subtitle {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 19px;
+        color: $white;
+        margin-top: 0;
+        margin-bottom: 17px;
+    }
+
+    &__foot {
+        padding: 25px 23px;
+    }
+
+    &__label {
+        margin-bottom: 2px;
+    }
+
+    &__select {
+        .choices__list--single {
+            padding-left: 0;
+            padding-top: 14px;
+            padding-bottom: 14px;
+            border-bottom-color: $bluegrey30;
+        }
+
+        .choices__item--selectable {
+            font-size: 14px;
+            line-height: 19px;
+        }
+
+        .choices[data-type*=select-one]::after,
+        .choices[data-type*=select-one].is-open::after {
+            width: 7px;
+            height: 7px;
+        }
+    }
+
+    &__select-files,
+    &__btn-save {
+        box-shadow: none;
+        padding-left: 28px;
+        padding-right: 28px;
+    }
+
+    &__container {
+        max-width: 100%;
+    }
+
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -16px;
+        margin-right: -16px;
+    }
+
+    @media (min-width: 768px) {
+        &__row-dates {
+            padding-right: 52px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        &__head {
+            flex-wrap: wrap;
+        }
+
+        &__head,
+        &__item,
+        &__foot {
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+    }
+}

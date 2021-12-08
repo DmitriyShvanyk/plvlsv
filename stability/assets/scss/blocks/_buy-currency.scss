@@ -1,0 +1,171 @@
+.buy-currency {
+    max-width: 466px;
+    margin: 16px auto;
+    background-color: $bluegrey80;
+    box-shadow: 0px 4px 4px rgba($black, .6);
+    border-radius: 6px;
+    padding: 17px 30px 43px;
+
+    &__head {
+        border-bottom: 1px solid $bluegrey70;
+    }
+
+    &__title {
+        color: $white;
+        margin-bottom: 11px;
+    }
+
+    &__body {
+        padding-top: 22px;
+    }
+
+    &__payment-method {
+        font-size: 14px;
+        line-height: 19px;
+        color: $white;
+    }
+
+    &__item {
+        margin-top: 8px;
+    }
+
+    &__tabs {
+        margin-top: 21px;
+        width: 100%;
+
+        .nav-tabs,
+        .nav-link {
+            width: 100%;
+        }
+
+        .nav-item {
+            flex-grow: 1;
+            flex-basis: 0;
+            margin-right: 0;
+        }
+    }
+
+    &__select {
+        border: 1px solid $bluegrey60;
+        border-radius: 4px;
+    }
+
+    &__buying {
+        min-width: 100px;
+    }
+
+    &__give {
+        width: 100%;
+    }
+
+    &__control-give {
+        .select {
+            .choices__inner {
+                font-size: 14px;
+            }
+
+            .choices__list--single {
+                border: none;
+            }
+
+            .choices__list--dropdown {
+                .choices__item {
+                    text-align: left;
+                }
+            }
+        }
+    }
+
+    &__control-get{
+        border-bottom: 1px solid $bluegrey60;
+        background-color: $bluegrey90;     
+        padding-right: 25px;
+
+        .buy-currency__control-get-text{
+            color: $bluegrey40;     
+            position: absolute; top: 50%; left: 17px;
+            transform: translateY(-50%);
+            z-index: 1;
+        }
+
+        .control__input{                   
+            padding-left: 90px;            
+        }
+
+        .buy-currency__control-get-text,
+        .control__cur{
+            font-size: 14px;
+            line-height: 19px;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+#selectCryptoCur {
+    .choices[data-type*=select-one]:after {
+        right: 8px;
+    }
+
+    .choices__list--single {
+        padding: 0;
+        color: $bluegrey40;
+        border-bottom: transparent;
+    }
+
+    .choices__item--selectable {
+        min-height: 46px;
+        display: flex;
+        align-items: center;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 19px;
+    }
+
+    .choices__item {
+        padding: 7px 20px 7px 50px;
+        background-position: 8px center;
+        background-repeat: no-repeat;
+        background-size: 32px 32px;
+    }
+
+    .choices__item[data-value="BTC"] {
+        background-image: url(../img/cryptocurrency/btc.png);
+    }
+
+    .choices__item[data-value="USDT"] {
+        background-image: url(../img/cryptocurrency/usdt.png);
+    }
+
+    .choices__item[data-value="ETH"] {
+        background-image: url(../img/cryptocurrency/eth.png);
+    }
+
+    .choices__item[data-value="USDTLP"] {
+        background-image: url(../img/cryptocurrency/usdtlp.png);
+    }
+
+    .choices__item[data-value="ZEC"] {
+        background-image: url(../img/cryptocurrency/zec.png);
+    }
+
+    .choices__list--dropdown {
+        z-index: 100;
+
+        .choices__item {
+            font-size: 12px;
+            line-height: 16px;
+            padding-left: 40px;
+            background-size: 26px 26px;
+        }
+
+        .choices__item--selectable {
+            min-height: 36px;
+        }
+    }
+}

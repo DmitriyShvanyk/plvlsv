@@ -1,0 +1,295 @@
+.navbar {
+    background-color: $bluegrey70;
+    position: relative;
+    padding-top: 0;
+    padding-bottom: 0;
+
+    &__container {
+        max-width: 1920px;
+        padding: 0 24px;
+        min-height: 56px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__logo {
+        margin-right: 56.5px;
+    }
+
+    &__menu {
+        height: 56px;
+    }
+
+    &__right {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+    }
+
+    &__toggle {
+        margin-right: 32px;
+    }
+
+    &__lang,
+    &__notification {
+        margin-right: 28px;
+    }
+
+    &__hamburger {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 32px;
+        height: 32px;
+        padding: 8px;
+        border: none;
+        background-color: transparent;
+        outline: none;
+        position: relative;
+        margin-right: -8px;
+    }
+
+    &__hamburger-line {
+        width: 16px;
+        height: 1px;
+        min-height: 1px;
+        background-color: $bluegrey10;
+    }
+
+    &__hamburger-line+&__hamburger-line {
+        margin-top: 4px;
+    }
+
+    @media (min-width: 1025px) {
+
+        &__head,
+        &__foot,
+        &__hamburger {
+            display: none;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        &__container {
+            flex-wrap: nowrap !important;
+        }
+
+        &__collapse {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            min-height: 100vh;
+            background-color: $bluegrey70;
+            z-index: 999;
+            transform: translateX(150%);
+            will-change: transform;
+            transition: transform .3s ease;
+        }
+
+        &__collapse--active {
+            transform: translateX(0%);
+        }
+
+        &__head {
+            padding: 0 15px;
+            display: flex;
+            align-items: center;
+            min-height: 40px;
+            border-bottom: 1px solid $bluegrey60;
+
+            .navbar__toggle {
+                margin-left: auto;
+                margin-right: 24px;
+            }
+        }
+
+        &__menu-name {
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 16px;
+            color: $white;
+            text-transform: uppercase;
+        }
+
+        &__close {
+            width: 32px;
+            height: 32px;
+            border: none;
+            background-color: transparent;
+            outline: none;
+            position: relative;
+            margin-right: -15px;
+
+            &::before,
+            &:after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 16px;
+                height: 1px;
+                background-color: $bluegrey10;
+                margin: -.5px 0 0 -8px;
+                transform: rotate(45deg);
+            }
+
+            &:after {
+                transform: rotate(-45deg);
+            }
+        }
+
+        &__menu {
+            height: auto;
+            display: block;
+            padding-top: 0px;
+
+            .menu__link {
+                margin-right: 0;
+                display: block;
+                padding: 12px 15px;
+                border-bottom: 1px solid $bluegrey60;
+            }
+
+            .menu__link::before {
+                display: none;
+            }
+        }
+
+        &__right &__toggle,
+        .dropdown.navbar__my-profile {
+            display: none;
+        }
+
+        &__lang,
+        &__notification {
+            margin-right: 12px;
+        }
+
+        &__my-profile {
+            .my-profile__text {
+                max-width: 100%;
+            }
+
+            .my-profile__head {
+                display: flex;
+                align-items: center;
+                padding-top: 0;
+                padding-bottom: 10px;
+                border-bottom: 1px solid $bluegrey60;
+            }
+
+            .my-profile__name {
+                margin-right: 4px;
+                margin-bottom: 0;
+            }
+
+            .my-profile__link {
+                padding: 8px 15px;
+                border-bottom: 1px solid $bluegrey60;
+            }
+
+            .my-profile__link+.my-profile__link {
+                margin-top: 0;
+            }
+        }
+
+        &__my-profile-name {
+            display: flex;
+            align-items: center;
+            padding: 7px 15px 0;
+            text-decoration: none;
+
+            &:hover,
+            &:focus,
+            &:active {
+                text-decoration: none;
+            }
+        }
+    }
+
+    @media (max-width: 991px) {
+        &__container {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+
+}
+
+
+
+
+
+
+.menu-mobile {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    display: flex;
+    align-items: stretch;
+    min-height: 48px;
+    background-color: $bluegrey60;
+    box-shadow: 0px 4px 4px rgba($black, 0.25);
+
+    &__item {
+        display: flex;
+        justify-content: center;
+        flex-grow: 1;
+        flex-basis: 0;
+        text-align: center;
+    }
+
+    &__link {
+        height: 100%;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: .04em;
+        text-transform: uppercase;
+        text-decoration: none;
+        text-align: center;
+        color: $bluegrey20;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: $blue1;
+            opacity: 0;
+            will-change: opacity;
+            transition: opacity .3s ease;
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: $bluegrey10;
+            text-decoration: none;
+        }
+    }
+
+    &__link--active {
+        color: $white;
+
+        &::after {
+            opacity: 1;
+        }
+    }
+
+    @media (min-width: 1025px) {
+        & {
+            display: none;
+        }
+    }
+}

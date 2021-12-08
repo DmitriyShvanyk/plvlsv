@@ -1,0 +1,54 @@
+.investment {
+    max-width: 466px;
+    margin: 16px auto;
+    background-color: $bluegrey80;
+    box-shadow: 0px 4px 4px rgba($black, .6);
+    border-radius: 6px;
+    padding: 17px 30px 29px;
+
+    &__head {
+        border-bottom: 1px solid $bluegrey70;
+    }
+
+    &__title {
+        color: $white;
+        margin-bottom: 11px;
+    }
+
+    &__subtitle {
+        font-size: 18px;
+        margin-bottom: 16px;
+    }
+
+    &__btn-rend {
+        width: 100%;
+        font-size: 18px;
+        border-color: $bluegrey70;
+        box-shadow: none;
+        padding-top: 1.167em;
+        padding-bottom: 1.167em;
+    }
+
+    &__body {
+        padding-top: 10px;
+    }
+
+    &__item {
+        margin-top: 8px;
+    }
+
+    &__control {
+        font-size: 14px;
+    }
+
+    &__control-input,
+    &__control-cur {
+        color: $white;
+    }
+
+    &__caption {
+        font-size: 11px;
+        line-height: 15px;
+        color: $bluegrey20;
+    }
+}

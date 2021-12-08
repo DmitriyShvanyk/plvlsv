@@ -1,0 +1,1220 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Stability</title>
+	<meta charset="utf-8">
+	<meta name="keywords" content='Stability'>
+	<meta name="description" content='Stability'>
+	<meta name="format-detection" content="telephone=no">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<meta property="og:url" content="">
+	<meta property="og:image" content="">
+
+	<!-- favicon -->
+	<link rel="shortcut icon" href="favicon.ico">
+
+	<!-- preload fonts -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+
+	<!-- preload style -->
+	<link rel="preload" href="css/style.min.css?v=31" as="style">
+
+	<!-- main style -->
+	<link href="css/style.min.css?v=31" rel="stylesheet">
+</head>
+
+<body class="page">
+
+	<!--root.begin-->
+	<div class="root">
+
+		<!--navbar.begin-->
+		<nav class="navbar">
+			<div class="container navbar__container">
+				<a href="/" class="logo navbar__logo">
+					<img class="logo__img" loading="lazy" src="img/logo.svg" alt="Stability">
+				</a>
+
+				<div class="navbar__collapse">
+					<div class="navbar__head">
+						<div class="navbar__menu-name">Меню</div>
+
+						<!--toggle.begin-->
+						<label class="toggle navbar__toggle">
+							<input type="checkbox" name="toggleTheme" class="toggle__control sr-only">
+							<span class="toggle__icon"></span>
+						</label>
+						<!--toggle.end-->
+
+						<button class="navbar__close"></button>
+					</div>
+					<div class="navbar__body">
+
+						<!--menu.begin-->
+						<div class="menu navbar__menu">
+							<a href="buy-currency.html" class="menu__link">Купить криптовалюту</a>
+							<a href="#" class="menu__link">Торговля</a>
+							<a href="#" class="menu__link">Инвестиции</a>
+							<a href="wallet.html" class="menu__link menu__link--active">Кошелёк</a>
+						</div>
+						<!--menu.end-->
+
+					</div>
+					<div class="navbar__foot">
+						<div class="my-profile navbar__my-profile">
+							<a href="#" class="navbar__my-profile-name">
+								<span class="my-profile__avatar">
+									<img class="my-profile__avatar-img" loading="lazy" src="img/avatar.png" alt="">
+								</span>
+								<span class="my-profile__text">vitaliy1985@gmail.com</span>
+							</a>
+							<div class="my-profile__head">
+								<div class="my-profile__name">Валерий Иванов</div>
+								<div class="badge bg-danger my-profile__status my-profile__status--unverified">Неверифицирован</div>
+							</div>
+							<div class="my-profile__menu">
+								<a href="#" class="my-profile__link">
+									<span class="my-profile__link-pict">
+										<svg class="my-profile__link-icon">
+											<use xlink:href="#i-calling"></use>
+										</svg>
+									</span>
+									<span class="my-profile__link-text">Поддержка</span>
+								</a>
+								<a href="#" class="my-profile__link">
+									<span class="my-profile__link-pict">
+										<svg class="my-profile__link-icon">
+											<use xlink:href="#i-lock"></use>
+										</svg>
+									</span>
+									<span class="my-profile__link-text">Безопасность</span>
+								</a>
+								<a href="#" class="my-profile__link">
+									<span class="my-profile__link-pict">
+										<svg class="my-profile__link-icon">
+											<use xlink:href="#i-user"></use>
+										</svg>
+									</span>
+									<span class="my-profile__link-text">Мои аккаунты</span>
+								</a>
+								<a href="#" class="my-profile__link">
+									<span class="my-profile__link-pict">
+										<svg class="my-profile__link-icon">
+											<use xlink:href="#i-logout"></use>
+										</svg>
+									</span>
+									<span class="my-profile__link-text">Выйти</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="navbar__right">
+					<!--toggle.begin-->
+					<label class="toggle navbar__toggle">
+						<input type="checkbox" name="toggleTheme" class="toggle__control sr-only">
+						<span class="toggle__icon"></span>
+					</label>
+					<!--toggle.end-->
+
+					<!--lang.begin-->
+					<div class="dropdown lang navbar__lang">
+						<button class="btn btn-link dropdown-toggle" type="button" data-bs-toggle="dropdown"
+							aria-expanded="false">
+							RU
+						</button>
+						<ul class="dropdown-menu dropdown-menu-end">
+							<li><a class="dropdown-item" href="#">RU</a></li>
+							<li><a class="dropdown-item" href="#">EN</a></li>
+						</ul>
+					</div>
+					<!--lang.end-->
+
+					<!--notification.begin-->
+					<div class="dropdown notification navbar__notification">
+						<button class="btn btn-link dropdown-toggle" type="button" data-bs-toggle="dropdown"
+							aria-expanded="false">
+							<svg class="notification__icon">
+								<use xlink:href="#i-notification"></use>
+							</svg>
+							<span class="notification__status"></span>
+						</button>
+						<ul class="dropdown-menu dropdown-menu-end">
+							<li>Notification</li>
+						</ul>
+					</div>
+					<!--notification.end-->
+
+					<!--my-profile.begin-->
+					<div class="dropdown my-profile navbar__my-profile">
+						<button class="btn btn-link dropdown-toggle" type="button" data-bs-toggle="dropdown"
+							aria-expanded="false">
+							<span class="my-profile__avatar">
+								<img class="my-profile__avatar-img" loading="lazy" src="img/avatar.png" alt="">
+							</span>
+							<span class="my-profile__text">vitaliy1985@gmail.com</span>
+						</button>
+						<div class="dropdown-menu dropdown-menu-end my-profile__dropdown-menu">
+							<div class="my-profile__head">
+								<div class="my-profile__this">Профиль</div>
+								<div class="my-profile__name">Валерий Иванов</div>
+								<div class="badge bg-danger my-profile__status my-profile__status--unverified">Неверифицирован</div>
+							</div>
+							<div class="my-profile__body">
+								<div class="my-profile__balance">
+									<div class="my-profile__balance-text">Баланс</div>
+									<div class="my-profile__balance-num">1.32156468 USD</div>
+								</div>
+							</div>
+							<div class="my-profile__foot">
+								<div class="my-profile__menu">
+									<a href="#" class="my-profile__link">
+										<span class="my-profile__link-pict">
+											<svg class="my-profile__link-icon">
+												<use xlink:href="#i-calling"></use>
+											</svg>
+										</span>
+										<span class="my-profile__link-text">Поддержка</span>
+									</a>
+									<a href="#" class="my-profile__link">
+										<span class="my-profile__link-pict">
+											<svg class="my-profile__link-icon">
+												<use xlink:href="#i-lock"></use>
+											</svg>
+										</span>
+										<span class="my-profile__link-text">Безопасность</span>
+									</a>
+									<a href="#" class="my-profile__link">
+										<span class="my-profile__link-pict">
+											<svg class="my-profile__link-icon">
+												<use xlink:href="#i-user"></use>
+											</svg>
+										</span>
+										<span class="my-profile__link-text">Мои аккаунты</span>
+									</a>
+									<a href="#" class="my-profile__link">
+										<span class="my-profile__link-pict">
+											<svg class="my-profile__link-icon">
+												<use xlink:href="#i-logout"></use>
+											</svg>
+										</span>
+										<span class="my-profile__link-text">Выйти</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--my-profile.end-->
+
+					<!--hamburger.begin-->
+					<button class="navbar__hamburger">
+						<span class="navbar__hamburger-line"></span>
+						<span class="navbar__hamburger-line"></span>
+						<span class="navbar__hamburger-line"></span>
+					</button>
+					<!--hamburger.end-->
+
+				</div>
+			</div>
+
+			<div class="menu-mobile">
+				<div class="menu-mobile__item">
+					<a href="#" class="menu-mobile__link menu-mobile__link--active">Валюты</a>
+				</div>
+				<div class="menu-mobile__item">
+					<a href="#" class="menu-mobile__link">Графики</a>
+				</div>
+				<div class="menu-mobile__item">
+					<a href="#" class="menu-mobile__link">ордера</a>
+				</div>
+				<div class="menu-mobile__item">
+					<a href="#" class="menu-mobile__link">история</a>
+				</div>
+			</div>
+		</nav>
+		<!--navbar.end-->
+
+		<!--content.begin-->
+		<main class="main">
+			<div class="content">
+				<div class="container content__container content__container--w-1074">
+
+					<!--wallet.begin-->
+					<div class="wallet">
+						<div class="wallet__head">
+							<h1 class="wallet__title">Кошелёк</h1>
+							<div class="tabs wallet__tabs">
+								<ul class="nav nav-tabs" id="tabWallet">
+									<li class="nav-item">
+										<button class="nav-link active" data-bs-toggle="tab"
+											data-bs-target="#tabWalletBalance" type="button"
+											aria-selected="true">баланс</button>
+									</li>
+									<li class="nav-item">
+										<button class="nav-link" data-bs-toggle="tab" data-bs-target="#tabWalletHistory"
+											type="button" aria-selected="false">история кошелька</button>
+									</li>
+								</ul>
+							</div>
+							<div class="wallet__btns">
+								<button class="btn btn-info wallet__btn">ввод</button>
+								<button class="btn btn-gray-outline wallet__btn">вывод</button>
+								<button class="btn btn-gray-outline wallet__btn">перевод</button>
+							</div>
+						</div>
+						<div class="wallet__body">
+							<div class="tab-content">
+								<div class="tab-pane fade show active" id="tabWalletBalance">
+
+									<div class="wallet__items">
+										<div class="wallet__item">
+
+											<!--toggle.begin-->
+											<label class="toggle wallet__toggle-hide-balance d-flex align-items-center">
+												<input type="checkbox" name="hideBalance"
+													class="toggle__control sr-only">
+												<span class="toggle__text me-2">Скрыть баланс</span>
+												<span class="toggle__icon"></span>
+											</label>
+											<!--toggle.end-->
+
+											<!--balance.begin-->
+											<div class="balance wallet__balance">
+												<div class="balance__item">
+													<div class="balance__caption">Фиатный и спотовый баланс</div>
+													<div class="balance__main">
+														<div class="balance__num">0.07895642</div>
+														<div class="balance__cur">BTC</div>
+													</div>
+													<div class="balance__approximately">≈$32.000000</div>
+												</div>
+												<div class="balance__item">
+													<div class="balance__caption">Спотовый баланс</div>
+													<div class="balance__main">
+														<div class="balance__num">0.07895642</div>
+														<div class="balance__cur">BTC</div>
+													</div>
+													<div class="balance__approximately">≈$32.000000</div>
+												</div>
+												<div class="balance__item">
+													<div class="balance__caption">PNL за вчера</div>
+													<div class="balance__main">
+														<div class="balance__num">0.07895642</div>
+														<div class="balance__cur">BTC</div>
+													</div>
+													<div class="balance__approximately">≈$32.000000</div>
+												</div>
+											</div>
+											<!--balance.end-->
+
+										</div>
+										<div class="wallet__item">
+											<div class="wallet__item-head d-flex align-items-center">
+												<div class="wallet__item-column order-md-2">
+
+													<!--toggle.begin-->
+													<label
+														class="toggle wallet__low-value-assets d-flex align-items-center">
+														<input type="checkbox" name="hideLowValueAssets"
+															class="toggle__control sr-only">
+														<span class="toggle__text me-2">Скрывать активы с низкой
+															стоимостью</span>
+														<span class="toggle__icon"></span>
+													</label>
+													<!--toggle.end-->
+
+												</div>
+												<div class="wallet__item-column order-md-1">
+
+													<!--form-search.begin-->
+													<form action="#" class="form-search wallet__form-search"
+														method="POST">
+														<input type="search" name="searchCoin"
+															class="form-search__control" placeholder="Поиск монет"
+															required>
+														<button class="btn form-search__button">
+															<svg class="form-search__icon">
+																<use xlink:href="#i-search"></use>
+															</svg>
+														</button>
+													</form>
+													<!--form-search.end-->
+
+												</div>
+											</div>
+											<div class="wallet__item-body">
+												<div class="smart-table smart-table--wallet">
+													<table class="table smart-table__table">
+														<thead class="smart-table__thead">
+															<tr class="smart-table__row">
+																<th class="smart-table__cell"
+																	data-column-id="cryptocurrency">
+																	<div class="smart-table__sort-by">Криптовалюта</div>
+																</th>
+																<th class="smart-table__cell text-right"
+																	data-column-id="all">
+																	<div class="smart-table__sort-by">Всего</div>
+																</th>
+																<th class="smart-table__cell text-center"
+																	data-column-id="available">
+																	<div class="smart-table__sort-by">Доступно</div>
+																</th>
+																<th class="smart-table__cell text-center"
+																	data-column-id="inorder">
+																	<div class="smart-table__sort-by">В ордере</div>
+																</th>
+																<th class="smart-table__cell text-center"
+																	data-column-id="cost-btc">
+																	<div class="smart-table__sort-by">Стоимость в BTC
+																	</div>
+																</th>
+																<th class="smart-table__cell text-right"
+																	data-column-id="status">
+																	<div class="smart-table__sort-by">&nbsp;</div>
+																</th>
+															</tr>
+														</thead>
+														<tbody class="smart-table__tbody">
+															<tr class="smart-table__row">
+																<td class="smart-table__cell"
+																	data-column-id="cryptocurrency">
+																	<div class="cryptocurrency">
+																		<img class="cryptocurrency__img" loading="lazy"
+																			src="img/cryptocurrency/btc.png" alt="">
+																		<div class="cryptocurrency__name ms-2">BTC</div>
+																	</div>
+																</td>
+																<td class="smart-table__cell justify-content-end"
+																	data-column-id="all">
+																	<span>0.07895642</span>
+																</td>
+																<td class="smart-table__cell justify-content-center"
+																	data-column-id="available">
+																	<span>0.07895642</span>
+																</td>
+																<td class="smart-table__cell justify-content-center"
+																	data-column-id="inorder">
+																	<span>0.07895642</span>
+																</td>
+																<td class="smart-table__cell justify-content-center"
+																	data-column-id="cost-btc">
+																	<span>0.07895642</span>
+																</td>
+																<td class="smart-table__cell justify-content-end"
+																	data-column-id="status">
+																	<div class="wallet__links">
+																		<a href="#"
+																			class="link wallet__link wallet__link--input">Ввод</a>
+																		<a href="#"
+																			class="link wallet__link wallet__link--output">Вывод</a>
+																		<a href="#"
+																			class="link wallet__link wallet__link--trade">Торговать</a>
+																	</div>
+																</td>
+															</tr>
+															<tr class="smart-table__row">
+																<td class="smart-table__cell"
+																	data-column-id="cryptocurrency">
+																	<div class="cryptocurrency">
+																		<img class="cryptocurrency__img" loading="lazy"
+																			src="img/cryptocurrency/usdt.png" alt="">
+																		<div class="cryptocurrency__name ms-2">BTC</div>
+																	</div>
+																</td>
+																<td class="smart-table__cell justify-content-end"
+																	data-column-id="all">
+																	<span>0.07895642</span>
+																</td>
+																<td class="smart-table__cell justify-content-center"
+																	data-column-id="available">
+																	<span>0.07895642</span>
+																</td>
+																<td class="smart-table__cell justify-content-center"
+																	data-column-id="inorder">
+																	<span>0.07895642</span>
+																</td>
+																<td class="smart-table__cell justify-content-center"
+																	data-column-id="cost-btc">
+																	<span>0.07895642</span>
+																</td>
+																<td class="smart-table__cell justify-content-end"
+																	data-column-id="status">
+																	<div class="wallet__links">
+																		<a href="#"
+																			class="link wallet__link wallet__link--input">Ввод</a>
+																		<a href="#"
+																			class="link link--gray wallet__link wallet__link--output">Вывод</a>
+																		<a href="#"
+																			class="link link--gray wallet__link wallet__link--trade">Торговать</a>
+																	</div>
+																</td>
+															</tr>
+															<tr class="smart-table__row">
+																<td class="smart-table__cell"
+																	data-column-id="cryptocurrency">
+																	<div class="cryptocurrency">
+																		<img class="cryptocurrency__img" loading="lazy"
+																			src="img/cryptocurrency/eth.png" alt="">
+																		<div class="cryptocurrency__name ms-2">BTC</div>
+																	</div>
+																</td>
+																<td class="smart-table__cell justify-content-end"
+																	data-column-id="all">
+																	<span>0.07895642</span>
+																</td>
+																<td class="smart-table__cell justify-content-center"
+																	data-column-id="available">
+																	<span>0.07895642</span>
+																</td>
+																<td class="smart-table__cell justify-content-center"
+																	data-column-id="inorder">
+																	<span>0.07895642</span>
+																</td>
+																<td class="smart-table__cell justify-content-center"
+																	data-column-id="cost-btc">
+																	<span>0.07895642</span>
+																</td>
+																<td class="smart-table__cell justify-content-end"
+																	data-column-id="status">
+																	<div class="wallet__links">
+																		<a href="#"
+																			class="link wallet__link wallet__link--input">Ввод</a>
+																		<a href="#"
+																			class="link wallet__link wallet__link--output">Вывод</a>
+																		<a href="#"
+																			class="link wallet__link wallet__link--trade">Торговать</a>
+																	</div>
+																</td>
+															</tr>
+															<tr class="smart-table__row">
+																<td class="smart-table__cell"
+																	data-column-id="cryptocurrency">
+																	<div class="cryptocurrency">
+																		<img class="cryptocurrency__img" loading="lazy"
+																			src="img/cryptocurrency/usdtlp.png" alt="">
+																		<div class="cryptocurrency__name ms-2">BTC</div>
+																	</div>
+																</td>
+																<td class="smart-table__cell justify-content-end"
+																	data-column-id="all">
+																	<span>0.07895642</span>
+																</td>
+																<td class="smart-table__cell justify-content-center"
+																	data-column-id="available">
+																	<span>0.07895642</span>
+																</td>
+																<td class="smart-table__cell justify-content-center"
+																	data-column-id="inorder">
+																	<span>0.07895642</span>
+																</td>
+																<td class="smart-table__cell justify-content-center"
+																	data-column-id="cost-btc">
+																	<span>0.07895642</span>
+																</td>
+																<td class="smart-table__cell justify-content-end"
+																	data-column-id="status">
+																	<div class="wallet__links">
+																		<a href="#"
+																			class="link wallet__link wallet__link--input">Ввод</a>
+																		<a href="#"
+																			class="link wallet__link wallet__link--output">Вывод</a>
+																		<a href="#"
+																			class="link wallet__link wallet__link--trade">Торговать</a>
+																	</div>
+																</td>
+															</tr>
+															<tr class="smart-table__row">
+																<td class="smart-table__cell"
+																	data-column-id="cryptocurrency">
+																	<div class="cryptocurrency">
+																		<img class="cryptocurrency__img" loading="lazy"
+																			src="img/cryptocurrency/usdt.png" alt="">
+																		<div class="cryptocurrency__name ms-2">BTC</div>
+																	</div>
+																</td>
+																<td class="smart-table__cell justify-content-end"
+																	data-column-id="all">
+																	<span>0.07895642</span>
+																</td>
+																<td class="smart-table__cell justify-content-center"
+																	data-column-id="available">
+																	<span>0.07895642</span>
+																</td>
+																<td class="smart-table__cell justify-content-center"
+																	data-column-id="inorder">
+																	<span>0.07895642</span>
+																</td>
+																<td class="smart-table__cell justify-content-center"
+																	data-column-id="cost-btc">
+																	<span>0.07895642</span>
+																</td>
+																<td class="smart-table__cell justify-content-end"
+																	data-column-id="status">
+																	<div class="wallet__links">
+																		<a href="#"
+																			class="link wallet__link wallet__link--input">Ввод</a>
+																		<a href="#"
+																			class="link wallet__link wallet__link--output">Вывод</a>
+																		<a href="#"
+																			class="link wallet__link wallet__link--trade">Торговать</a>
+																	</div>
+																</td>
+															</tr>
+															<tr class="smart-table__row">
+																<td class="smart-table__cell"
+																	data-column-id="cryptocurrency">
+																	<div class="cryptocurrency">
+																		<img class="cryptocurrency__img" loading="lazy"
+																			src="img/cryptocurrency/zec.png" alt="">
+																		<div class="cryptocurrency__name ms-2">BTC</div>
+																	</div>
+																</td>
+																<td class="smart-table__cell justify-content-end"
+																	data-column-id="all">
+																	<span>0.07895642</span>
+																</td>
+																<td class="smart-table__cell justify-content-center"
+																	data-column-id="available">
+																	<span>0.07895642</span>
+																</td>
+																<td class="smart-table__cell justify-content-center"
+																	data-column-id="inorder">
+																	<span>0.07895642</span>
+																</td>
+																<td class="smart-table__cell justify-content-center"
+																	data-column-id="cost-btc">
+																	<span>0.07895642</span>
+																</td>
+																<td class="smart-table__cell justify-content-end"
+																	data-column-id="status">
+																	<div class="wallet__links">
+																		<a href="#"
+																			class="link wallet__link wallet__link--input">Ввод</a>
+																		<a href="#"
+																			class="link wallet__link wallet__link--output">Вывод</a>
+																		<a href="#"
+																			class="link wallet__link wallet__link--trade">Торговать</a>
+																	</div>
+																</td>
+															</tr>
+															<tr class="smart-table__row">
+																<td class="smart-table__cell"
+																	data-column-id="cryptocurrency">
+																	<div class="cryptocurrency">
+																		<img class="cryptocurrency__img" loading="lazy"
+																			src="img/cryptocurrency/btc.png" alt="">
+																		<div class="cryptocurrency__name ms-2">BTC</div>
+																	</div>
+																</td>
+																<td class="smart-table__cell justify-content-end"
+																	data-column-id="all">
+																	<span>0.07895642</span>
+																</td>
+																<td class="smart-table__cell justify-content-center"
+																	data-column-id="available">
+																	<span>0.07895642</span>
+																</td>
+																<td class="smart-table__cell justify-content-center"
+																	data-column-id="inorder">
+																	<span>0.07895642</span>
+																</td>
+																<td class="smart-table__cell justify-content-center"
+																	data-column-id="cost-btc">
+																	<span>0.07895642</span>
+																</td>
+																<td class="smart-table__cell justify-content-end"
+																	data-column-id="status">
+																	<div class="wallet__links">
+																		<a href="#"
+																			class="link wallet__link wallet__link--input">Ввод</a>
+																		<a href="#"
+																			class="link wallet__link wallet__link--output">Вывод</a>
+																		<a href="#"
+																			class="link wallet__link wallet__link--trade">Торговать</a>
+																	</div>
+																</td>
+															</tr>
+															<tr class="smart-table__row">
+																<td class="smart-table__cell"
+																	data-column-id="cryptocurrency">
+																	<div class="cryptocurrency">
+																		<img class="cryptocurrency__img" loading="lazy"
+																			src="img/cryptocurrency/eth.png" alt="">
+																		<div class="cryptocurrency__name ms-2">BTC</div>
+																	</div>
+																</td>
+																<td class="smart-table__cell justify-content-end"
+																	data-column-id="all">
+																	<span>0.07895642</span>
+																</td>
+																<td class="smart-table__cell justify-content-center"
+																	data-column-id="available">
+																	<span>0.07895642</span>
+																</td>
+																<td class="smart-table__cell justify-content-center"
+																	data-column-id="inorder">
+																	<span>0.07895642</span>
+																</td>
+																<td class="smart-table__cell justify-content-center"
+																	data-column-id="cost-btc">
+																	<span>0.07895642</span>
+																</td>
+																<td class="smart-table__cell justify-content-end"
+																	data-column-id="status">
+																	<div class="wallet__links">
+																		<a href="#"
+																			class="link wallet__link wallet__link--input">Ввод</a>
+																		<a href="#"
+																			class="link wallet__link wallet__link--output">Вывод</a>
+																		<a href="#"
+																			class="link wallet__link wallet__link--trade">Торговать</a>
+																	</div>
+																</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="tab-pane fade" id="tabWalletHistory">
+									<div class="wallet__item">
+
+										<div class="wallet-filter">
+											<div class="wallet-filter__columns">
+												<div class="wallet-filter__column wallet-filter__column--1">
+													<div class="form__label wallet-filter__label">
+														Поиск по монете
+													</div>
+													<form action="#" class="form-search wallet__form-search" method="POST">
+														<input type="search" name="searchCoin" class="form-search__control"
+															placeholder="Поиск" required>
+														<button class="btn form-search__button">
+															<svg class="form-search__icon">
+																<use xlink:href="#i-search"></use>
+															</svg>
+														</button>
+													</form>
+												</div>
+												<div class="wallet-filter__column wallet-filter__column--2">
+													<div class="form__label wallet-filter__label">
+														Транзакция
+													</div>
+													<div class="select select--line">
+														<select class="select__control js-choice" name="selectTransaction">
+															<option value="Все">Все</option>
+															<option value="20">20</option>
+															<option value="30">30</option>
+															<option value="40">40</option>
+															<option value="50">50</option>
+														</select>
+													</div>	
+												</div>
+												<div class="wallet-filter__column wallet-filter__column--3">
+													<div class="form__label wallet-filter__label">
+														Статус
+													</div>
+													<div class="select select--line">
+														<select class="select__control js-choice" name="selectStatus">
+															<option value="Все">Все</option>
+															<option value="Завершен">Завершен</option>
+															<option value="Обрабатывается">Обрабатывается</option>
+															<option value="Отмена">Отмена</option>
+														</select>
+													</div>	
+												</div>
+												<div class="wallet-filter__column wallet-filter__column--4">
+													<div class="date-period">
+														<div class="form__label wallet-filter__label">
+															Период
+														</div>
+														<div class="date-period__columns">
+															<div class="date-period__column">
+																<div class="control control--date">
+																	<input type="text" class="control__input control__input--left control__input--date js-date" id="walletHistoryDateStart" placeholder="Select date start" value="01/02/2021">
+																	<svg class="control__icon">
+																		<use xlink:href="#i-calendar"></use>
+																	</svg>
+																</div>
+															</div>
+															<div class="date-period__column">—</div>
+															<div class="date-period__column">
+																<div class="control control--date">
+																	<input type="text" class="control__input control__input--left control__input--date js-date" id="walletHistoryDateEnd" placeholder="Select date end" value="05/02/2021">
+																	<svg class="control__icon">
+																		<use xlink:href="#i-calendar"></use>
+																	</svg>
+																</div>
+															</div>
+														</div>														
+													</div>
+												</div>
+											</div>
+										</div>		
+									</div>
+									<div class="wallet__item">
+										<div class="wallet__item-body">
+											<div class="smart-table smart-table--wallet-history">
+												<table class="table smart-table__table">
+													<thead class="smart-table__thead">
+														<tr class="smart-table__row">
+															<th class="smart-table__cell" data-column-id="date">
+																<div class="smart-table__sort-by">Дата</div>
+															</th>
+															<th class="smart-table__cell"
+																data-column-id="cryptocurrency">
+																<div class="smart-table__sort-by">Криптовалюта</div>
+															</th>
+															<th class="smart-table__cell text-center"
+																data-column-id="sum">
+																<div class="smart-table__sort-by">Сумма</div>
+															</th>
+															<th class="smart-table__cell" data-column-id="transaction">
+																<div class="smart-table__sort-by">Транзакция</div>
+															</th>
+															<th class="smart-table__cell" data-column-id="status">
+																<div class="smart-table__sort-by">Статус</div>
+															</th>
+															<th class="smart-table__cell" data-column-id="info">
+																<div class="smart-table__sort-by">Информация</div>
+															</th>
+														</tr>
+													</thead>
+													<tbody class="smart-table__tbody">
+														<tr class="smart-table__row">
+															<td class="smart-table__cell" data-column-id="date">
+																<span>02/18/2019</span>
+															</td>
+															<td class="smart-table__cell"
+																data-column-id="cryptocurrency">
+																<div class="cryptocurrency">
+																	<img class="cryptocurrency__img" loading="lazy"
+																		src="img/cryptocurrency/btc.png" alt="">
+																	<div class="cryptocurrency__name ms-2">BTC</div>
+																</div>
+															</td>
+															<td class="smart-table__cell justify-content-center"
+																data-column-id="sum">
+																<span>0.07895642</span>
+															</td>
+															<td class="smart-table__cell" data-column-id="transaction">
+																<span class="plus">Ввод</span>
+															</td>
+															<td class="smart-table__cell" data-column-id="status">
+																<span>Завершен</span>
+															</td>
+															<td class="smart-table__cell" data-column-id="info">
+																<span>Lorem ipsum dolor sit amet consectetur adipisicing
+																	elit. Inventore laboriosam, velit cupiditate eaque
+																	itaque quos unde pariatur adipisci neque, fuga
+																	consequatur esse quidem. Asperiores et, eligendi
+																	maiores in mollitia quae.</span>
+															</td>
+														</tr>
+														<tr class="smart-table__row">
+															<td class="smart-table__cell" data-column-id="date">
+																<span>02/18/2019</span>
+															</td>
+															<td class="smart-table__cell"
+																data-column-id="cryptocurrency">
+																<div class="cryptocurrency">
+																	<img class="cryptocurrency__img" loading="lazy"
+																		src="img/cryptocurrency/usdt.png" alt="">
+																	<div class="cryptocurrency__name ms-2">USDT</div>
+																</div>
+															</td>
+															<td class="smart-table__cell justify-content-center"
+																data-column-id="sum">
+																<span>0.07895642</span>
+															</td>
+															<td class="smart-table__cell" data-column-id="transaction">
+																<span class="minus">Вывод</span>
+															</td>
+															<td class="smart-table__cell" data-column-id="status">
+																<span>Завершен</span>
+															</td>
+															<td class="smart-table__cell" data-column-id="info">
+																<span>Lorem ipsum dolor sit amet consectetur adipisicing
+																	elit. Inventore laboriosam, velit cupiditate eaque
+																	itaque quos unde pariatur adipisci neque, fuga
+																	consequatur esse quidem. Asperiores et, eligendi
+																	maiores in mollitia quae.</span>
+															</td>
+														</tr>
+														<tr class="smart-table__row">
+															<td class="smart-table__cell" data-column-id="date">
+																<span>02/18/2019</span>
+															</td>
+															<td class="smart-table__cell"
+																data-column-id="cryptocurrency">
+																<div class="cryptocurrency">
+																	<img class="cryptocurrency__img" loading="lazy"
+																		src="img/cryptocurrency/eth.png" alt="">
+																	<div class="cryptocurrency__name ms-2">ETH</div>
+																</div>
+															</td>
+															<td class="smart-table__cell justify-content-center"
+																data-column-id="sum">
+																<span>0.07895642</span>
+															</td>
+															<td class="smart-table__cell" data-column-id="transaction">
+																<span class="plus">Ввод</span>
+															</td>
+															<td class="smart-table__cell" data-column-id="status">
+																<span>Завершен</span>
+															</td>
+															<td class="smart-table__cell" data-column-id="info">
+																<span>Lorem ipsum dolor sit amet consectetur adipisicing
+																	elit. Inventore laboriosam, velit cupiditate eaque
+																	itaque quos unde pariatur adipisci neque, fuga
+																	consequatur esse quidem. Asperiores et, eligendi
+																	maiores in mollitia quae.</span>
+															</td>
+														</tr>
+														<tr class="smart-table__row">
+															<td class="smart-table__cell" data-column-id="date">
+																<span>02/18/2019</span>
+															</td>
+															<td class="smart-table__cell"
+																data-column-id="cryptocurrency">
+																<div class="cryptocurrency">
+																	<img class="cryptocurrency__img" loading="lazy"
+																		src="img/cryptocurrency/usdtlp.png" alt="">
+																	<div class="cryptocurrency__name ms-2">ETH</div>
+																</div>
+															</td>
+															<td class="smart-table__cell justify-content-center"
+																data-column-id="sum">
+																<span>0.07895642</span>
+															</td>
+															<td class="smart-table__cell" data-column-id="transaction">
+																<span class="plus">Ввод</span>
+															</td>
+															<td class="smart-table__cell processed"
+																data-column-id="status">
+																<span>Обрабатывается</span>
+															</td>
+															<td class="smart-table__cell" data-column-id="info">
+																<span>Lorem ipsum dolor sit amet consectetur adipisicing
+																	elit. Inventore laboriosam, velit cupiditate eaque
+																	itaque quos unde pariatur adipisci neque, fuga
+																	consequatur esse quidem. Asperiores et, eligendi
+																	maiores in mollitia quae.</span>
+															</td>
+														</tr>
+														<tr class="smart-table__row">
+															<td class="smart-table__cell" data-column-id="date">
+																<span>02/18/2019</span>
+															</td>
+															<td class="smart-table__cell"
+																data-column-id="cryptocurrency">
+																<div class="cryptocurrency">
+																	<img class="cryptocurrency__img" loading="lazy"
+																		src="img/cryptocurrency/usdtlp.png" alt="">
+																	<div class="cryptocurrency__name ms-2">ETH</div>
+																</div>
+															</td>
+															<td class="smart-table__cell justify-content-center"
+																data-column-id="sum">
+																<span>0.07895642</span>
+															</td>
+															<td class="smart-table__cell" data-column-id="transaction">
+																<span class="plus">Ввод</span>
+															</td>
+															<td class="smart-table__cell processed"
+																data-column-id="status">
+																<span>Обрабатывается</span>
+															</td>
+															<td class="smart-table__cell" data-column-id="info">
+																<span>Lorem ipsum dolor sit amet consectetur adipisicing
+																	elit. Inventore laboriosam, velit cupiditate eaque
+																	itaque quos unde pariatur adipisci neque, fuga
+																	consequatur esse quidem. Asperiores et, eligendi
+																	maiores in mollitia quae.</span>
+															</td>
+														</tr>
+														<tr class="smart-table__row">
+															<td class="smart-table__cell" data-column-id="date">
+																<span>02/18/2019</span>
+															</td>
+															<td class="smart-table__cell"
+																data-column-id="cryptocurrency">
+																<div class="cryptocurrency">
+																	<img class="cryptocurrency__img" loading="lazy"
+																		src="img/cryptocurrency/usdtlp.png" alt="">
+																	<div class="cryptocurrency__name ms-2">ETH</div>
+																</div>
+															</td>
+															<td class="smart-table__cell justify-content-center"
+																data-column-id="sum">
+																<span>0.07895642</span>
+															</td>
+															<td class="smart-table__cell" data-column-id="transaction">
+																<span class="minus">Вывод</span>
+															</td>
+															<td class="smart-table__cell processed"
+																data-column-id="status">
+																<span>Обрабатывается</span>
+															</td>
+															<td class="smart-table__cell" data-column-id="info">
+																<span>Lorem ipsum dolor sit amet consectetur adipisicing
+																	elit. Inventore laboriosam, velit cupiditate eaque
+																	itaque quos unde pariatur adipisci neque, fuga
+																	consequatur esse quidem. Asperiores et, eligendi
+																	maiores in mollitia quae.</span>
+															</td>
+														</tr>
+														<tr class="smart-table__row">
+															<td class="smart-table__cell" data-column-id="date">
+																<span>02/18/2019</span>
+															</td>
+															<td class="smart-table__cell"
+																data-column-id="cryptocurrency">
+																<div class="cryptocurrency">
+																	<img class="cryptocurrency__img" loading="lazy"
+																		src="img/cryptocurrency/btc.png" alt="">
+																	<div class="cryptocurrency__name ms-2">ETH</div>
+																</div>
+															</td>
+															<td class="smart-table__cell justify-content-center"
+																data-column-id="sum">
+																<span>0.07895642</span>
+															</td>
+															<td class="smart-table__cell" data-column-id="transaction">
+																<span class="minus">Вывод</span>
+															</td>
+															<td class="smart-table__cell cancel"
+																data-column-id="status">
+																<span>Отмена</span>
+															</td>
+															<td class="smart-table__cell" data-column-id="info">
+																<span>Lorem ipsum dolor sit amet consectetur adipisicing
+																	elit. Inventore laboriosam, velit cupiditate eaque
+																	itaque quos unde pariatur adipisci neque, fuga
+																	consequatur esse quidem. Asperiores et, eligendi
+																	maiores in mollitia quae.</span>
+															</td>
+														</tr>
+														<tr class="smart-table__row">
+															<td class="smart-table__cell" data-column-id="date">
+																<span>02/18/2019</span>
+															</td>
+															<td class="smart-table__cell"
+																data-column-id="cryptocurrency">
+																<div class="cryptocurrency">
+																	<img class="cryptocurrency__img" loading="lazy"
+																		src="img/cryptocurrency/btc.png" alt="">
+																	<div class="cryptocurrency__name ms-2">ETH</div>
+																</div>
+															</td>
+															<td class="smart-table__cell justify-content-center"
+																data-column-id="sum">
+																<span>0.07895642</span>
+															</td>
+															<td class="smart-table__cell" data-column-id="transaction">
+																<span class="plus">Ввод</span>
+															</td>
+															<td class="smart-table__cell cancel"
+																data-column-id="status">
+																<span>Отмена</span>
+															</td>
+															<td class="smart-table__cell" data-column-id="info">
+																<span>Lorem ipsum dolor sit amet consectetur adipisicing
+																	elit. Inventore laboriosam, velit cupiditate eaque
+																	itaque quos unde pariatur adipisci neque, fuga
+																	consequatur esse quidem. Asperiores et, eligendi
+																	maiores in mollitia quae.</span>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+						<div class="wallet__foot">
+
+							<!--pagination.begin-->
+							<nav class="pagination" aria-label="Page navigation">
+								<ul class="pagination__list">
+									<li class="pagination__item">
+										<a class="pagination__link pagination__link-prev" href="#"
+											aria-label="Previous">
+											<svg class="pagination__icon">
+												<use xlink:href="#i-arrow-left"></use>
+											</svg>
+										</a>
+									</li>
+									<li class="pagination__item"><a class="pagination__link pagination__link--active"
+											href="#">1</a>
+									</li>
+									<li class="pagination__item"><a class="pagination__link" href="#">2</a></li>
+									<li class="pagination__item"><a class="pagination__link" href="#">3</a></li>
+									<li class="pagination__item"><a class="pagination__link" href="#">...</a></li>
+									<li class="pagination__item"><a class="pagination__link" href="#">22</a></li>
+									<li class="pagination__item">
+										<a class="pagination__link pagination__link-next" href="#" aria-label="Next">
+											<svg class="pagination__icon">
+												<use xlink:href="#i-arrow-right"></use>
+											</svg>
+										</a>
+									</li>
+								</ul>
+							</nav>
+							<!--pagination.end-->
+
+						</div>
+					</div>
+					<!--wallet.end-->
+
+				</div>
+			</div>
+		</main>
+		<!--content.end-->
+
+	</div>
+	<!--root.end-->
+
+	<!-- svg sprites.begin -->
+	<svg class="sr-only" version="1.1" height="0" xmlns="http://www.w3.org/2000/svg"
+		xmlns:xlink="http://www.w3.org/1999/xlink">
+		<symbol id="i-notification" viewBox="0 0 24 24" fill="none">
+			<path fill-rule="evenodd" clip-rule="evenodd"
+				d="M3.50083 13.7871V13.5681C3.53295 12.9202 3.7406 12.2925 4.10236 11.7496C4.7045 11.0975 5.1167 10.2983 5.29571 9.43598C5.29571 8.7695 5.29571 8.0935 5.35393 7.42703C5.65469 4.21842 8.82728 2 11.9611 2H12.0387C15.1725 2 18.345 4.21842 18.6555 7.42703C18.7137 8.0935 18.6555 8.7695 18.704 9.43598C18.8854 10.3003 19.2972 11.1019 19.8974 11.7591C20.2618 12.2972 20.4698 12.9227 20.4989 13.5681V13.7776C20.5206 14.648 20.2208 15.4968 19.6548 16.1674C18.907 16.9515 17.8921 17.4393 16.8024 17.5384C13.607 17.8812 10.383 17.8812 7.18762 17.5384C6.09914 17.435 5.08576 16.9479 4.33521 16.1674C3.778 15.4963 3.48224 14.6526 3.50083 13.7871Z"
+				stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+			<path
+				d="M9.55493 20.8518C10.0542 21.4784 10.7874 21.884 11.5922 21.9787C12.3971 22.0734 13.2072 21.8495 13.8433 21.3564C14.0389 21.2106 14.2149 21.041 14.3672 20.8518"
+				stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+		</symbol>
+		<symbol id="i-calling" viewBox="0 0 24 24" fill="none">
+			<path fill-rule="evenodd" clip-rule="evenodd"
+				d="M2.98995 4.87351C3.30627 4.34875 5.05018 2.44377 6.2929 2.50127C6.66469 2.53311 6.99334 2.75698 7.26037 3.01783H7.2614C7.87351 3.61756 9.62974 5.88094 9.72834 6.35745C9.97175 7.52611 8.57806 8.19978 9.00428 9.37769C10.0909 12.0364 11.9632 13.9086 14.6232 14.994C15.8002 15.4212 16.4739 14.0287 17.6427 14.2711C18.1192 14.3707 20.3839 16.1257 20.9826 16.7388V16.7388C21.2425 17.0048 21.4684 17.3344 21.4992 17.7062C21.5454 19.0155 19.5222 20.7829 19.1278 21.0088C18.1973 21.6753 16.9833 21.663 15.5034 20.975C11.3737 19.2569 4.77391 12.782 3.02384 8.49657C2.35421 7.02496 2.30902 5.8029 2.98995 4.87351Z"
+				stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+			<path d="M14.5654 2.75C18.2674 3.161 21.1904 6.081 21.6064 9.782" stroke="currentColor" stroke-width="1.5"
+				stroke-linecap="round" stroke-linejoin="round" />
+			<path d="M14.5654 6.293C16.3354 6.638 17.7184 8.021 18.0634 9.791" stroke="currentColor" stroke-width="1.5"
+				stroke-linecap="round" stroke-linejoin="round" />
+		</symbol>
+		<symbol id="i-lock" viewBox="0 0 24 24" fill="none">
+			<path
+				d="M16.4232 9.4478V7.3008C16.4232 4.7878 14.3852 2.7498 11.8722 2.7498C9.35925 2.7388 7.31325 4.7668 7.30225 7.2808V7.3008V9.4478"
+				stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+			<path fill-rule="evenodd" clip-rule="evenodd"
+				d="M15.683 21.2496H8.042C5.948 21.2496 4.25 19.5526 4.25 17.4576V13.1686C4.25 11.0736 5.948 9.3766 8.042 9.3766H15.683C17.777 9.3766 19.475 11.0736 19.475 13.1686V17.4576C19.475 19.5526 17.777 21.2496 15.683 21.2496Z"
+				stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+			<path d="M11.8628 14.2027V16.4237" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+				stroke-linejoin="round" />
+		</symbol>
+		<symbol id="i-logout" viewBox="0 0 24 24" fill="none">
+			<path
+				d="M15.016 7.3895V6.4565C15.016 4.4215 13.366 2.7715 11.331 2.7715H6.45597C4.42197 2.7715 2.77197 4.4215 2.77197 6.4565V17.5865C2.77197 19.6215 4.42197 21.2715 6.45597 21.2715H11.341C13.37 21.2715 15.016 19.6265 15.016 17.5975V16.6545"
+				stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+			<path d="M21.8096 12.0214H9.76855" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+				stroke-linejoin="round" />
+			<path d="M18.8813 9.10629L21.8093 12.0213L18.8813 14.9373" stroke="currentColor" stroke-width="1.5"
+				stroke-linecap="round" stroke-linejoin="round" />
+		</symbol>
+		<symbol id="i-v-dots" viewBox="0 0 24 24" fill="none">
+			<circle cx="12" cy="6.5" r="1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+				stroke-linejoin="round" />
+			<circle cx="12" cy="12" r="1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+				stroke-linejoin="round" />
+			<circle cx="12" cy="17.5" r="1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+				stroke-linejoin="round" />
+		</symbol>
+		<symbol id="i-search" viewBox="0 0 24 24" fill="none">
+			<ellipse cx="11.7666" cy="11.7666" rx="6.98856" ry="6.98856" stroke="currentColor" stroke-width="1.5"
+				stroke-linecap="round" stroke-linejoin="round" />
+			<path d="M17.0182 17.4851L18.5423 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+				stroke-linejoin="round" />
+		</symbol>
+		<symbol id="i-circle-red" viewBox="0 0 24 24" fill="none">
+			<circle cx="12" cy="12" r="5" fill="#FF5860" />
+		</symbol>
+		<symbol id="i-circle-green" viewBox="0 0 24 24" fill="none">
+			<circle cx="12" cy="12" r="5" fill="#01B26A" />
+		</symbol>
+		<symbol id="i-circle-red-green" viewBox="0 0 24 24" fill="none">
+			<path
+				d="M17 12C17 10.6739 16.4732 9.40215 15.5355 8.46447C14.5979 7.52678 13.3261 7 12 7C10.6739 7 9.40215 7.52678 8.46447 8.46447C7.52678 9.40215 7 10.6739 7 12L12 12H17Z"
+				fill="#FF5860" />
+			<path
+				d="M7 12C7 13.3261 7.52678 14.5979 8.46447 15.5355C9.40215 16.4732 10.6739 17 12 17C13.3261 17 14.5979 16.4732 15.5355 15.5355C16.4732 14.5979 17 13.3261 17 12L12 12L7 12Z"
+				fill="#01B26A" />
+		</symbol>
+		<symbol id="i-minus" viewBox="0 0 24 24" fill="none">
+			<rect x="7" y="12" width="10" height="1" rx="0.5" fill="currentColor" />
+		</symbol>
+		<symbol id="i-plus" viewBox="0 0 24 24" fill="none">
+			<rect x="7" y="12" width="10" height="1" rx="0.5" fill="currentColor" />
+			<rect x="12.5" y="7.5" width="10" height="1" rx="0.5" transform="rotate(90 12.5 7.5)" fill="currentColor" />
+		</symbol>
+		<symbol id="i-fullscreen" viewBox="0 0 24 24" fill="none">
+			<path d="M9.5 5H7.25H6C5.44772 5 5 5.44772 5 6V9.5" stroke="currentColor" stroke-linecap="round"
+				stroke-linejoin="round" />
+			<path d="M14.5 5H18C18.5523 5 19 5.44772 19 6V9.5" stroke="currentColor" stroke-linecap="round"
+				stroke-linejoin="round" />
+			<path d="M9.5 19H6C5.44772 19 5 18.5523 5 18V14.5" stroke="currentColor" stroke-linecap="round"
+				stroke-linejoin="round" />
+			<path d="M14.5 19H18C18.5523 19 19 18.5523 19 18V14.5" stroke="currentColor" stroke-linecap="round"
+				stroke-linejoin="round" />
+			<path d="M6 6L18 18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+			<path d="M6 18L18 6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+		</symbol>
+		<symbol id="i-eye" viewBox="0 0 24 24" fill="none">
+			<path fill-rule="evenodd" clip-rule="evenodd"
+				d="M12.2882 4.00482L12.002 4C7.86108 4 4.12926 6.92308 2.06091 11.7058C1.9797 11.8936 1.9797 12.1064 2.06091 12.2942L2.20424 12.6168C4.24638 17.0931 7.77544 19.8644 11.7118 19.9952L11.998 20C16.1389 20 19.8707 17.0769 21.9391 12.2942C22.0213 12.104 22.0202 11.8884 21.9361 11.699L21.7968 11.3856C19.7497 6.90091 16.2192 4.13547 12.2882 4.00482ZM12.009 5.48942L12.2479 5.49456L12.5149 5.50845C15.7122 5.73484 18.6525 8.10553 20.429 11.9991L20.4197 12.0231C18.5987 16.0005 15.5569 18.3853 12.2589 18.505L12.004 18.5088L11.7469 18.5054L11.4806 18.4915C8.38271 18.2721 5.52637 16.0344 3.73914 12.3597L3.57 11.9991L3.72658 11.6662C5.61117 7.77315 8.69148 5.49027 12.009 5.48942ZM11.9995 8.11346C9.8391 8.11346 8.0885 9.85313 8.0885 12.0002C8.0885 14.1465 9.83929 15.8859 11.9995 15.8859C14.1598 15.8859 15.9115 14.1463 15.9115 12.0002C15.9115 9.85325 14.16 8.11346 11.9995 8.11346ZM11.9995 9.60378C13.3317 9.60378 14.4115 10.6764 14.4115 12.0002C14.4115 13.3231 13.3316 14.3956 11.9995 14.3956C10.6677 14.3956 9.5885 13.3234 9.5885 12.0002C9.5885 10.6761 10.6676 9.60378 11.9995 9.60378Z"
+				fill="currentColor" />
+		</symbol>
+		<symbol id="i-warning" viewBox="0 0 24 24" fill="none">
+			<path fill-rule="evenodd" clip-rule="evenodd" d="M2 12.0002C2 6.47798 6.47779 2.0002 12 2.0002C17.5229 2.0002 22 6.47765 22 12.0002C22 17.5227 17.5229 22.0002 12 22.0002C6.47779 22.0002 2 17.5224 2 12.0002ZM20.5 12.0002C20.5 7.30605 16.6944 3.5002 12 3.5002C7.30621 3.5002 3.5 7.30641 3.5 12.0002C3.5 16.694 7.30621 20.5002 12 20.5002C16.6944 20.5002 20.5 16.6943 20.5 12.0002ZM11.9951 7.4543C12.3748 7.4543 12.6886 7.73645 12.7383 8.10253L12.7451 8.2043V12.6233C12.7451 13.0375 12.4093 13.3733 11.9951 13.3733C11.6154 13.3733 11.3016 13.0911 11.2519 12.7251L11.2451 12.6233V8.2043C11.2451 7.79008 11.5809 7.4543 11.9951 7.4543ZM12.7551 15.7961C12.7551 15.3819 12.4193 15.0461 12.0051 15.0461L11.8933 15.0529C11.5273 15.1026 11.2451 15.4164 11.2451 15.7961C11.2451 16.2103 11.5809 16.5461 11.9951 16.5461L12.1069 16.5393C12.4729 16.4896 12.7551 16.1758 12.7551 15.7961Z" fill="currentColor"/>
+		</symbol>
+		<symbol id="i-arrow-right" viewBox="0 0 24 24" fill="none">
+			<path fill-rule="evenodd" clip-rule="evenodd"
+				d="M7.96967 19.5303C7.67678 19.2374 7.67678 18.7626 7.96967 18.4697L14.4393 12L7.96967 5.53033C7.67678 5.23744 7.67678 4.76256 7.96967 4.46967C8.26256 4.17678 8.73744 4.17678 9.03033 4.46967L16.0303 11.4697C16.3232 11.7626 16.3232 12.2374 16.0303 12.5303L9.03033 19.5303C8.73744 19.8232 8.26256 19.8232 7.96967 19.5303Z"
+				fill="currentColor" />
+		</symbol>
+		<symbol id="i-arrow-left" viewBox="0 0 16 16" fill="none">
+			<path fill-rule="evenodd" clip-rule="evenodd"
+				d="M10.6868 13.0202C10.8821 12.8249 10.8821 12.5084 10.6868 12.3131L6.37369 7.99999L10.6868 3.68688C10.8821 3.49161 10.8821 3.17503 10.6868 2.97977C10.4915 2.78451 10.175 2.78451 9.9797 2.97977L5.31303 7.64644C5.11777 7.8417 5.11777 8.15828 5.31303 8.35354L9.9797 13.0202C10.175 13.2155 10.4915 13.2155 10.6868 13.0202Z"
+				fill="currentColor" />
+		</symbol>
+		<symbol id="i-user" viewBox="0 0 24 24" fill="none">
+			<path d="M4 18.1938C4 16.4293 5.78443 15 7.98502 15H16.015C18.2156 15 20 16.4293 20 18.1938" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+			<circle cx="12" cy="7" r="5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+		</symbol>
+		<symbol id="i-calendar" viewBox="0 0 16 16" fill="none">
+			<path d="M2.06177 6.26949H13.9444" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+			<path d="M10.9615 8.87313H10.9676" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+			<path d="M8.00298 8.87313H8.00915" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+			<path d="M5.03862 8.87313H5.0448" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+			<path d="M10.9615 11.4641H10.9676" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+			<path d="M8.00298 11.4641H8.00915" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+			<path d="M5.03862 11.4641H5.0448" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+			<path d="M10.6958 1.33331V3.52717" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+			<path d="M5.31026 1.33331V3.52717" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+			<path fill-rule="evenodd" clip-rule="evenodd" d="M10.8255 2.38611H5.18064C3.22285 2.38611 2 3.47673 2 5.48146V11.5146C2 13.5508 3.22285 14.6666 5.18064 14.6666H10.8193C12.7833 14.6666 14 13.5697 14 11.565V5.48146C14.0062 3.47673 12.7895 2.38611 10.8255 2.38611Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+		</symbol>			
+	</svg>
+	<!-- svg sprites.end -->
+
+	<!--script.begin-->
+	<script async src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.2/lazysizes.min.js"></script>
+	<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
+	<script defer src="vendor/choices/choices.min.js"></script>
+	<script defer src="vendor/flatpickr/flatpickr.min.js"></script>	
+	<script defer src="vendor/flatpickr/rangePlugin.min.js"></script>
+	<script defer src="js/main.js?v=31"></script>
+	<!--script.end-->
+
+</body>
+
+</html>

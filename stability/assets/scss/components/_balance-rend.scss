@@ -1,0 +1,33 @@
+.balance-rend {
+    &,
+    &__title {
+        font-size: 11px;
+        color: $bluegrey40;
+    }
+
+    &__title {
+        margin-bottom: 8px;
+    }
+
+    &__inner {
+        display: flex;
+        align-items: center;
+    }
+
+    &__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        min-width: 32px;
+        background-color: #1FA7FC;
+        border-radius: 50px;
+        margin-right: 8px;
+    }
+
+    &__value {
+        font-size: 18px;
+        color: $white;
+    }
+}

@@ -1,0 +1,24 @@
+.link {
+    display: inline-block;
+    vertical-align: top;
+    color: $lightblue1;
+    text-decoration: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: $lightblue1;
+        text-decoration: underline;
+    }
+
+
+    &--gray {
+        color: $bluegrey40;
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: $bluegrey20;
+        }
+    }
+}

@@ -1,0 +1,11 @@
+.payout-history{
+    padding: 16px;
+
+    &__head{        
+        border-bottom: 1px solid $bluegrey70;
+    }
+
+    &__body{
+        padding-top: 0;
+    }
+}

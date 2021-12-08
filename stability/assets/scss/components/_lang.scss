@@ -1,0 +1,39 @@
+.lang {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    color: $bluegrey20;
+
+    .dropdown-toggle {
+        padding: 0;
+        font-size: 12px;
+        line-height: 16px;
+        text-decoration: none;
+        color: $bluegrey20;
+        box-shadow: none;
+    }
+
+    .dropdown-menu {
+        text-align: center;
+        min-width: 3rem;
+        padding: .5rem 0;
+        font-size: 11px;
+        line-height: 15px;
+        background-color: $bluegrey50;
+        border-color: $bluegrey50;
+        box-shadow: 0px 4px 4px rgba($black, .25);
+        border-radius: 4px;
+    }
+
+    .dropdown-menu,
+    .dropdown-item {
+        color: $bluegrey20;
+    }
+
+    .dropdown-item {
+        padding-left: .25rem;
+        padding-right: .25rem;
+    }
+}
