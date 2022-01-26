@@ -1,0 +1,15 @@
+.subtitle {
+    color: $white;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 1.39;
+    letter-spacing: .04em;
+    margin-top: 0;
+    margin-bottom: 8px;
+
+    @media (max-width: 576px) {
+        &{
+            font-size: 4.5vw;
+        }
+    }
+}

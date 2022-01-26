@@ -1,0 +1,23 @@
+.dropdown{
+    &-toggle{
+        &::after {
+            margin-left: .255em;
+            vertical-align: .25em;
+            border: 1px solid $bluegrey20;
+            border-top: none;
+            border-left: none;
+            width: 5px;
+            height: 5px;
+            transform: rotate(45deg);
+            will-change: transform;
+            transition: transform .3s ease;
+        }
+    }
+
+    &-toggle.show {
+        &::after {
+            vertical-align: .1em;
+            transform: rotate(-135deg);
+        }
+    }
+}

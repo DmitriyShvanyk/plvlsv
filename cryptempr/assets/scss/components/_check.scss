@@ -1,0 +1,47 @@
+.check {
+    position: relative;
+
+    &__text {
+        display: block;
+        color: $bluegrey20;
+        padding-left: 27px;
+    }
+
+    &__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 18px;
+        height: 18px;
+        border: 1px solid $bluegrey60;
+        border-radius: 2px;
+
+        &::before {
+            content: '';
+            position: relative;
+            top: -1px;
+            display: block;
+            width: 12px;
+            height: 6px;
+            border: 2px solid $bluegrey100;
+            border-top: none;
+            border-right: none;
+            transform: rotate(-45deg);
+            opacity: 0;
+            will-change: opacity;
+            transition: opacity .3s ease;
+        }
+    }
+
+    &__control:checked~&__icon {
+        border-color: $lightblue1;
+        background-color: $lightblue1;
+    }
+
+    &__control:checked~&__icon::before {
+        opacity: 1;
+    }
+}

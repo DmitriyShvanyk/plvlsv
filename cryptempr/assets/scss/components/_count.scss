@@ -1,0 +1,90 @@
+.count {
+    display: flex;
+    position: relative;
+
+    &__btn {
+        position: absolute;
+        top: 0;
+        color: $bluegrey30;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        outline: none;
+        background-color: transparent;
+        border: none;
+        padding: 0;
+    }
+
+    &__btn-minus {
+        left: 0;
+    }
+
+    &__btn-plus {
+        right: 0;
+    }
+
+    &__btn,
+    &__icon {
+        width: 24px;
+        height: 24px;
+        min-width: 24px;
+    }
+
+    &__block,
+    &__input {
+        display: block;
+        width: 100%;
+    }
+
+    &__block {
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid $bluegrey30;
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    &__input {
+        color: $bluegrey10;
+        padding: 7px 0;
+        min-height: 24px;
+        outline: none;
+        background-color: transparent;
+        border: none;
+        text-align: right;
+        -moz-appearance: textfield;
+
+        /* Chrome, Safari, Edge, Opera */
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        &::placeholder {
+            color: $bluegrey10;
+        }
+
+    }
+
+    &__input:focus~&__line {
+        width: 100%;
+    }
+
+    &__cur {
+        color: $bluegrey40;
+        margin-left: 4px;
+        margin-right: 8px;
+    }
+
+    &__line {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 1px;
+        background-color: $blue1;
+        z-index: 1;
+        transition: width .3s ease;
+    }
+}

@@ -1,0 +1,13 @@
+.select {
+    &__control {
+        outline: none;
+        background-color: transparent;
+        border: none;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: .04em;
+        text-transform: uppercase;
+        color: $bluegrey20;
+    }
+}

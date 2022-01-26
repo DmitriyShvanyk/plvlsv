@@ -1,0 +1,217 @@
+.wallet {
+    margin-top: 16px;
+    background-color: $bluegrey80;
+    box-shadow: 0px 4px 4px rgba($black, .6);
+    border-radius: 6px;
+
+    &__head {
+        display: flex;
+        align-items: center;
+        padding: 16px 23px 8px;
+        border-bottom: 1px solid $bluegrey70;
+    }
+
+    &__title {
+        color: $white;
+        margin: 0;
+        margin-right: 28px;
+        line-height: 1;
+    }
+
+    &__tabs {
+        position: relative;
+        top: 6px;
+
+        .nav-link::after {
+            bottom: -6px;
+        }
+    }
+
+    &__btns {
+        margin-left: auto;
+    }
+
+    &__btn {
+        min-width: 101px;
+        padding-bottom: .652em;
+        box-shadow: none;
+    }
+
+    &__btn+&__btn {
+        margin-left: 12px;
+    }
+
+    &__item {
+        padding: 14px 23px;
+    }
+
+    &__item+&__item {
+        border-top: 1px solid $bluegrey70;
+    }
+
+    &__toggle-hide-balance {
+        margin-bottom: 10px;
+    }
+
+    &__item-head {
+        margin-bottom: 15px;
+    }
+
+    &__item-column {
+        &:nth-child(1) {
+            width: 280px;
+        }
+
+        &:nth-child(2) {
+            width: calc(100% - 280px);
+            margin-right: 64px;
+        }
+    }
+
+    &__link {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    &__foot {
+        margin-top: 23px;
+    }
+
+    @media (max-width: 991px) {
+        &__btn+&__btn {
+            margin-left: 4px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        &__head {
+            flex-wrap: wrap;            
+        }
+
+        &__head,
+        &__item{
+            padding-left: 8px;
+            padding-right: 8px;
+        }
+
+        &__tabs {
+            order: 1;
+            width: 100%;
+            top: 0;
+            margin-top: 15px;
+
+            .nav-link::after {
+                bottom: -9px;
+            }
+        }
+
+        &__item-head {
+            display: block!important;
+            width: 100%;
+        }
+
+        &__item-column{
+            width: 100%!important;
+
+            &:nth-child(2){
+                margin-top: 15px;
+            }
+        }
+
+        &__balance{
+            margin-top: 20px;
+        }
+    }
+
+    @media (max-width: 640px) {
+        &__btns{
+            margin-left: 0;
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        &__btn{
+            margin-right: 4px;
+            margin-bottom: 4px;
+            margin-top: 4px;
+        }
+
+        &__btn+&__btn {
+            margin-left: 0;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.wallet-filter{
+    &__columns{
+        display: flex;
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+
+    &__column{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    &__column--1{
+        width: 38.5%;
+    }
+
+    &__column--2,
+    &__column--3{
+        width: 145px;
+    }
+
+    &__label{
+        color: $bluegrey40;
+    }
+
+    @media (max-width: 991px) {
+        &__columns{
+            flex-wrap: wrap;
+        }
+
+        &__column--1{
+            width: 100%;
+            order: 1;
+            margin-top: 20px;
+        }
+
+        &__column--2,
+        &__column--3{
+            width: 25%;
+            max-width: 25%;
+        }
+
+        &__column--4{
+            width: 50%;
+            max-width: 50%;
+        }
+    }
+
+    @media (max-width: 640px) {
+        &__column--2,
+        &__column--3{
+            width: 50%;
+            max-width: 50%;
+        }
+
+        &__column--4{
+            width: 100%;
+            max-width: 100%;
+            margin-top: 20px;
+        }
+    }
+}

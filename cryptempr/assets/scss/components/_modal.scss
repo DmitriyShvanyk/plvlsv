@@ -1,0 +1,171 @@
+.modal {
+    &-dialog {
+        max-width: 450px;
+    }
+
+    &-content {
+        border: 1px solid $bluegrey80;
+        background-color: $bluegrey80;
+        box-shadow: 0px 4px 4px rgba($black, .6);
+        border-radius: 6px;
+    }
+
+    &-header {
+        justify-content: center;
+        flex-direction: column;
+        padding: 1.45rem 1rem;
+    }
+
+    &-header,
+    &-footer {
+        border: none;
+    }
+
+    &-header,
+    &-body,
+    &-footer {
+        padding-left: 55px;
+        padding-right: 55px;
+    }
+
+    &-title {
+        text-align: center;
+        color: $white;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 1.333;
+        margin-top: 0;
+        margin-bottom: 8px;
+    }
+
+    &-subtitle {
+        text-align: center;
+        color: $white;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 19px;
+        margin-top: 0;
+        margin-bottom: 8px;
+    }
+
+    &-text {
+        margin-bottom: 16px;
+    }
+
+    .btn-close {
+        color: $bluegrey50;
+        position: absolute;
+        top: 13px;
+        right: 13px;
+        background: none;
+        cursor: pointer;
+        width: 15px;
+        min-width: 15px;
+        height: 15px;
+        display: inline-block;
+        vertical-align: top;
+        margin: 0;
+        padding: 0;
+        outline: none;
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 10px;
+            height: 2px;
+            background-color: $bluegrey50;
+            margin: -1px 0 0 -5px;
+            transform: rotate(-45deg);
+            transition: background-color .3s ease;
+        }
+
+        &::after {
+            transform: rotate(45deg);
+        }
+
+        &:hover::before,
+        &:hover::after {
+            background-color: $red1;
+        }
+    }
+
+    @media (max-width: 576px) {
+
+        &-header,
+        &-body,
+        &-footer {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+}
+
+
+
+
+
+#modalSendBitcoin,
+#modalGetBitcoin {
+    .modal-header,
+    .modal-body,
+    .modal-footer {
+        padding-left: 44px;
+        padding-right: 44px;
+    }
+
+    .tabs .nav-tabs {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .tabs .nav-item {
+        margin-right: 0;
+    }
+
+    .tabs__head::after {
+        left: 0;
+        width: 100%;
+    }
+
+    @media (max-width: 576px) {
+        .modal-header,
+        .modal-body,
+        .modal-footer {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .tabs .nav-item {
+            font-size: 11px;
+            line-height: 15px;
+            margin-right: 0;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+#modalConfirmationSecretPhrase{
+    .modal-dialog{
+        max-width: 1026px;
+    }
+
+    .modal-body{
+        max-width: 864px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+}

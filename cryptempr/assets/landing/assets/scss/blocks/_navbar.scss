@@ -1,0 +1,184 @@
+.navbar {
+    background-color: transparent;
+    position: relative;
+    padding-top: 0;
+    padding-bottom: 0;
+    position: fixed; top: 0; left: 0;
+    width: 100%;
+    z-index: 999;
+    transition: background-color .3s ease;
+
+    &--bg{
+        background-color: $bluegrey100;
+    }
+
+    &__container {
+        max-width: 1280px;
+        padding: 0 24px;
+        min-height: 56px;
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__logo {
+        margin-right: 28px;
+    }
+
+    &__menu {
+        height: 56px;
+    }
+
+    &__right {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+    }
+
+    &__lang {
+        margin-right: 18px;
+        position: relative; top: -2px;
+    }
+
+    &__hamburger {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 32px;
+        height: 32px;
+        padding: 8px;
+        border: none;
+        background-color: transparent;
+        outline: none;
+        position: relative;
+        margin-right: -8px;
+    }
+
+    &__hamburger-line {
+        width: 16px;
+        height: 1px;
+        min-height: 1px;
+        background-color: $bluegrey10;
+    }
+
+    &__hamburger-line+&__hamburger-line {
+        margin-top: 4px;
+    }
+
+    @media (min-width: 1025px) {
+
+        &__head,
+        &__hamburger {
+            display: none;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        &__container {
+            flex-wrap: nowrap !important;
+        }
+
+        &__collapse {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            min-height: 100vh;
+            background-color: $bluegrey70;
+            z-index: 999;
+            transform: translateX(150%);
+            will-change: transform;
+            transition: transform .3s ease;
+        }
+
+        &__collapse--active {
+            transform: translateX(0%);
+        }
+
+        &__head {
+            padding: 0 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 40px;
+            border-bottom: 1px solid $bluegrey60;
+
+            .navbar__toggle {
+                margin-left: auto;
+                margin-right: 24px;
+            }
+        }
+
+        &__menu-name {
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 16px;
+            color: $white;
+            text-transform: uppercase;
+        }
+
+        &__close {
+            width: 32px;
+            height: 32px;
+            border: none;
+            background-color: transparent;
+            outline: none;
+            position: relative;
+            margin-right: -15px;
+
+            &::before,
+            &:after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 16px;
+                height: 1px;
+                background-color: $bluegrey10;
+                margin: -.5px 0 0 -8px;
+                transform: rotate(45deg);
+            }
+
+            &:after {
+                transform: rotate(-45deg);
+            }
+        }
+
+        &__menu {
+            height: auto;
+            display: block;
+            padding-top: 0px;
+
+            .menu__link {
+                margin-right: 0;
+                display: block;
+                padding: 12px 15px;
+                border-bottom: 1px solid $bluegrey60;
+            }
+
+            .menu__link::before {
+                display: none;
+            }
+        }        
+
+        &__lang,
+        &__btn {
+            margin-right: 12px;
+        }
+
+        &__btn{
+            padding-left: 14px;
+            padding-right: 14px;
+            font-size: 10px;
+        }
+    }
+
+    @media (max-width: 991px) {
+        &__container {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+}

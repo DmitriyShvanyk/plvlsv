@@ -1,0 +1,12 @@
+.asset {
+    &__label {
+        margin-top: 1px;
+    }
+
+    &__value {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 19px;
+        color: $white;
+    }
+}

@@ -1,0 +1,418 @@
+.minus {
+    color: $red1;
+}
+
+.plus {
+    color: $green1;
+}
+
+.cell {
+    vertical-align: middle;
+    white-space: nowrap;
+    flex: 1;
+}
+
+.icon-star {
+    position: relative;
+    z-index: 2;
+    display: block;
+    width: 14px;
+    height: 12px;
+    background: url(../img/icons/star-outline.svg) no-repeat 0 0;
+
+    &--filled {
+        background: url(../img/icons/star.svg) no-repeat 0 0;
+    }
+}
+
+
+
+.smart-table {
+    width: calc(100% + 16px);
+    margin-left: -8px;
+
+    .table>:not(:last-child)>:last-child>*,
+    .table>:not(caption)>*>* {
+        border: none;
+    }
+
+    .table>:not(caption)>*>* {
+        box-shadow: none;
+    }
+
+    .smart-table__table {
+        color: $bluegrey10;
+        margin-bottom: 0;
+        border-collapse: collapse;
+    }
+
+    .smart-table__thead,
+    .smart-table__tbody {
+        display: block;
+        width: 100%;
+    }
+
+    .smart-table__thead {
+        color: $bluegrey40;
+    }
+
+    .smart-table__tbody {
+        max-height: 260px;
+    }
+
+    .smart-table__cell {
+        padding: 5px 6px;
+        white-space: nowrap;
+        flex-basis: 100%;
+        flex-grow: 1;
+    }
+
+    .smart-table__cell[data-column-id="favorite"] {
+        min-width: 22px;
+        max-width: 22px;
+        padding-right: 0;
+    }
+
+    .smart-table__cell--plus {
+        color: $green1;
+    }
+
+    .smart-table__row {
+        cursor: pointer;
+        width: 100%;
+        display: flex;
+    }
+
+    .smart-table__row:hover .smart-table__cell {
+        background-color: $bluegrey70;
+    }
+
+    &__circle {
+        width: 16px;
+        height: 16px;
+    }
+
+    &__zero {
+        color: $bluegrey40;
+    }
+
+    &__progress {
+        display: block;
+        margin: 0 6px;
+        height: 1px;
+        width: 100%;
+        background-color: $red1;
+        position: relative;
+    }
+
+    &__close {
+        cursor: pointer;
+        width: 15px;
+        min-width: 15px;
+        height: 15px;
+        display: inline-block;
+        vertical-align: top;
+        position: relative;
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 10px;
+            height: 2px;
+            background-color: $bluegrey20;
+            margin: -1px 0 0 -5px;
+            transform: rotate(-45deg);
+            transition: background-color .3s ease;
+        }
+
+        &::after {
+            transform: rotate(45deg);
+        }
+
+        &:hover::before,
+        &:hover::after {
+            background-color: $red1;
+        }
+    }
+}
+
+
+
+
+.smart-table--watchlist {
+    margin-top: 11px;
+
+    .smart-table__cell:nth-child(1) {
+        flex-basis: 22px;
+    }
+
+    .smart-table__cell:nth-child(3) {
+        flex-basis: 140%;
+    }
+}
+
+
+
+
+
+.smart-table--orderbook {
+    margin-top: 11px;
+
+    .smart-table__tbody {
+        max-height: 296px;
+    }
+
+    .smart-table__cell {
+        flex-grow: 1;
+        flex-basis: 0;
+    }
+
+    .smart-table__cell[data-column-id="lastprice"],
+    .smart-table__cell[data-column-id="difference"] {
+        color: $white;
+    }
+}
+
+
+
+
+.smart-table--tradehistory {
+    .smart-table__cell:nth-child(8) {
+        min-width: 170px;
+        flex-basis: 170px;
+    }
+
+    .smart-table__tbody {
+        max-height: 255px;
+    }
+
+    @media (max-width:991px) {
+        & {
+            overflow-x: auto;
+        }
+
+        .smart-table__cell {
+            min-width: 100px;
+        }
+    }
+}
+
+
+
+
+.smart-table--wallet,
+.smart-table--wallet-history {
+    .smart-table__tbody {
+        max-height: 100%;
+    }
+
+    .smart-table__row {
+        border-bottom: 1px solid $bluegrey70;
+    }
+
+    td.smart-table__cell {
+        display: inline-flex;
+        align-items: center;
+        padding-top: 6px;
+        padding-bottom: 6px;
+
+        span {
+            font-size: 14px;
+            line-height: 19px;
+        }
+    }
+
+    @media (max-width: 1200px) {
+        & {
+            overflow-x: auto;
+            width: calc(100% + 46px);
+            margin-left: -23px;
+        }
+
+        .smart-table__cell {
+            min-width: 140px;
+        }
+    }
+
+    @media (max-width: 991px) {
+        td.smart-table__cell {
+            span {
+                font-size: 11px;
+                line-height: 15px;
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        & {
+            width: calc(100% + 16px);
+            margin-left: -8px;
+        }
+    }
+}
+
+.smart-table--wallet {
+    .smart-table__cell[data-column-id="cryptocurrency"] {
+        min-width: 180px;
+    }
+
+    .smart-table__cell[data-column-id="status"] {
+        min-width: 250px;
+    }
+
+    @media (max-width: 1200px) {
+        .smart-table__cell[data-column-id="cryptocurrency"] {
+            min-width: 100px;
+            padding-left: 20px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .smart-table__cell[data-column-id="cryptocurrency"] {
+            padding-left: 8px;
+        }
+    }
+}
+
+
+.smart-table--wallet-history {
+    .smart-table__cell[data-column-id="info"] {
+        max-width: 280px;
+        min-width: 280px;
+
+        span {
+            color: $bluegrey40;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 100%;
+            white-space: nowrap;
+        }
+    }
+
+    .smart-table__cell[data-column-id="sum"] {
+        min-width: 180px;
+        max-width: 180px;
+    }
+
+    .smart-table__cell[data-column-id="status"] {
+        padding-right: 30px;
+    }
+
+    @media (max-width: 1200px) {
+        .smart-table__cell[data-column-id="date"] {
+            min-width: 120px;
+        }
+
+        .smart-table__cell[data-column-id="cryptocurrency"] {
+            min-width: 80px;
+        }
+
+        .smart-table__cell[data-column-id="date"] {
+            padding-left: 20px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .smart-table__cell[data-column-id="date"] {
+            padding-left: 8px;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+.smart-table--payout-history {
+    .smart-table__thead {
+        color: $bluegrey40;
+    }
+
+    .smart-table__row {
+        align-items: center;
+    }
+
+    .smart-table__cell {
+        padding-top: 13px;
+        padding-bottom: 13px;
+
+        &[data-column-id="staiking"] {
+            min-width: 115px;
+            max-width: 115px;
+        }
+
+        &[data-column-id="time"] {
+            min-width: 45px;
+            max-width: 45px;
+        }
+    }
+
+    @media (min-width:1360px){
+        .smart-table__cell {
+            &[data-column-id="staiking"] {
+                min-width: 265px;
+                max-width: 265px;
+            }
+
+            &[data-column-id="sum"] {
+                padding-right: 20px;
+                min-width: 100px;
+                max-width: 100px;
+            }
+
+            &[data-column-id="time"] {
+                min-width: 55px;
+                max-width: 55px;
+            }
+        }
+    }
+
+    @media (max-width:991px){
+        .smart-table__cell {
+            &[data-column-id="date"] {
+                text-align: center!important;
+            }
+        }
+    }
+
+    @media (max-width:767px){
+        .smart-table__cell {
+            padding-top: 8px;
+            padding-bottom: 8px;
+        }
+    }
+}
+
+
+
+
+
+.smart-table--profitability {
+    .smart-table__thead {
+        color: $bluegrey40;
+    }
+
+    .smart-table__cell {
+        padding-top: 3px;
+        padding-bottom: 3px;
+    }
+
+    @media (max-width: 1200px) {
+        & {
+            overflow-x: auto;
+            width: calc(100% + 16px);
+            margin-left: -8px;
+        }
+
+        .smart-table__cell {
+            min-width: 50px;
+        }
+    }
+}

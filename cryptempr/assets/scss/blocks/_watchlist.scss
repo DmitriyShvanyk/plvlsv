@@ -1,0 +1,155 @@
+.watchlist {
+    &__btn-edit {
+        outline: none;
+        position: relative;
+        top: -4px;
+
+        &:hover,
+        &:focus,
+        &:active {
+            box-shadow: none;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+.smart-table {
+    position: relative
+}
+
+.smart-table,
+.smart-table__wrapper {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    overflow: hidden
+}
+
+.smart-table__wrapper {
+    flex-direction: column
+}
+
+.smart-table__row {
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    padding: 0;
+}
+
+.smart-table__row .cell-label {
+    display: none;
+    color: #b7bfd1;
+    margin-right: 7px;
+    font-size: 11px
+}
+
+.smart-table__cell {
+    padding: 0 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.smart-table__cell:first-child {
+    padding-left: 0;
+    padding-right: 0
+}
+
+.smart-table__cell:last-child {
+    padding-right: 0
+}
+
+.smart-table__cell[data-column-id=controls] {
+    color: #fff
+}
+
+.smart-table__thead {
+    width: 100%;
+    z-index: 1;
+    color: #959dae;
+}
+
+.smart-table__thead .smart-table__search-container {
+    position: relative
+}
+
+.smart-table__thead .smart-table__cell {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.smart-table__thead .smart-table__cell .sort-by {
+    cursor: pointer;
+    display: inline-block
+}
+
+.smart-table__thead .smart-table__cell .sort-by span {
+    color: #01B26A;
+}
+
+
+
+.smart-table__thead .smart-table__row {
+    height: 28px
+}
+
+.smart-table__tbody {
+    height: 100%;
+    display: block;
+    overflow: auto;
+    position: relative;
+    z-index: 2
+}
+
+.smart-table__tbody .smart-table__row {
+    -webkit-transition: all .3s;
+    transition: all .3s
+}
+
+.smart-table__tbody .smart-table__row:hover {
+    background-color: #363c4a
+}
+
+.smart-table__tbody .smart-table__row:hover .underline a {
+    display: inline-block;
+    position: relative
+}
+
+.smart-table__tbody .smart-table__row:hover .underline a:after {
+    display: block;
+    height: 1px;
+    border-bottom: 1px dashed #b7bfd1;
+    position: absolute;
+    content: "";
+    bottom: 0;
+    width: 100%
+}
+
+.smart-table__tbody .smart-table__row a {
+    color: #fff
+}
+
+
+
+
+.smart-table--watchlist{
+    margin-top: 8px;
+}*/

@@ -1,0 +1,129 @@
+.my-profile {
+    .dropdown-toggle {
+        text-decoration: none;
+        box-shadow: none;
+        display: flex;
+        align-items: center;
+        padding: 0;
+
+        &::after {
+            position: relative;
+            top: -.1em;
+        }
+    }
+
+    .dropdown-toggle.show {
+        &::after {
+            top: 0;
+        }
+    }
+
+    &__avatar-img {
+        width: 32px;
+        height: 32px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-right: 8px;
+    }
+
+    &__text {
+        max-width: 133px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: .04em;
+        text-transform: uppercase;
+        color: $bluegrey20;
+    }
+
+    &__dropdown-menu {
+        padding: 0;
+        font-size: 11px;
+        line-height: 15px;
+        min-width: 198px;
+        background-color: $bluegrey60;
+        border-color: $bluegrey60;
+        color: $bluegrey10;
+        box-shadow: 0px 4px 16px rgba($black, .25);
+        border-radius: 4px;
+    }
+
+    &__head,
+    &__body,
+    &__foot {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    &__head {
+        padding-top: 12px;
+        padding-bottom: 15px;
+    }
+
+    &__body {
+        padding-top: 9px;
+        padding-bottom: 9px;
+        border-top: 1px solid $bluegrey70;
+        border-bottom: 1px solid $bluegrey70;
+    }
+
+    &__foot {
+        padding-top: 9px;
+        padding-bottom: 15px;
+    }
+
+    &__this {
+        color: $bluegrey40;
+    }
+
+    &__name {
+        font-size: 14px;
+        line-height: 19px;
+        margin-bottom: 4px;
+    }
+
+    &__balance {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        color: $bluegrey10;
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: $bluegrey20;
+            text-decoration: none;
+        }
+    }
+
+    &__link+&__link {
+        margin-top: 13px;
+    }
+
+    &__link-pict {
+        min-width: 24px;
+        margin-right: 8px;
+    }
+
+    &__link-icon {
+        max-width: 24px;
+        max-height: 24px;
+    }
+
+    &__status--unverified {
+        color: $bluegrey70 !important;
+    }
+
+    @media (min-width: 1400px) {
+        &__text {
+            max-width: 200px;
+        }
+    }
+
+}

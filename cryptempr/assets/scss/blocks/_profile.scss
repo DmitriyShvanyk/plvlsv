@@ -1,0 +1,90 @@
+.profile {
+    margin-top: 16px;
+    background-color: $bluegrey80;
+    box-shadow: 0px 4px 4px rgba($black, .6);
+    border-radius: 6px;
+
+    &__head {
+        display: flex;
+        align-items: center;
+        padding: 20px 23px 15px;
+        border-bottom: 1px solid $bluegrey70;
+    }
+
+    &__title {
+        color: $white;
+        margin: 0;
+        margin-right: 28px;
+        line-height: 1;
+    }
+
+    &__head,
+    &__body {
+        border-bottom: 1px solid $bluegrey70;
+    }
+
+    &__item {
+        padding: 16px 23px;
+
+        &+& {
+            border-top: 1px solid $bluegrey70;
+        }
+    }
+
+    &__subtitle {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 19px;
+        color: $white;
+        margin-top: 0;
+        margin-bottom: 17px;
+    }
+
+    &__btn-edit,
+    &__btn-verify,
+    &__btn-my-profile{
+        box-shadow: none;
+    }
+
+    &__btn-my-profile{
+        text-decoration: none;
+
+        .my-profile__text {
+            text-transform: none;
+            font-size: 14px;
+        }
+    }
+
+    &__btn-edit{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    &__btn-verify{
+        margin-bottom: 16px;
+        padding-left: 26px;
+        padding-right: 26px;
+    }
+
+    &__foot {
+        padding: 25px 23px;
+    }
+
+    @media (max-width: 767px) {
+        &__head {
+            flex-wrap: wrap;
+        }
+
+        &__head,
+        &__item,
+        &__foot {
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+
+        &__btn-edit{
+            margin-top: 16px;
+        }
+
+    }
+}

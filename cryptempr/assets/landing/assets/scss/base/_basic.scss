@@ -1,0 +1,202 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba($black, 0);
+}
+
+body {
+  /*background-color: $bluegrey90;*/
+  color: $bluegrey20;
+  text-align: left;
+  font-family: $fontDefault;
+  font-size: $fontSizeDefault;
+  line-height: $lineHeightDefault;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+
+  @media (max-width: 576px) {
+    &{
+        font-size: 3.5vw;
+    }
+  }
+}
+
+
+input,
+select,
+button,
+textarea {
+  font-family: $fontDefault;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+a {
+  color: $bluegrey20;
+  text-decoration: none;
+  transition: color .3s ease;
+}
+
+a:hover {
+  color: $white;
+  text-decoration: none;
+}
+
+a:focus,
+a:active {
+  color: $white;
+  text-decoration: underline;
+}
+
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.text-nowrap {
+  white-space: nowrap;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-lowercase {
+  text-transform: lowercase;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+.text-grey100 {
+  color: $bluegrey100;
+}
+
+.text-grey90 {
+  color: $bluegrey90;
+}
+
+.text-grey80 {
+  color: $bluegrey80;
+}
+
+.text-grey70 {
+  color: $bluegrey70;
+}
+
+.text-grey60 {
+  color: $bluegrey60;
+}
+
+.text-grey50 {
+  color: $bluegrey50;
+}
+
+.text-grey40 {
+  color: $bluegrey40;
+}
+
+.text-grey30 {
+  color: $bluegrey30;
+}
+
+.text-grey20 {
+  color: $bluegrey20;
+}
+
+.text-grey10 {
+  color: $bluegrey10;
+}
+
+
+
+
+
+/* img */
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+
+
+
+
+/* sr-only */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+
+
+
+
+/* main */
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+
+
+
+
+/* lazyload */
+
+.lazyload,
+.lazyloading {
+  opacity: 0;
+}
+
+.lazyloaded {
+  opacity: 1;
+  transition: opacity 300ms;
+}

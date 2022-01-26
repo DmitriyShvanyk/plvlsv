@@ -1,0 +1,75 @@
+.orderbook {
+    &__head {
+        display: flex;
+        align-items: center;
+        position: relative;
+        padding-bottom: 6px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: -8px;
+            width: calc(100% + 16px);
+            height: 1px;
+            background-color: $bluegrey70;
+        }
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: $white;
+        margin: 0 16px 0 0;
+        white-space: nowrap;
+    }
+
+    &__tabs-list {
+        .nav-tabs {
+            display: flex;
+            flex-wrap: nowrap;
+            border-bottom: none;
+        }
+
+        .nav-link {
+            color: $bluegrey20;
+            font-weight: 600;
+            letter-spacing: .04em;
+            text-transform: uppercase;
+            padding: 0;
+            border: none;
+            position: relative;
+            margin-bottom: 0;
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: -5px;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                background-color: $blue1;
+                opacity: 0;
+                z-index: 99;
+                pointer-events: none;
+            }
+
+            &:hover {
+                color: $bluegrey10;
+            }
+        }
+
+        .nav-link.active {
+            color: $white;
+            background-color: transparent;
+            border: none;
+
+            &::after {
+                opacity: 1;
+            }
+        }
+    }
+}

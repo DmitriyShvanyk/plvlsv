@@ -1,0 +1,25 @@
+.date-period {
+    color: $bluegrey40;
+
+    &__columns {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: -7.5px;
+        margin-right: -7.5px;
+    }
+
+    &__column {
+        padding-left: 7.5px;
+        padding-right: 7.5px;
+
+        &:nth-child(2) {
+            width: 30px;
+        }
+
+        &:nth-child(1),
+        &:nth-child(3) {
+            width: calc(50% - 15px);
+        }
+    }
+}

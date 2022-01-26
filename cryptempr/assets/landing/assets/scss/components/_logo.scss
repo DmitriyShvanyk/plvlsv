@@ -1,0 +1,42 @@
+.logo {
+  color: $white;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  will-change: opacity;
+  transition: color .3s ease, opacity .3s ease;
+
+  &__img {
+    display: block;
+  }
+
+  &__slogan {
+    font-size: 12px;
+    line-height: 16px;
+    text-transform: uppercase;
+    min-width: 142px;
+    max-width: 142px;
+    margin-left: 14px;
+    position: relative;
+    top: 2px;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $white;
+    text-decoration: none;
+    opacity: .9;
+  }
+
+  @media (max-width:1200px) {
+    &__slogan {
+      font-size: 8px;
+      line-height: 11px;
+      min-width: 82px;
+      max-width: 82px;
+      margin-left: 10px;
+      top: 2px;
+    }
+  }
+}

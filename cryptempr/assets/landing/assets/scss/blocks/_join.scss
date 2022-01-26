@@ -1,0 +1,50 @@
+.join {
+    min-height: 474px;
+    background: #120634 url(../img/join/join.jpg) no-repeat center top;
+    background-size: cover;
+
+    &__container{
+        padding-top: 107px;
+        padding-bottom: 104px;
+    }
+
+    &__content{
+        padding-left: 61.8%;
+    }
+
+    &__lead{
+        margin-bottom: 40px;
+    }
+
+    &__mobile-img{
+        display: none;
+        width: 100%;
+        pointer-events: none;
+    }
+
+    @media (max-width: 1024px){
+        &__content{
+            padding-left: 57%;
+        }
+    }
+
+    @media (max-width: 767px){
+        &{
+            background: linear-gradient(to right, rgba(61,54,118,1) 0%,rgba(57,51,113,1) 6%,rgba(59,52,116,1) 6%,rgba(57,50,112,1) 7%,rgba(57,51,113,1) 9%,rgba(56,49,111,1) 9%,rgba(57,50,113,1) 10%,rgba(55,48,109,1) 13%,rgba(53,47,108,1) 20%,rgba(53,45,106,1) 20%,rgba(53,47,108,1) 20%,rgba(52,45,105,1) 21%,rgba(53,46,107,1) 22%,rgba(50,43,103,1) 26%,rgba(52,45,104,1) 26%,rgba(50,43,102,1) 27%,rgba(49,42,100,1) 33%,rgba(44,36,91,1) 46%,rgba(45,38,92,1) 47%,rgba(43,36,90,1) 47%,rgba(43,35,89,1) 53%,rgba(34,27,75,1) 79%,rgba(32,25,72,1) 88%,rgba(34,26,73,1) 88%,rgba(31,23,70,1) 90%,rgba(30,22,68,1) 100%);
+        }
+
+        &__container{
+            padding-top: 70px;
+            padding-bottom: 70px;
+        }
+
+        &__content{
+            padding-left: 0;
+        }
+
+        &__mobile-img{
+            display: block;
+            margin-top: -4em;
+        }
+    }
+}

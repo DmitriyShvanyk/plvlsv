@@ -1,0 +1,297 @@
+html,
+body {
+  overflow-x: hidden;
+}
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba($black, 0);
+}
+
+body {
+  background-color: $bluegrey90;
+  color: $bluegrey10;
+  text-align: left;
+  font-family: $fontDefault;
+  font-size: $fontSizeDefault;
+  line-height: $lineHeightDefault;
+  font-weight: 600;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+input,
+select,
+button,
+textarea {
+  font-family: $fontDefault;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+@-webkit-keyframes autofill {
+  to {
+    color: inherit;
+    background: transparent;
+  }
+}
+
+input:-webkit-autofill {
+  -webkit-animation-name: autofill;
+  -webkit-animation-fill-mode: both;
+}
+
+
+
+a {
+  color: $lightblue1;
+  text-decoration: none;
+  transition: color .3s ease;
+}
+
+a:hover {
+  color: $lightblue2;
+  text-decoration: none;
+}
+
+a:focus,
+a:active {
+  color: $lightblue1;
+  text-decoration: underline;
+}
+
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.text-nowrap {
+  white-space: nowrap;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-lowercase {
+  text-transform: lowercase;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+.text-required,
+.cancel {
+  color: $red1;
+}
+
+.text-grey100 {
+  color: $bluegrey100!important;
+}
+
+.text-grey90 {
+  color: $bluegrey90!important;
+}
+
+.text-grey80 {
+  color: $bluegrey80!important;
+}
+
+.text-grey70 {
+  color: $bluegrey70!important;
+}
+
+.text-grey60 {
+  color: $bluegrey60!important;
+}
+
+.text-grey50 {
+  color: $bluegrey50!important;
+}
+
+.text-grey40 {
+  color: $bluegrey40!important;
+}
+
+.text-grey30 {
+  color: $bluegrey30!important;
+}
+
+.text-grey20 {
+  color: $bluegrey20!important;
+}
+
+.text-grey10 {
+  color: $bluegrey10!important;
+}
+
+
+.processed {
+  color: $bluegrey40;
+}
+
+
+.bg-danger {
+  background-color: $red2;
+}
+
+.bg-success {
+  color: $bluegrey70;
+  background-color: $green1;
+}
+
+
+
+
+/* img */
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+
+
+/* sr-only */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+
+
+
+
+
+
+
+/* main */
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+
+
+
+
+
+/* lazyload */
+
+.lazyload,
+.lazyloading {
+  opacity: 0;
+}
+
+.lazyloaded {
+  opacity: 1;
+  transition: opacity 300ms;
+}
+
+
+
+
+
+
+/* typography */
+
+h1,
+h2 {
+  line-height: 1.333;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+h3 {
+  font-size: 14px;
+  line-height: 1.36;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+
+
+/* lead */
+
+.lead {
+  color: $bluegrey100;
+  font-weight: 600;
+  margin-top: 0;
+}
+
+
+
+/* icon-circle */
+
+.icon-circle {
+  width: 24px;
+  height: 24px;
+}
+
+
+
+
+
+
+
+
+.page{
+  .main{
+    min-height: calc(100vh - 56px);
+  }
+}

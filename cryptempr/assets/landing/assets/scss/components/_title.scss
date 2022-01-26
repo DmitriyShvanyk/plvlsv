@@ -1,0 +1,15 @@
+.title {
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 1.25;
+    letter-spacing: .04em;
+    margin-top: 0;
+    margin-bottom: 24px;
+    color: $white;
+
+    @media (max-width: 576px) {
+        &{
+            font-size: 8vw;
+        }
+    }
+}
