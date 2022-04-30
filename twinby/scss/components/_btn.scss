@@ -1,0 +1,82 @@
+.btn {
+  text-align: center;
+  outline: none;
+  cursor: pointer;
+  min-width: 200px;
+  padding: 15px 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  font-size: 16px;
+  line-height: 1;
+  color: $white;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  background-color: $blue;
+  border: 1px solid $blue;
+  border-radius: 55px;
+  text-decoration: none;
+  transition: opacity .3s ease;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $white;
+    border-color: $blue;
+    background-color: $blue;
+    text-decoration: none;
+    opacity: .9;
+  }
+
+  &--dark {
+    &,
+    &:hover,
+    &:focus,
+    &:active {
+      border-color: #333;
+      background-color: #333;
+    }
+  }
+}
+
+
+.stores {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  align-items: center;
+  max-width: 324px;
+  width: 100%;
+
+  &__btn {
+    color: #121212;
+    background-color: $white;
+    height: 48px;
+    width: 100%;
+    max-width: 157px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    border-radius: 55px;
+    transition: opacity .3s ease;
+
+    &:hover,
+    &:focus,
+    &:active {
+      opacity: .9;
+      color: #121212;
+      background-color: $white;
+    }
+  }
+
+  @media (max-width: 576px) {
+    &,
+    &__btn {
+      max-width: 100%;
+    }
+  }
+}

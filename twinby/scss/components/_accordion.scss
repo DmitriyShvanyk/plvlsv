@@ -1,0 +1,105 @@
+.accordion {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #252525;
+
+    &__item {
+        position: relative;
+
+        & + & {
+            border-top: 1px solid rgba(168, 172, 179, 0.42);;
+        }
+    }
+
+    &__label {
+        display: flex;
+        align-items: center;
+        position: relative;
+        padding: 27px 60px 27px 0;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 1.24;
+        min-height: 96px;
+    }
+
+    &__title {
+        display: block;
+        max-width: 550px;
+    }
+
+    &__icon {
+        position: absolute; top: 27px; right: 0;
+        width: 41px;
+        height: 41px;
+        border: 1px solid rgba(37, 37, 37, 0.1);
+        border-radius: 50%;
+        transition: background-color .3s ease, border-color .3s ease;
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute; top: 50%; left: 50%;
+            width: 9px;
+            height: 1px;
+            background-color: #252525;
+            margin: -.5px 0 0 -4.5px;
+            transition: background-color .3s ease;
+        }
+
+        &::after {
+            transform: rotate(-90deg);
+            transition: transform .3s ease;
+        }
+    }
+
+    &__text {
+        p, ol, ul {
+            margin-top: 0;
+        }
+    }
+
+    &__content {
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.5s cubic-bezier(0, 1, 0, 1), margin-top .3s ease-in-out;
+
+    }
+
+    &__text {
+        padding-right: 3rem;
+    }
+
+    &__control:checked ~ &__label &__icon {
+        background-color: $blue;
+        border-color: $blue;
+    }
+
+    &__control:checked ~ &__label &__icon::before,
+    &__control:checked ~ &__label &__icon::after {
+        background-color: $white;
+    }
+
+    &__control:checked ~ &__label &__icon::after {
+        transform: rotate(0deg);
+    }
+
+    &__control:checked ~ &__content {
+        max-height: 1000px;
+        transition: max-height 1s ease-in-out;
+        margin-top: -20px;
+        padding-bottom: 10px;
+    }
+
+    @media (max-width:576px) {
+        &__label {
+            padding: 20px 60px 20px 0;
+            font-size: 20px;
+            min-height: 76px;
+        }
+
+        &__control:checked ~ &__content {
+            margin-top: -10px;
+        }
+    }
+}

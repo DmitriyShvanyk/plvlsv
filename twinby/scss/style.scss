@@ -1,0 +1,46 @@
+@charset 'utf-8';
+
+/* ==================== PLUGINS ==================== */
+
+@import url(../vendor/aos/aos.css);
+@import url(../vendor/swiper/swiper.min.css);
+
+
+/* ==================== ABSTRACTS ==================== */
+
+@import 'abstracts/variable';
+
+
+/* ==================== BASE ==================== */
+
+@import 'base/normalize';
+@import 'base/fonts';
+@import 'base/basic';
+
+
+/* ==================== COMPONENTS ==================== */
+
+@import 'components/logo';
+@import 'components/social';
+@import 'components/btn';
+@import 'components/title';
+@import 'components/subtitle';
+@import 'components/quiz';
+//@import 'components/accordion';
+@import 'components/tabs';
+@import 'components/modal';
+
+
+/* ==================== BLOCKS ==================== */
+
+@import 'blocks/navbar';
+@import 'blocks/header';
+@import 'blocks/modern';
+@import 'blocks/compatibility';
+@import 'blocks/trust';
+@import 'blocks/form';
+@import 'blocks/blog';
+@import 'blocks/article';
+@import 'blocks/interest';
+@import 'blocks/faq';
+@import 'blocks/footer';

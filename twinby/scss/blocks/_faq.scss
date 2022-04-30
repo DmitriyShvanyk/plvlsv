@@ -1,0 +1,49 @@
+.faq {
+  &__container {
+    padding-top: 38px;
+    padding-bottom: 38px;
+  }
+
+  &__title {
+    text-align: left;
+    font-size: 96px;
+    line-height: .95;
+    letter-spacing: -0.025em;
+    max-width: 700px;
+    color: #333;
+    position: relative;
+    margin-bottom: 28px;
+  }
+
+  &__accordion {
+    max-width: 665px;
+  }
+
+  @media (max-width:1200px) {
+    &__title {
+      font-size: 76px;
+    }
+  }
+
+  @media (max-width:767px) {
+    &__title {
+      font-size: 56px;
+      margin-bottom: 35px;
+    }
+
+    &__accordion {
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width:576px) {
+    &__container {
+      padding-top: 29px;
+    }
+
+    &__title {
+      font-size: 12.26666vw;
+      line-height: 1;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+.logo {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    border: none;
+    will-change: opacity;
+    transition: opacity .3s ease;
+
+    &__img {
+        display: block;
+        max-height: 23px;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+        opacity: .8;
+    }
+}

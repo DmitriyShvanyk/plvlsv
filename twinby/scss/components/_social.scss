@@ -1,0 +1,48 @@
+.social {
+    position: relative;
+
+    &,
+    &__link {
+        display: flex;
+        align-items: center;
+    }
+
+    &__link {
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        min-width: 32px;
+        color: $black;
+        background-color: #EFF0F4;
+        border-radius: 50%;
+        text-decoration: none;
+        transition: .3s ease;
+
+        & + & {
+            margin-left: 9px;
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: $white;
+            background-color: $blue;
+            text-decoration: none;
+        }
+    }
+
+    &__i {
+        max-height: 16px;
+        max-width: 16px;
+    }
+
+    &--white &__link{
+        &,
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: rgba($white, .11);
+            color: $white;
+        }
+    }
+}

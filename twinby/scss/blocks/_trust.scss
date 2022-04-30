@@ -1,0 +1,190 @@
+.trust {
+  &__container {
+    padding-top: 35px;
+    padding-bottom: 55px;
+  }
+
+  &__content {
+    max-width: 1238px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    min-height: 602px;
+    padding-top: 260px;
+    text-align: center;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 1.03;
+    letter-spacing: -0.03em;
+    color: #282828;
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+
+  &__stores {
+    display: inline-flex;
+  }
+
+  &__title,
+  &__stores {
+    position: relative;
+    z-index: 9;
+  }
+
+  &__user {
+    position: absolute;
+    pointer-events: none;
+    object-fit: cover;
+  }
+
+  &__user--1 {
+    max-height: 68px;
+    min-height: 68px;
+    min-width: 68px;
+    top: 17%; left: 0;
+  }
+
+  &__user--2 {
+    max-height: 141px;
+    min-height: 141px;
+    min-width: 141px;
+    top: 5.5%; left: 24%;
+  }
+
+  &__user--3 {
+    max-height: 122px;
+    min-height: 122px;
+    min-width: 122px;
+    top: 43.5%; left: 9.5%;
+  }
+
+  &__user--4 {
+    max-height: 122px;
+    min-height: 122px;
+    min-width: 122px;
+    bottom: 0; left: -.5%;
+  }
+
+  &__user--5 {
+    max-height: 68px;
+    min-height: 68px;
+    min-width: 68px;
+    top: 17.5%; right: 30.4%;
+  }
+
+  &__user--6 {
+    max-height: 122px;
+    min-height: 122px;
+    min-width: 122px;
+    top: 0; right: 10.5%;
+  }
+
+  &__user--7 {
+    max-height: 122px;
+    min-height: 122px;
+    min-width: 122px;
+    top: 40%; right: .5%;
+  }
+
+  &__user--8 {
+    max-height: 146px;
+    min-height: 146px;
+    min-width: 146px;
+    bottom: 0; right: 12.7%;
+  }
+
+  @media (max-width: 991px) {
+
+    &__content {
+      min-height: 502px;
+      padding-top: 122px;
+    }
+
+    &__title {
+      font-size: 48px;
+      line-height: 1.1;
+      margin-bottom: 18px;
+    }
+
+    &__user--1 {
+      max-height: 28px;
+      min-height: 28px;
+      min-width: 28px;
+      bottom: 6%;
+      top: auto;
+      left: 66%;
+    }
+
+    &__user--2 {
+      max-height: 84px;
+      min-height: 84px;
+      min-width: 84px;
+      top: -9.5%;
+      left: 32%;
+    }
+
+    &__user--3 {
+      max-height: 50px;
+      min-height: 50px;
+      min-width: 50px;
+      top: 12%;
+      left: auto;
+      right: 26%;
+    }
+
+    &__user--4 {
+      max-height: 50px;
+      min-height: 50px;
+      min-width: 50px;
+      bottom: auto;
+      top: 12.5%;
+      left: .5%;
+    }
+
+    &__user--5 {
+      max-height: 45px;
+      min-height: 45px;
+      min-width: 45px;
+      top: auto;
+      bottom: 28%;
+      right: auto;
+      left: 0;
+    }
+
+    &__user--6 {
+      max-height: 80px;
+      min-height: 80px;
+      min-width: 80px;
+      top: -4.5%;
+      right: -10px;
+    }
+
+    &__user--7 {
+      max-height: 80px;
+      min-height: 80px;
+      min-width: 80px;
+      top: auto;
+      bottom: 20.5%;
+      right: 0;
+    }
+
+    &__user--8 {
+      max-height: 96px;
+      min-height: 96px;
+      min-width: 96px;
+      bottom: 12%;
+      right: auto;
+      left: 26%;
+    }
+  }
+
+  @media (max-width: 576px) {
+    &__title {
+      font-size: 12.26666vw;
+    }
+  }
+
+}

@@ -1,0 +1,405 @@
+.fancybox__backdrop {
+  background: var(--fancybox-bg, rgba($black, .16));
+}
+
+
+.modal {
+  display: none;
+  width: 100%;
+
+  .is-close {
+    top: 15px;
+    right: 20px;
+    color: $black !important;
+    box-shadow: none;
+    width: 20px;
+    height: 20px;
+
+    svg {
+      filter: none;
+    }
+  }
+
+  &__head {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.29;
+    color: $black;
+    margin-bottom: 25px;
+  }
+}
+
+
+
+#modal {
+  max-width: 448px;
+  padding: 43px 53px;
+  box-shadow: 0px 4px 20px rgba(152, 151, 180, 0.15);
+  border-radius: 24px;
+}
+
+/*
+#modalLogin {
+  max-width: 325px;
+  padding: 15px;
+  text-align: center;
+  border-radius: 22px;
+  color: $brand;
+
+  .is-close {
+    top: 20px;
+    left: 20px;
+    right: auto;
+    width: 28px;
+    height: 28px;
+  }
+
+  .modal__title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 5px;
+  }
+
+  .modal__lead {
+    font-size: 14px;
+    font-weight: 300;
+    margin-top: 0;
+    margin-bottom: 18px;
+  }
+
+  .modal__btns {
+    margin-bottom: 5px;
+  }
+
+  .modal__link {
+    color: $blue3;
+    text-decoration: none;
+    font-weight: 700;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $blue3;
+      text-decoration: underline;
+    }
+  }
+
+  .modal__support {
+    font-size: 10px;
+    line-height: 2;
+    margin-bottom: 18px;
+  }
+
+  .modal__support-image {
+    max-height: 20px;
+    vertical-align: middle;
+  }
+
+  .modal__conditions {
+    max-width: 205px;
+    margin: 0 auto 16px auto;
+    font-size: 8px;
+    line-height: 10px;
+
+    a {
+      color: $brand;
+      font-weight: 700;
+      text-decoration: none;
+    }
+  }
+
+  .btn {
+    width: 100%;
+    margin-bottom: 10px;
+    min-height: 42px;
+    padding: 7px 15px;
+    justify-content: flex-start;
+    border-radius: 15px;
+  }
+
+  .btn__pict {
+    min-width: 36px;
+    margin-right: 10px;
+  }
+}
+
+#modalConditions,
+#modalTerms {
+  max-width: 800px;
+  max-height: 680px;
+  min-height: 610px;
+  padding: 15px 0 15px 15px;
+  border-radius: 15px;
+
+  .is-close {
+    top: 15px;
+    right: 20px;
+
+    svg {
+      filter: none;
+    }
+  }
+
+  iframe {
+    height: 100%;
+  }
+}
+
+#modalConditions {
+  padding-top: 25px;
+}
+
+#modalTerms {
+  overflow-y: auto;
+  line-height: 1.5;
+  padding-right: 13px;
+
+  .modal__title {
+    margin-top: 0.5em;
+    font-weight: 400;
+    color: $black;
+    font-size: 30px;
+    line-height: 1.2;
+  }
+
+  ol,
+  ul {
+    padding-left: 20px;
+    font-size: 13px;
+  }
+
+  ol {
+    margin-top: 2em;
+
+    >li {
+      font-weight: 700;
+      color: $yellow;
+    }
+  }
+
+  ul {
+    color: $black;
+    font-weight: 400;
+    margin-top: 1em;
+    list-style: none;
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    li::before {
+      content: "⚪";
+      display: inline-block;
+      margin-left: 0px;
+      margin-right: 0.6em;
+      font-size: 13px;
+      color: rgb(240, 187, 47);
+      font-weight: 700;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .modal__title {
+      margin-top: 1.15em;
+    }
+
+    ol {
+      padding-left: 12px;
+    }
+
+    ul {
+      padding-left: 8px;
+    }
+  }
+}
+
+#modalProtect {
+  background-color: $white;
+  background-image: url(https://static.ca-tests.com/static/images/conseilsdesecurite.png);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  max-width: 500px;
+  padding: 10px;
+  border-radius: 30px;
+
+  .carousel__button.is-close {
+    display: none;
+  }
+
+  .modal__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 35%;
+    margin-bottom: 10px;
+  }
+
+  .modal__title {
+    color: $yellow;
+    font-weight: 700;
+    font-size: 28px;
+    opacity: .9;
+    text-align: center;
+    margin: 0 0 10px;
+  }
+
+  ul {
+    color: $brand;
+    line-height: 1.4;
+    font-weight: 500;
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 10px;
+
+    li {
+      margin-bottom: 10px;
+    }
+  }
+
+  .btn {
+    min-width: 97px;
+  }
+
+  @media (max-width: 576px) {
+    & {
+      background-size: contain;
+    }
+
+    .modal__inner {
+      margin-top: 30%;
+    }
+  }
+}
+
+
+
+
+
+
+@media (min-width:992px) {
+  #modalFilter {
+    display: block;
+
+    .modal__title {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  #modalFilter {
+    padding: 15px;
+    width: calc(100% + 16px);
+    margin: -48px -8px -8px;
+
+    .is-close {
+      top: 15px;
+      left: 25px;
+    }
+
+    .modal__title {
+      display: block;
+      text-align: center;
+      font-size: 15px;
+      font-weight: 600;
+      margin-top: .2em;
+      margin-bottom: .1em;
+    }
+
+    .filter__box--2 {
+      .filter__title {
+        display: none;
+      }
+    }
+
+    .filter__item {
+      padding-top: 20px;
+      padding-bottom: 16px;
+
+      .filter__dropdown,
+      .checkbox--warning {
+        margin-bottom: 0;
+      }
+
+      .checkbox--info,
+      .checkbox--danger,
+      .checkbox--warning {
+        font-size: 13px;
+        font-weight: 600;
+        color: rgba($brand, .7);
+      }
+    }
+
+    .filter__item--villa,
+    .filter__item--category {
+      .filter__subtitle {
+        margin-bottom: 18px;
+      }
+    }
+
+    .filter__item--category,
+    .filter__item--prix,
+    .filter__item--services {
+
+      .filter__subtitle {
+        margin-top: 0;
+      }
+    }
+
+    .filter__item--prix {
+      .filter__subtitle {
+        margin-bottom: 16px;
+      }
+
+      .filter__inputs {
+        margin-bottom: 10px;
+      }
+    }
+
+    .dropdown__before-icon {
+      margin-right: 10px;
+    }
+  }
+}
+
+
+
+
+#modalPublish {
+  background: transparent;
+  max-width: 670px;
+  width: 100%;
+  text-align: center;
+
+  .carousel__button.is-close {
+    top: -40px;
+    left: 20px;
+    color: $white !important;
+  }
+
+  .modal__layer {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(121, 135, 155, .9);
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+  }
+
+  .modal__inner {
+    position: relative;
+    z-index: 90;
+  }
+
+  @media (min-width:768px) {
+    .carousel__button.is-close {
+      display: none;
+    }
+  }
+}*/

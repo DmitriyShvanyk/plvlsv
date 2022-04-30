@@ -1,0 +1,41 @@
+.footer {
+  margin-top: auto;
+
+  &__container {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 400;
+    font-size: 14px;
+    color: #707781;
+  }
+
+  &__link {
+    display: inline-flex;
+    text-decoration: none;
+    color: #707781;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $dark;
+      text-decoration: underline;
+    }
+  }
+
+  @media (max-width: 576px) {
+    &__container {
+      flex-direction: column;
+      padding-top: 22px;
+      padding-bottom: 22px;
+    }
+
+    &__copy {
+      margin-top: 12px;
+      margin-bottom: 14px;
+    }
+  }
+}
+
