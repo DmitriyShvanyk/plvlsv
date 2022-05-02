@@ -3,19 +3,22 @@
 
 	"use strict";
 
-	const formPhone = document.querySelector('.quiz-start--form')
-	const formPhoneControl = formPhone.querySelector('.quiz-start__control')
-	const formPhoneSubmit = formPhone.querySelector('.quiz-start__btn')
+	const form = document.querySelector('.quiz-start--form')
+	const formControl = form.querySelector('.quiz-start__control')
+	const formSubmit = form.querySelector('.quiz-start__btn')
 
 	function disableButton() {
-		if (formPhoneControl.value.length > 8 ){
-			formPhoneSubmit.disabled = false
+		const placeholderActive = formControl.getAttribute('placeholder');
+		const placeholderLength = placeholderActive.length;
+
+		if (formControl.value.length == placeholderLength ){
+			formSubmit.disabled = false
 		}
 		else {
-			formPhoneSubmit.disabled = true
+			formSubmit.disabled = true
 		}
 	}
 
-	formPhone.addEventListener('change', disableButton)
+	form.addEventListener('change', disableButton)
 
 })();

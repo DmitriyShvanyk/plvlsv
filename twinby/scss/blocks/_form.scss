@@ -124,6 +124,27 @@
     transform: translateY(-50%) rotate(180deg);
   }
 
+  .iti {
+    width: 100%;
+
+    .iti__selected-flag {
+      background-color: transparent;
+      pointer-events: none;
+    }
+
+    .iti__selected-dial-code {
+      font-weight: 300;
+      font-size: 18px;
+      color: $white;
+      opacity: .7;
+    }
+
+    .iti__flag,
+    .iti__arrow {
+      display: none;
+    }
+  }
+
   @media (max-width: 1200px) {
     &__box {
       padding: 50px;
@@ -197,6 +218,12 @@
     &__control--textarea {
       min-height: 144px;
       padding-top: 17px;
+    }
+
+    .iti {
+      .iti__selected-dial-code {
+        font-size: 16px;
+      }
     }
   }
 }
